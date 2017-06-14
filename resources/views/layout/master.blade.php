@@ -125,6 +125,12 @@
                      @yield('isi-iso-user')
                      @yield('isi-sni-user')
                      @yield('isi-one-stop-service-user')
+                     
+                     @yield('isi-dashboard-admin')
+                     @yield('isi-iso-admin')
+                     @yield('isi-sni-admin')
+                     @yield('isi-one-stop-service-admin')
+
 
 
                 </div>
@@ -159,6 +165,7 @@
 
     <!-- Sparkline chart JavaScript -->
     <script src="{{env('APP_URL')}}/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/jquery-sparkline/jquery.charts-sparkline.js"></script>
     <!-- jQuery peity -->
     <script src="{{env('APP_URL')}}/plugins/bower_components/peity/jquery.peity.min.js"></script>
     <script src="{{env('APP_URL')}}/plugins/bower_components/peity/jquery.peity.init.js"></script>

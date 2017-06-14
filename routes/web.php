@@ -15,12 +15,35 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//----------------------------------------------//
 Route::get('/user/dashboard', function () {
     return view('user.dashboard');
 });
 Route::get('/user/iso', function () {
     return view('user.iso');
 });
+Route::get('/user/sni', function () {
+    return view('user.sni');
+});
+Route::get('/user/one-stop-service', function () {
+    return view('user.one-stop-service');
+});
+//---------------------------------------------//
+
+//-------------------------------------------//
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard');
+});
+Route::get('/admin/iso', function () {
+    return view('admin.iso');
+});
+Route::get('/user/sni', function () {
+    return view('admin.sni');
+});
+Route::get('/admin/one-stop-service', function () {
+    return view('admin.one-stop-service');
+});
+//-------------------------------------------//
 
 Route::get('/register', "AuthController@register");
 

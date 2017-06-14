@@ -1,14 +1,33 @@
 @extends('layout.master')
 
 @section ('sidebar-sni-user')
-<<li class="nav-small-cap m-t-10">--- Main Menu</li>
-                    <li> <a href="index.html" class="waves-effect"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
-                    <li> <a href="iso.html" class="waves-effect"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi ISO</span></a> </li>
-                     <li> <a href="sni.html" class="waves-effect active"><i class="ti-world p-r-10"></i> <span class="hide-menu">Sertifikasi SNI</span></a> </li>
-                     <li> <a href="one-stop-service.html" class="waves-effect"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
+<li class="nav-small-cap m-t-10">--- Main Menu</li>
+                    <li> <a href="/user/dashboard" class="waves-effect"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
+                    <li> <a href="/user/iso" class="waves-effect"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi ISO</span></a> </li>
+                     <li> <a href="/user/sni" class="waves-effect active"><i class="ti-world p-r-10"></i> <span class="hide-menu">Sertifikasi SNI</span></a> </li>
+                     <li> <a href="/user/one-stop-service" class="waves-effect"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
 @endsection
 
-@section("sni-user")
+@section ('breadcrumb-sni-user')
+ <div class="row bg-title">
+                    <!-- .page title -->
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Sistem Sertifikasi Terpadu</h4> </div>
+                    <!-- /.page title -->
+                    <!-- .breadcrumb -->
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
+                        <ol class="breadcrumb">
+                            <li><a href="#">System</a></li>
+                            <li href="/user/dashboard">Dashboard</li>
+                            <li class="active">SNI</li>
+
+                        </ol>
+                    </div>
+                    <!-- /.breadcrumb -->
+                </div>
+@endsection
+
+@section("isi-sni-user")
  <div class="row">
                     
                     <div class="col-sm-6 ol-md-6 col-xs-12">
