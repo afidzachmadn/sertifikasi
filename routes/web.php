@@ -18,12 +18,15 @@ Route::get('/', function () {
 Route::get('/user/dashboard', function () {
     return view('user.dashboard');
 });
+Route::get('/user/iso', function () {
+    return view('user.iso');
+});
 
 Route::get('/register', "AuthController@register");
 
 Route::get('/login', "AuthController@login");
 
-Route::get('/login-proses', "AuthController@bacadatabase");
+Route::post('/login-proses', "AuthController@bacadatabase");
 
 Route::get('/register-proses', "AuthController@registerproses");
 

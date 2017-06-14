@@ -27,8 +27,7 @@ class AuthController extends Controller
             $usercheck= $loginTable->where('username', $user)->first();
             $decrypt = decrypt($usercheck->password);
             if($password == $decrypt) {
-                redirect('/user/dashboard');
-                #return view('user.dashboard');
+                return redirect()->action('HomeController@indexuser');
             } else {
                 echo 'login gagal';
             }

@@ -27,6 +27,8 @@
     <link href="{{env('APP_URL')}}/plugins/bower_components/owl.carousel/owl.theme.default.css" rel="stylesheet" type="text/css" />
     <!-- animation CSS -->
     <link href="{{env('APP_URL')}}/css/animate.css" rel="stylesheet">
+    <!-- dropify -->
+    <link rel="stylesheet" href="{{env('APP_URL')}}/plugins/bower_components/dropify/dist/css/dropify.min.css">
     <!-- Custom CSS -->
     <link href="{{env('APP_URL')}}/css/style.min.css" rel="stylesheet">
                               
@@ -90,54 +92,39 @@
                             <li><a href="javascript:void(0)"><i class="fa fa-power-off"></i> Logout</a></li>
                         </ul>
                     </li>
-                    <li class="nav-small-cap m-t-10">--- Main Menu</li>
-                    <li> <a href="index.html" class="waves-effect active"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
-                    <li> <a href="iso.html" class="waves-effect"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi ISO</span></a> </li>
-                     <li> <a href="sni.html" class="waves-effect"><i class="ti-world p-r-10"></i> <span class="hide-menu">Sertifikasi SNI</span></a> </li>
-                     <li> <a href="one-stop-service.html" class="waves-effect"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
+                    <!-- yield sidebar -->
+                    @yield('sidebar-dashboard-user')
+                    @yield('sidebar-iso-user')
+                    @yield('sidebar-sni-user')
+                    @yield('sidebar-one-stop-service-user')
+                    
                 </ul>
             </div>
         </div>
-        <!-- Left navbar-header end -->
-        <!-- Page Content -->
+        <!-- yield untuk breadcrumb -->
         <div id="page-wrapper">
             <div class="container-fluid">
-                <div class="row bg-title">
-                    <!-- .page title -->
-                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Sistem Sertifikasi Terpadu</h4> </div>
-                    <!-- /.page title -->
-                    <!-- .breadcrumb -->
-                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
-                        <ol class="breadcrumb">
-                            <li><a href="#">System</a></li>
-                            <li class="active">Dashboard</li>
-                        </ol>
-                    </div>
-                    <!-- /.breadcrumb -->
-                </div>
-
+                <!-- letakan yield -->
+                
+                @yield('breadcrumb-dashboard-user')
+                @yield('breadcrumb-iso-user')
+                @yield('breadcrumb-sni-user')
+                @yield('breadcrumb-one-stop-service-user')
+                
 
                 <!-- contents start here -->
-                  <!-- .row -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-wrapper p-b-10 collapse in">
-                                <div id="owl-demo" class="owl-carousel owl-theme">
-                                    <div class="item"><img src="../plugins/images/heading-bg/slide3.jpg" alt="Owl Image"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @yield('header-dashboard-user')
+                    <!-- FOR THIS SECTION IS ONLY FOR DASHBOARD! -->
+                
 
 
                 <!-- .row -->
                 <div class="row">
                     
                      @yield('isi-dashboard-user')
-
+                     @yield('isi-iso-user')
+                     @yield('isi-sni-user')
+                     @yield('isi-one-stop-service-user')
 
 
                 </div>
@@ -180,6 +167,51 @@
     <script src="{{env('APP_URL')}}/js/dashboard1.js"></script>
     <!--Style Switcher -->
     <script src="{{env('APP_URL')}}/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+     <!-- Custom Theme JavaScript -->
+    <script src="{{env('APP_URL')}}/js/custom.min.js"></script>
+    <script src="{{env('APP_URL')}}/js/jasny-bootstrap.js"></script>
+    <!-- jQuery file upload -->
+    <script src="{{env('APP_URL')}}/plugins/bower_components/dropify/dist/js/dropify.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Basic
+            $('.dropify').dropify();
+            // Translated
+            $('.dropify-fr').dropify({
+                messages: {
+                    default: 'Glissez-déposez un fichier ici ou cliquez'
+                    , replace: 'Glissez-déposez un fichier ou cliquez pour remplacer'
+                    , remove: 'Supprimer'
+                    , error: 'Désolé, le fichier trop volumineux'
+                }
+            });
+            // Used events
+            var drEvent = $('#input-file-events').dropify();
+            drEvent.on('dropify.beforeClear', function (event, element) {
+                return confirm("Do you really want to delete \"" + element.file.name + "\" ?");
+            });
+            drEvent.on('dropify.afterClear', function (event, element) {
+                alert('File deleted');
+            });
+            drEvent.on('dropify.errors', function (event, element) {
+                console.log('Has Errors');
+            });
+            var drDestroy = $('#input-file-to-destroy').dropify();
+            drDestroy = drDestroy.data('dropify')
+            $('#toggleDropify').on('click', function (e) {
+                e.preventDefault();
+                if (drDestroy.isDropified()) {
+                    drDestroy.destroy();
+                }
+                else {
+                    drDestroy.init();
+                }
+            })
+        });
+    </script>
+    <!--Style Switcher -->
+    <script src="{{env('APP_URL')}}/plugins/bower_components/styleswitcher/jQuery.style.switcher.js">
+    </script>
 </body>
 
 </html>
