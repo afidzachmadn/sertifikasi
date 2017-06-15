@@ -36,7 +36,8 @@
         <div class="login-box login-sidebar">
             <div class="white-box">
               
-                <form class="form-horizontal form-material" id="loginform" value="{{csrf_field()}}" action="/login-proses" method="post">
+                <form class="form-horizontal form-material" id="loginform" action="/login-proses" method="post">
+		{{ csrf_field() }}
                     <a href="javascript:void(0)" class="text-center db"><img src="../plugins/images/bisqa.jpg" alt="Home" />
                         </a>
                     <div class="form-group m-t-40">
