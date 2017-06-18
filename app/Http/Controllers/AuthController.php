@@ -39,8 +39,14 @@ class AuthController extends Controller
             $user = $request->input('username');
             $password=encrypt($request->input('password'));
             // login ke db
-            $logintable = DB::table('login');
+            $logintable_login = DB::table('login');
+            //$logintable_data = DB::table('data');
+            //untuk register ke table login
             $usercheck=$logintable->insert(['username'=>$user, 'password'=>$password,'permission'=>2]);
+            //untuk register ke table data
+            //
+            
+
             // redirect('/');
             dd($password);
         }

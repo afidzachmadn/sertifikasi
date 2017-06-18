@@ -87,9 +87,9 @@
                         <a href="#" class="waves-effect"><img src="../plugins/images/big/d2.jpg" alt="user-img" class="img-circle"> <span class="hide-menu">PT. Subur Jaya<span class="fa arrow"></span></span>
                         </a>
                         <ul class="nav nav-second-level">
-                            <li><a href="profile.html"><i class="ti-user"></i>Profile Perusahaan</a></li>
-                             <li><a href="edit-profile.html"><i class=" ti-pencil-alt"></i>Edit Profile Perusahaan</a></li>
-                            <li><a href="javascript:void(0)"><i class="fa fa-power-off"></i> Logout</a></li>
+                            <li><a href="/user/profile"><i class="ti-user"></i>Profile Perusahaan</a></li>
+                             <li><a href="/user/edit-profile"><i class=" ti-pencil-alt"></i>Edit Profile Perusahaan</a></li>
+                            <li><a href="/logout"><i class="fa fa-power-off"></i> Logout</a></li>
                         </ul>
                     </li>
                     <!-- yield sidebar -->
@@ -97,7 +97,7 @@
                     @yield('sidebar-iso-user')
                     @yield('sidebar-sni-user')
                     @yield('sidebar-one-stop-service-user')
-                    
+                    @yield('sidebar-profile-user') <!-- sama untuk profile-user maupun profile-edit-user -->
                 </ul>
             </div>
         </div>
@@ -110,6 +110,8 @@
                 @yield('breadcrumb-iso-user')
                 @yield('breadcrumb-sni-user')
                 @yield('breadcrumb-one-stop-service-user')
+                @yield('breadcrumb-profile-user')
+                 @yield('breadcrumb-profile-edit-user')
                 
 
                 <!-- contents start here -->
@@ -125,11 +127,12 @@
                      @yield('isi-iso-user')
                      @yield('isi-sni-user')
                      @yield('isi-one-stop-service-user')
-                     
+                     @yield('isi-profile-user')
+                     @yield('isi-profile-edit-user')
+
                      @yield('isi-dashboard-admin')
                      @yield('isi-iso-admin')
-                     @yield('isi-sni-admin')
-                     @yield('isi-one-stop-service-admin')
+                    
 
 
 

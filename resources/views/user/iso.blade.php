@@ -18,7 +18,7 @@
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         <ol class="breadcrumb">
                             <li><a href="#">System</a></li>
-                            <li href="/user/dashboard">Dashboard</li>
+                            <li><a href="/user/dashboard">Dashboard</a></li>
                             <li class="active">ISO</li>
 
                         </ol>
@@ -27,7 +27,7 @@
                 </div>
 @endsection
 
-@section("isi-iso-user")
+@section('isi-iso-user')
 <div class="row">
                     
                     <div class="col-sm-6 ol-md-6 col-xs-12">
