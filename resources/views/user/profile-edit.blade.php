@@ -31,42 +31,35 @@
                     <div class="col-sm-12">
                         <div class="white-box">
                             <h3 class="box-title">Edit Profile Perusahaan</h3>
-                            <form class="form-material form-horizontal">
+                            <form class="form-material form-horizontal" action="/profile-edit-proses" method="post">
                                 <div class="form-group">
                                     <label class="col-md-12" for="example-text">Nama Perusahaan</span>
                                     </label>
                                     <div class="col-md-12">
-                                        <input type="text" id="example-text" name="example-text" class="form-control" placeholder="Nama Perusahaan"> </div>
+                                        <input type="text" id="example-text" name="nama-perusahaan" class="form-control" placeholder="Nama Perusahaan"> </div>
                                 </div>
 
                                <div class="form-group">
                                     <label class="col-md-12" for="example-text">E-mail</span>
                                     </label>
                                     <div class="col-md-12">
-                                        <input type="text" id="email" name="example-text" class="form-control" placeholder="E-mail"> </div>
+                                        <input type="text" id="email" name="e-mail" class="form-control" placeholder="E-mail"> </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-md-12" for="telp">No Telpon</span>
                                     </label>
                                     <div class="col-md-12">
-                                        <input type="text" id="telp" name="example-text" class="form-control" placeholder="No Telpon"> </div>
+                                        <input type="text" id="telp" name="no-telpon" class="form-control" placeholder="No Telpon"> </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-md-12" for="alamat">Alamat Perusahaan</span>
                                     </label>
                                     <div class="col-md-12">
-                                        <input type="text" id="alamat" name="alamat" class="form-control" placeholder="Alamat Perusahaan"> </div>
+                                        <input type="text" id="alamat" name="alamat-perusahaan" class="form-control" placeholder="Alamat Perusahaan"> </div>
                                 </div>
-                                <!--
-                                <div class="form-group">
-                                    <label class="col-md-12" for="bdate">Date of Birth</span>
-                                    </label>
-                                    <div class="col-md-12">
-                                        <input type="text" id="bdate" name="bdate" class="form-control mydatepicker" placeholder="enter your birth date" value="12/10/2017"> </div>
-                                </div>
-                                -->
+    
                                 
                                 <div class="form-group">
                                     <label class="col-sm-12">Profile Image</label>
@@ -80,7 +73,7 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Diskripsi Perusahaan</label>
                                     <div class="col-md-12">
-                                        <textarea class="form-control" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</textarea>
+                                        <textarea class="form-control" rows="3" name="diskripsi-perusahaan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</textarea>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Submit</button>

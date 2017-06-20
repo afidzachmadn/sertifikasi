@@ -29,7 +29,7 @@ class AuthController extends Controller
             if($password == $decrypt) {
                 return redirect()->action('HomeController@indexuser');
             } else {
-                echo 'login gagal';
+                return redirect()->action('AuthController@login');
             }
             //dd($usercheck);
 
@@ -40,14 +40,17 @@ class AuthController extends Controller
             $password=encrypt($request->input('password'));
             // login ke db
             $logintable_login = DB::table('login');
-            //$logintable_data = DB::table('data');
-            //untuk register ke table login
-            $usercheck=$logintable->insert(['username'=>$user, 'password'=>$password,'permission'=>2]);
-            //untuk register ke table data
-            //
-            
+            $data_iso_table = DB::table('data_iso');
+            $data_sni_table = DB::table('data_sni');
+            $profile_perusahaan_table = DB::table('profile_perusahaan');
+            $status_iso_sni_table = DB::table('status_iso_sni');
 
-            // redirect('/');
-            dd($password);
+            //untuk register ke table login + memasukan username ke table yang lainnya juga
+            $usercheck=$logintable_login->insert(['username'=>$user, 'password'=>$password,'permission'=>2]);
+            $usercheck=$data_iso_table->insert(['username'=>$user]);
+            $usercheck=$data_sni_table->insert(['username'=>$user]);
+            $usercheck=$profile_perusahaan_table->insert(['username'=>$user]);
+            $usercheck=$status_iso_sni_table->insert(['username'=>$user]);
+        return redirect()->action('AuthController@login');
         }
 }

@@ -58,9 +58,12 @@ Route::get('/login', "AuthController@login");
 
 Route::post('/login-proses', "AuthController@bacadatabase");
 
-Route::get('/register-proses', "AuthController@registerproses");
+Route::post('/register-proses', "AuthController@registerproses");
 
 Route::get('/user/dashboard', "HomeController@indexuser");
+
+Route::get('/profile-edit-proses', "HomeController@profile_edit_proses");
+
 
 
 

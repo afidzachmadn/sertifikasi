@@ -36,7 +36,7 @@
     </div>
     
     <section  id="wrapper" class="step-register" style="background-color:rgba(3, 169, 243, 0.36)">
-         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> <a href="http://localhost/sertifikasi/website/login.html"  class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline waves-effect waves-light">Kembali ke halaman login</a>
+         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> <a href="/login"  class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline waves-effect waves-light">Kembali ke halaman login</a>
                    
                      </div>
         <div class="register-box">
@@ -44,38 +44,30 @@
                 <a href="javascript:void(0)" class="text-center db m-b-40"><img src="../plugins/images/bisqa.jpg" alt="Home" />
                     </a>
                 <!-- multistep form -->
-                <form id="msform" action="/register-proses">
+                <form id="msform" action="/register-proses" method="post">
+                {{ csrf_field() }}
                     <!-- progressbar -->
                     <ul id="eliteregister">
-                        <li class="active">Detail Perusahaan</li>
-                        <li>Penanggung Jawab</li>
-                        <li>Personal Details</li>
+                        <li class="active">USER NAME</li>
+                        <li>PASSWORD</li>
                     </ul>
                     <!-- fieldsets -->
                     <fieldset>
                         <h2 class="fs-title">Form Registrasi</h2>
-                        <h3 class="fs-subtitle">1</h3>
+                        <h3 class="fs-subtitle">Silahkan masukan username yang ingin anda gunakan</h3>
                         <input type="text" name="username" placeholder="User Name" />
-                        
-                        
-                       <!-- <input type="password" name="pass" placeholder="Password" />
-                        <input type="password" name="cpass" placeholder="Confirm Password" /> -->
-                        <input type="button" name="next" class="next action-button" value="Next" /> </fieldset>
-                  <!--  <fieldset>
-                        <h2 class="fs-title">Social Profiles</h2>
-                        <h3 class="fs-subtitle">Your presence on the social network</h3>
-                        <input type="text" name="twitter" placeholder="Twitter" />
-                        <input type="text" name="facebook" placeholder="Facebook" />
-                        <input type="text" name="gplus" placeholder="Google Plus" />
-                        <input type="button" name="previous" class="previous action-button" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" /> </fieldset> -->
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+    
                     <fieldset>
                         <h2 class="fs-title">Form Registrasi</h2>
-                        <h3 class="fs-subtitle">2</h3>
+                        <h3 class="fs-subtitle">Silahkan masukan Password yang ingin anda gunakan</h3>
                         <input type="password" name="password" placeholder="Password" />
                         <input type="button" name="previous" class="previous action-button" value="Previous" />
-                        <input type="submit" name="submit" class="action-button" value="Submit" /> </fieldset>
+                        <input type="submit" name="submit" class="action-button" value="Submit" />
+                    </fieldset>
                 </form>
+
                 <div class="clear"></div>
             </div>
         </div>

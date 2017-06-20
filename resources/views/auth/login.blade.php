@@ -7,18 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/bisqa.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{env('APP_URL')}}/plugins/images/bisqa.jpg">
     <title>Sistem Sertifikasi Terpadu - Kementrian Perindustrian Republik Indonesia</title>
     <!-- Bootstrap Core CSS -->
-    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
+    <link href="{{env('APP_URL')}}/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{env('APP_URL')}}/plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
     <!-- animation CSS -->
-    <link href="css/animate.css" rel="stylesheet">
+    <link href="{{env('APP_URL')}}/css/animate.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="{{env('APP_URL')}}/css/style.min.css" rel="stylesheet">
                               
     <!-- color CSS -->
-    <link href="css/colors/megna.css" id="theme" rel="stylesheet">
+    <link href="{{env('APP_URL')}}/css/colors/megna.css" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -38,7 +38,7 @@
               
                 <form class="form-horizontal form-material" id="loginform" action="/login-proses" method="post">
 		{{ csrf_field() }}
-                    <a href="javascript:void(0)" class="text-center db"><img src="../plugins/images/bisqa.jpg" alt="Home" />
+                    <a href="javascript:void(0)" class="text-center db"><img src="{{env('APP_URL')}}/plugins/images/bisqa.jpg" alt="Home" />
                         </a>
                     <div class="form-group m-t-40">
                         <div class="col-xs-12">
@@ -63,7 +63,7 @@
                     
                     <div class="form-group m-b-0">
                         <div class="col-sm-12 text-center">
-                            <p>Tidak punya akun? <a href="register.html" class="text-primary m-l-5"><b>Daftar</b></a></p>
+                            <p>Tidak punya akun? <a href="/register" class="text-primary m-l-5"><b>Daftar</b></a></p>
                         </div>
                     </div>
 		    <div class="form-group m-b-0">
@@ -93,21 +93,21 @@
         </div>
     </section>
     <!-- jQuery -->
-    <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="bootstrap/dist/js/tether.min.js"></script>
-    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../plugins/bower_components/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+    <script src="{{env('APP_URL')}}/bootstrap/dist/js/tether.min.js"></script>
+    <script src="{{env('APP_URL')}}/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/bootstrap-extension/js/bootstrap-extension.min.js"></script>
     <!-- Menu Plugin JavaScript -->
-    <script src="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
     <!--slimscroll JavaScript -->
-    <script src="js/jquery.slimscroll.js"></script>
+    <script src="{{env('APP_URL')}}/js/jquery.slimscroll.js"></script>
     <!--Wave Effects -->
-    <script src="js/waves.js"></script>
+    <script src="{{env('APP_URL')}}/js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
-    <script src="js/custom.min.js"></script>
+    <script src="{{env('APP_URL')}}/js/custom.min.js"></script>
     <!--Style Switcher -->
-    <script src="../plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
 </body>
 
 </html>

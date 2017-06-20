@@ -10,5 +10,10 @@ class HomeController extends Controller
    {
            return view('user.dashboard');
    }
+
+   public function profile_edit_proses()
+   {
+           
+   }
     //
 }
