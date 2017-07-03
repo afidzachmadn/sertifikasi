@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-// use Illuminate\Support\Facades\Crypt;
+use Auth;
 
 
 class AuthController extends Controller
@@ -26,12 +26,14 @@ class AuthController extends Controller
             //cek username dan pass di database
             $usercheck= $loginTable->where('username', $user)->first();
             $decrypt = decrypt($usercheck->password);
+            
             if($password == $decrypt) {
+                $request->session()->put('login', true);
+                $request->session()->put('username', $usercheck->username);
                 return redirect()->action('HomeController@indexuser');
             } else {
                 return redirect()->action('AuthController@login');
             }
-            //dd($usercheck);
 
         }
     public function registerproses(Request $request)

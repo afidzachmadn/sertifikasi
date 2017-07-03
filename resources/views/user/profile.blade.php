@@ -34,7 +34,7 @@
                                 <!-- .row -->
                                 <div class="row text-center m-t-10">
                                     <div class="col-md-12 b-r"><strong>Nama Perusahaan</strong>
-                                        <p>PT. Subur Jaya</p>
+                                        <p>{{$perusahaan->nama_perusahaan}}</p>
                                     </div> 
                                 </div>
                                 <!-- /.row -->
@@ -42,14 +42,14 @@
                                 <!-- .row -->
                                 <div class="row text-center m-t-10">
                                     <div class="col-md-12 b-r"><strong>Nomor Telpon</strong>
-                                        <p>+123 456 789</p>
+                                        <p>{{$perusahaan->no_telpon}}</p>
                                     </div>
                                 </div>
                                 <hr>
                                 <!-- .row-->
                                 <div class="row text-center m-t-10">
                                     <div class="col-md-12 b-r"><strong>E-mail</strong>
-                                        <p>suburjaya@suburjaya.com</p>
+                                        <p>{{$perusahaan->email}}</p>
                                     </div>     
                                 </div>
                                 <!-- /.row -->
@@ -57,8 +57,7 @@
                                 <!-- .row -->
                                 <div class="row text-center m-t-10">
                                     <div class="col-md-12"><strong>Alamat Perusahaan</strong>
-                                        <p>E104, Dharti-2, Chandlodia Ahmedabad
-                                            <br/> Gujarat, India.</p>
+                                        <p>{{$perusahaan->alamat_perusahaan}}</p>
                                     </div>
                                 </div>
                                 <!-- /.row -->
@@ -68,9 +67,7 @@
                     <div class="col-md-8 col-xs-12">
                         <div class="white-box">
                      
-                            <p class="m-t-30">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </p>
-                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <p class="m-t-30">{{$perusahaan->deskripsi_perusahaan}}</p>
                         </div>
                     </div>
                 </div>

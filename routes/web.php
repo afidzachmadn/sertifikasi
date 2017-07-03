@@ -28,9 +28,8 @@ Route::get('/user/sni', function () {
 });
 
 
-Route::get('/user/profile', function () {
-    return view('user.profile');
-});
+Route::get('/user/profile', 'UserController@profile');
+
 Route::get('/user/edit-profile', function () {
     return view('user.profile-edit');
 });
