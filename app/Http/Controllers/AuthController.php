@@ -19,17 +19,19 @@ class AuthController extends Controller
         }
     public function bacadatabase(Request $request)
         {
-            $user = $request->input('username');
+            $email = $request->input('email');
             $password=$request->input('password');
             // login ke db
-            $loginTable = DB::table('login');
+            $loginTable = DB::table('users');
             //cek username dan pass di database
-            $usercheck= $loginTable->where('username', $user)->first();
+            $usercheck= $loginTable->where('email', $email)->first();
             $decrypt = decrypt($usercheck->password);
             
             if($password == $decrypt) {
                 $request->session()->put('login', true);
-                $request->session()->put('username', $usercheck->username);
+                $request->session()->put('name', $usercheck->company_name);
+                $request->session()->put('id', $usercheck->id);
+                $request->session()->put('img_url', $usercheck->img_url);
                 return redirect()->action('HomeController@indexuser');
             } else {
                 return redirect()->action('AuthController@login');

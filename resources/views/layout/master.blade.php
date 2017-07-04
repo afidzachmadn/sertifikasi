@@ -84,7 +84,7 @@
                         <!-- /input-group -->
                     </li>
                     <li class="user-pro">
-                        <a href="#" class="waves-effect"><img src="../plugins/images/big/d2.jpg" alt="user-img" class="img-circle"> <span class="hide-menu">{{Session::get('username')}}<span class="fa arrow"></span></span>
+                        <a href="#" class="waves-effect"><img src="{{env('APP_URL')}}/storage/img/{{Session::get('img_url')}}" alt="user-img" class="img-circle"> <span class="hide-menu">{{Session::get('name')}}<span class="fa arrow"></span></span>
                         </a>
                         <ul class="nav nav-second-level">
                             <li><a href="/user/profile"><i class="ti-user"></i>Profile Perusahaan</a></li>

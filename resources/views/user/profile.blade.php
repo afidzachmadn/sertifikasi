@@ -29,12 +29,12 @@
 <div class="row">
                     <div class="col-md-4 col-xs-12">
                         <div class="white-box">
-                            <div class="user-bg"> <img width="100%" alt="user" src="../plugins/images/big/img2.jpg"> </div>
+                            <div class="user-bg"> <img width="100%" alt="user" src="{{env('APP_URL')}}/storage/img/{{$profile->img_url}}"> </div>
                             <div class="user-btm-box">
                                 <!-- .row -->
                                 <div class="row text-center m-t-10">
                                     <div class="col-md-12 b-r"><strong>Nama Perusahaan</strong>
-                                        <p>{{$perusahaan->nama_perusahaan}}</p>
+                                        <p>{{$profile->company_name}}</p>
                                     </div> 
                                 </div>
                                 <!-- /.row -->
@@ -42,14 +42,14 @@
                                 <!-- .row -->
                                 <div class="row text-center m-t-10">
                                     <div class="col-md-12 b-r"><strong>Nomor Telpon</strong>
-                                        <p>{{$perusahaan->no_telpon}}</p>
+                                        <p>{{$profile->telp}}</p>
                                     </div>
                                 </div>
                                 <hr>
                                 <!-- .row-->
                                 <div class="row text-center m-t-10">
                                     <div class="col-md-12 b-r"><strong>E-mail</strong>
-                                        <p>{{$perusahaan->email}}</p>
+                                        <p>{{$profile->email}}</p>
                                     </div>     
                                 </div>
                                 <!-- /.row -->
@@ -57,7 +57,7 @@
                                 <!-- .row -->
                                 <div class="row text-center m-t-10">
                                     <div class="col-md-12"><strong>Alamat Perusahaan</strong>
-                                        <p>{{$perusahaan->alamat_perusahaan}}</p>
+                                        <p>{{$profile->address}}</p>
                                     </div>
                                 </div>
                                 <!-- /.row -->
@@ -67,7 +67,7 @@
                     <div class="col-md-8 col-xs-12">
                         <div class="white-box">
                      
-                            <p class="m-t-30">{{$perusahaan->deskripsi_perusahaan}}</p>
+                            <p class="m-t-30">{{$profile->description}}</p>
                         </div>
                     </div>
                 </div>

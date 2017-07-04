@@ -8,11 +8,11 @@ use Illuminate\Support\Facades\DB;
 class UserController extends Controller
 {
     public function profile(Request $request) {
-        $username = $request->session()->get('username');
+        $id = $request->session()->get('id');
 
-        $perusahaanDb = DB::table('profile_perusahaan');
-        $perusahaan = $perusahaanDb->where('username', $username)->first();
-
-        return view('user.profile', array('perusahaan' => $perusahaan));
+        $profileDb = DB::table('users');
+        $profile = $profileDb->where('id', $id)->first();
+        
+        return view('user.profile', array('profile' => $profile));
     }
 }
