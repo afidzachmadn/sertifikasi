@@ -39,6 +39,7 @@ class UserController extends Controller
 
         $userDb = DB::table('users')->where('id', $id)
                                     ->update(['company_name' => $name, 'email' => $email, 'telp' => $telp, 'address' => $address, 'description' => $description, 'img_url' => $fileName]);
+        $request->session()->put('img_url', $fileName);
         return redirect()->action('UserController@profile');
     }
 }
