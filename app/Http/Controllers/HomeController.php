@@ -6,14 +6,8 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-   public function indexuser()
+   public function dashboard()
    {
            return view('user.dashboard');
    }
-
-   public function profile_edit_proses()
-   {
-           
-   }
-    //
 }

@@ -31,49 +31,53 @@
                     <div class="col-sm-12">
                         <div class="white-box">
                             <h3 class="box-title">Edit Profile Perusahaan</h3>
-                            <form class="form-material form-horizontal" action="/profile-edit-proses" method="post">
+                            <form class="form-material form-horizontal" action="{{url('edit-profile-proses')}}" method="post" enctype="multipart/form-data">
+                            {{csrf_field()}}
                                 <div class="form-group">
                                     <label class="col-md-12" for="example-text">Nama Perusahaan</span>
                                     </label>
                                     <div class="col-md-12">
-                                        <input type="text" id="example-text" name="nama-perusahaan" class="form-control" placeholder="Nama Perusahaan"> </div>
+                                        <input type="text" id="example-text" name="company_name" class="form-control" placeholder="Nama Perusahaan" value="{{$profile->company_name}}">
+                                    </div>
                                 </div>
 
                                <div class="form-group">
                                     <label class="col-md-12" for="example-text">E-mail</span>
                                     </label>
                                     <div class="col-md-12">
-                                        <input type="text" id="email" name="e-mail" class="form-control" placeholder="E-mail"> </div>
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" value="{{$profile->email}}">
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-md-12" for="telp">No Telpon</span>
                                     </label>
                                     <div class="col-md-12">
-                                        <input type="text" id="telp" name="no-telpon" class="form-control" placeholder="No Telpon"> </div>
+                                        <input type="text" id="telp" name="telp" class="form-control" placeholder="No Telpon" value="{{$profile->telp}}">
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-md-12" for="alamat">Alamat Perusahaan</span>
                                     </label>
                                     <div class="col-md-12">
-                                        <input type="text" id="alamat" name="alamat-perusahaan" class="form-control" placeholder="Alamat Perusahaan"> </div>
+                                        <input type="text" id="alamat" name="address" class="form-control" placeholder="Alamat Perusahaan" value="{{$profile->address}}">
+                                    </div>
                                 </div>
     
                                 
                                 <div class="form-group">
                                     <label class="col-sm-12">Profile Image</label>
-                                    <div class="col-sm-12"> <img class="img-responsive" src="../plugins/images/users/varun.jpg" alt="" style="max-width:120px;"> </div>
                                     <div class="col-sm-12">
                                         <div class="fileinput fileinput-new input-group" data-provides="fileinput">
                                             <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div> <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Select file</span> <span class="fileinput-exists">Change</span>
-                                            <input type="file" name="..."> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
+                                            <input type="file" name="img"> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-12">Diskripsi Perusahaan</label>
+                                    <label class="col-md-12">Deskripsi Perusahaan</label>
                                     <div class="col-md-12">
-                                        <textarea class="form-control" rows="3" name="diskripsi-perusahaan">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</textarea>
+                                        <textarea class="form-control" rows="3" name="description">{{$profile->description}}</textarea>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Submit</button>

@@ -30,9 +30,9 @@ Route::get('/user/sni', function () {
 
 Route::get('/user/profile', 'UserController@profile');
 
-Route::get('/user/edit-profile', function () {
-    return view('user.profile-edit');
-});
+Route::get('/user/edit-profile', 'UserController@editProfileForm');
+
+Route::post('/edit-profile-proses', "UserController@editProfile");
 //---------------------------------------------//
 
 // VIEW ADMIN PAGE //
@@ -59,10 +59,7 @@ Route::post('/login-proses', "AuthController@bacadatabase");
 
 Route::post('/register-proses', "AuthController@registerproses");
 
-Route::get('/user/dashboard', "HomeController@indexuser");
-
-Route::get('/profile-edit-proses', "HomeController@profile_edit_proses");
-
+Route::get('/user/dashboard', "HomeController@dashboard");
 
 
 

@@ -11,11 +11,19 @@ class AuthController extends Controller
 {
     public function register()
         {
-            return view('auth.register');
+            if($request->session()->get('login')) {
+                return redirect()->action('HomeController@dashboard');
+            } else {
+                return view('auth.register');
+            }
         }
-    public function login()
+    public function login(Request $request)
         {
-            return view('auth.login');
+            if($request->session()->get('login')) {
+                return redirect()->action('HomeController@dashboard');
+            } else {
+                return view('auth.login');
+            }
         }
     public function bacadatabase(Request $request)
         {
@@ -32,7 +40,7 @@ class AuthController extends Controller
                 $request->session()->put('name', $usercheck->company_name);
                 $request->session()->put('id', $usercheck->id);
                 $request->session()->put('img_url', $usercheck->img_url);
-                return redirect()->action('HomeController@indexuser');
+                return redirect()->action('HomeController@dashboard');
             } else {
                 return redirect()->action('AuthController@login');
             }
