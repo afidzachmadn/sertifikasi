@@ -16,6 +16,7 @@ class AuthController extends Controller
             } else {
                 return view('auth.register');
             }
+        return view('auth.register');
         }
     public function login(Request $request)
         {

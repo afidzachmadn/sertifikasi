@@ -48,20 +48,20 @@
                 {{ csrf_field() }}
                     <!-- progressbar -->
                     <ul id="eliteregister">
-                        <li class="active">USER NAME</li>
+                        <li class="active">E-Mail</li>
                         <li>PASSWORD</li>
                     </ul>
                     <!-- fieldsets -->
                     <fieldset>
                         <h2 class="fs-title">Form Registrasi</h2>
-                        <h3 class="fs-subtitle">Silahkan masukan username yang ingin anda gunakan</h3>
+                        <h3 class="fs-subtitle">Silahkan masukan e-mail yang ingin anda gunakan</h3>
                         <input type="text" name="username" placeholder="User Name" />
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
     
                     <fieldset>
                         <h2 class="fs-title">Form Registrasi</h2>
-                        <h3 class="fs-subtitle">Silahkan masukan Password yang ingin anda gunakan</h3>
+                        <h3 class="fs-subtitle">Silahkan masukan password yang ingin anda gunakan</h3>
                         <input type="password" name="password" placeholder="Password" />
                         <input type="button" name="previous" class="previous action-button" value="Previous" />
                         <input type="submit" name="submit" class="action-button" value="Submit" />
