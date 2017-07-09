@@ -44,18 +44,26 @@
                 <a href="javascript:void(0)" class="text-center db m-b-40"><img src="../plugins/images/bisqa.jpg" alt="Home" />
                     </a>
                 <!-- multistep form -->
-                <form id="msform" action="/register-proses" method="post">
+                <form id="msform" action="{{url('register-proses')}}" method="post">
                 {{ csrf_field() }}
                     <!-- progressbar -->
                     <ul id="eliteregister">
-                        <li class="active">USER NAME</li>
+                        <li class="active">NAMA PERUSAHAAN</li>
+                        <li>EMAIL</li>
                         <li>PASSWORD</li>
                     </ul>
                     <!-- fieldsets -->
                     <fieldset>
                         <h2 class="fs-title">Form Registrasi</h2>
-                        <h3 class="fs-subtitle">Silahkan masukan username yang ingin anda gunakan</h3>
-                        <input type="text" name="username" placeholder="User Name" />
+                        <h3 class="fs-subtitle">Silahkan masukan nama perusahaan yang ingin anda gunakan</h3>
+                        <input type="text" name="company_name" placeholder="Nama Perusahaan" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+
+                    <fieldset>
+                        <h2 class="fs-title">Form Registrasi</h2>
+                        <h3 class="fs-subtitle">Silahkan masukan email yang ingin anda gunakan</h3>
+                        <input type="email" name="email" placeholder="Email" />
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
     

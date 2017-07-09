@@ -18,10 +18,10 @@ class Users extends Migration
             $table->string('company_name', 100);
             $table->string('email', 100)->unique();
             $table->string('password', 500);
-            $table->string('img_url', 100);
-            $table->string('telp', 20);
-            $table->string('address', 500);
-            $table->text('description');
+            $table->string('img_url', 100)->default('users.png');
+            $table->string('telp', 20)->nullable();
+            $table->string('address', 500)->nullable();
+            $table->text('description')->nullable();
             $table->integer('permission');
         });
     }
