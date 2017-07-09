@@ -48,21 +48,13 @@
                 {{ csrf_field() }}
                     <!-- progressbar -->
                     <ul id="eliteregister">
-<<<<<<< HEAD
-                        <li class="active">E-Mail</li>
-=======
                         <li class="active">NAMA PERUSAHAAN</li>
                         <li>EMAIL</li>
->>>>>>> c1093d591cc60cdd2d7b45fce7773daef0bf8bd7
                         <li>PASSWORD</li>
                     </ul>
                     <!-- fieldsets -->
                     <fieldset>
                         <h2 class="fs-title">Form Registrasi</h2>
-<<<<<<< HEAD
-                        <h3 class="fs-subtitle">Silahkan masukan e-mail yang ingin anda gunakan</h3>
-                        <input type="text" name="username" placeholder="User Name" />
-=======
                         <h3 class="fs-subtitle">Silahkan masukan nama perusahaan yang ingin anda gunakan</h3>
                         <input type="text" name="company_name" placeholder="Nama Perusahaan" />
                         <input type="button" name="next" class="next action-button" value="Next" />
@@ -72,13 +64,12 @@
                         <h2 class="fs-title">Form Registrasi</h2>
                         <h3 class="fs-subtitle">Silahkan masukan email yang ingin anda gunakan</h3>
                         <input type="email" name="email" placeholder="Email" />
->>>>>>> c1093d591cc60cdd2d7b45fce7773daef0bf8bd7
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
     
                     <fieldset>
                         <h2 class="fs-title">Form Registrasi</h2>
-                        <h3 class="fs-subtitle">Silahkan masukan password yang ingin anda gunakan</h3>
+                        <h3 class="fs-subtitle">Silahkan masukan Password yang ingin anda gunakan</h3>
                         <input type="password" name="password" placeholder="Password" />
                         <input type="button" name="previous" class="previous action-button" value="Previous" />
                         <input type="submit" name="submit" class="action-button" value="Submit" />
