@@ -61,6 +61,8 @@ Route::get('/register', "AuthController@register");
 
 Route::get('/login', "AuthController@login");
 
+Route::get('/logout', "AuthController@logout");
+
 Route::post('/login-proses', "AuthController@bacadatabase");
 
 Route::post('/register-proses', "AuthController@registerproses");
