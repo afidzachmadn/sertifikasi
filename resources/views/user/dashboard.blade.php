@@ -41,7 +41,7 @@
 
 @section("isi-dashboard-user")
  <!-- .row -->
-                <div class="row">
+               
                     
                      <div class="col-lg-6 col-sm-6">
                         <div class="panel panel-info">
@@ -82,6 +82,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                
 
 @endsection

@@ -33,6 +33,12 @@ Route::get('/user/profile', 'UserController@profile');
 Route::get('/user/edit-profile', 'UserController@editProfileForm');
 
 Route::post('/edit-profile-proses', "UserController@editProfile");
+
+Route::get('/user/iso', 'UserController@iso');
+
+Route::post('/iso-proses', "UserController@isoUploadFormProcess");
+
+
 //---------------------------------------------//
 
 // VIEW ADMIN PAGE //

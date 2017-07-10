@@ -21,6 +21,19 @@ class Users extends Migration
             $table->string('img_url', 100)->default('users.png');
             $table->string('telp', 20)->nullable();
             $table->string('address', 500)->nullable();
+            $table->string('file_upload_iso_1', 500)->nullable();
+            $table->string('file_upload_iso_2', 500)->nullable();
+            $table->string('file_upload_iso_3', 500)->nullable();
+            $table->string('file_upload_iso_4', 500)->nullable();
+            $table->string('file_upload_iso_5', 500)->nullable();
+            $table->string('file_upload_iso_6', 500)->nullable();
+
+            $table->string('file_upload_sni_1', 500)->nullable();
+            $table->string('file_upload_sni_2', 500)->nullable();
+            $table->string('file_upload_sni_3', 500)->nullable();
+            $table->string('file_upload_sni_4', 500)->nullable();
+            $table->string('file_upload_sni_5', 500)->nullable();
+            $table->string('file_upload_sni_6', 500)->nullable();
             $table->text('description')->nullable();
             $table->integer('permission');
         });

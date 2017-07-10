@@ -26,10 +26,11 @@
 @endsection
 
 @section('isi-profile-user')
-<div class="row">
+
                     <div class="col-md-4 col-xs-12">
                         <div class="white-box">
-                            <div class="user-bg"> <img width="100%" alt="user" src="{{env('APP_URL')}}/storage/img/{{$profile->img_url}}"> </div>
+                            <div class="user-bg"> <img width="100%" alt="user" src="{{env('APP_URL')}}/storage/img/{{$profile->img_url}}"> 
+                            </div>
                             <div class="user-btm-box">
                                 <!-- .row -->
                                 <div class="row text-center m-t-10">
@@ -70,15 +71,7 @@
                             <p class="m-t-30">{{$profile->description}}</p>
                         </div>
                     </div>
-                </div>
-
-                </div>
+               
                 <!-- .row -->
                 
-            </div>
-            <!-- /.container-fluid -->
-            <footer class="footer text-center"> 2017 &copy; KEMENTERIAN PERINDUSTRIAN REPUBLIK INDONESIA </footer>
-        </div>
-        <!-- /#page-wrapper -->
-    </div>
     @endsection
