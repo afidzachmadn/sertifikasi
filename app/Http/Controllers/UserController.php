@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\DB;
 class UserController extends Controller
 {
 
-//---------------------------- UNTUK PROFILE PAGE DAN EDIT-PROFILE PAGE --------------------------//
+/* ---------------------------- UNTUK PROFILE PAGE DAN EDIT-PROFILE PAGE -------------------------*/
+
     public function profile(Request $request) {
         $id = $request->session()->get('id');
 
@@ -45,11 +46,19 @@ class UserController extends Controller
         return redirect()->action('UserController@profile');
     }
 
-//------------------------------ END PROFILE PAGE DAN EDIT-PROFILE PAGE -----------------//
+/* ----------------------------------------------------------------------------------------------- */
 
 
 
-// ------------------------------ UNTUK ISO PAGE -------------------------------//
+
+
+
+
+
+
+
+/* ------------------------------------------ UNTUK ISO PAGE ------------------------------------ */
+
     public function iso(Request $request){
         $id = $request->session()->get('id');
 
@@ -119,11 +128,19 @@ class UserController extends Controller
         return redirect()->action('UserController@iso');
     }
 
-//----------------------------- END ISO PAGE -----------------------------------//
+/* ------------------------------------------------------------------------------------------- */
 
 
 
-//------------------------------------ UNTUK SNI PAGE -----------------------------//
+
+
+
+
+
+
+
+/* ------------------------------------------- UNTUK SNI PAGE ----------------------------------- */
+
  public function sni(Request $request){
         $id = $request->session()->get('id');
 

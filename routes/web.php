@@ -12,11 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->action('AuthController@login');
+
 });
 
-// VIEW USER PAGE//
-//----------------------------------------------//
+
+
+
+/* ------------------------------------------ VIEW USER PAGES ------------------------- */
+
 Route::get('/user/dashboard', function () {
     return view('user.dashboard');
 });
@@ -26,8 +30,6 @@ Route::get('/user/iso', function () {
 Route::get('/user/sni', function () {
     return view('user.sni');
 });
-
-
 Route::get('/user/profile', 'UserController@profile');
 
 Route::get('/user/edit-profile', 'UserController@editProfileForm');
@@ -38,11 +40,18 @@ Route::get('/user/iso', 'UserController@iso');
 
 Route::post('/iso-proses', "UserController@isoUploadFormProcess");
 
+Route::get('/user/sni', 'UserController@sni');
 
-//---------------------------------------------//
+Route::post('/sni-proses', "UserController@sniUploadFormProcess");
+/* ------------------------------------------------------------------------------------------ */
 
-// VIEW ADMIN PAGE //
-//-------------------------------------------//
+
+
+
+
+
+/* ----------------------------------- VIEW ADMIN PAGES ------------------------------------ */
+
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 });
@@ -55,7 +64,15 @@ Route::get('/admin/sni', function () {
 Route::get('/admin/one-stop-service', function () {
     return view('admin.one-stop-service');
 });
-//-------------------------------------------//
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+
+
+
+
+/*-------------------------------- ESSENTIAL--------------------------------------------- */
 
 Route::get('/register', "AuthController@register");
 
@@ -67,7 +84,23 @@ Route::post('/login-proses', "AuthController@bacadatabase");
 
 Route::post('/register-proses', "AuthController@registerproses");
 
-Route::get('/user/dashboard', "HomeController@dashboard");
+/* ----------------------------------------------------------------------------------- */
 
 
+
+
+
+
+
+
+
+/* ----------------------- KALO ENGGAK LOGIN ENGGAK BISA LANGSUNG MASUK ---------------------- */
+
+Route::get('/user/dashboard', "HomeController@dashboardNoLogin");
+Route::get('/user/profile', "HomeController@profileNoLogin");
+Route::get('/user/edit-profile', "HomeController@editProfileNoLogin");
+Route::get('/user/iso', "HomeController@isoNoLogin");
+Route::get('/user/sni', "HomeController@sniNoLogin");
+
+/* ------------------------------------------------------------------------------------------ */
 
