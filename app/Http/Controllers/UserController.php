@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class UserController extends Controller
-{
+class UserController extends Controller {
+
+    public function __construct() {
+        $this->middleware('checkLogin');
+    }
 
 /* ---------------------------- UNTUK PROFILE PAGE DAN EDIT-PROFILE PAGE -------------------------*/
 
@@ -48,22 +51,13 @@ class UserController extends Controller
 
 /* ----------------------------------------------------------------------------------------------- */
 
-
-
-
-
-
-
-
-
-
 /* ------------------------------------------ UNTUK ISO PAGE ------------------------------------ */
 
     public function iso(Request $request){
         $id = $request->session()->get('id');
 
         $isoDb = DB::table('users');
-        $iso_p = $isoDb->where('id', $id)->first();
+        // $iso_p = $isoDb->where('id', $id)->first();
         
         return view('user.iso', array('iso_p' => $iso_p));
         //return view('user.iso');
@@ -129,15 +123,6 @@ class UserController extends Controller
     }
 
 /* ------------------------------------------------------------------------------------------- */
-
-
-
-
-
-
-
-
-
 
 /* ------------------------------------------- UNTUK SNI PAGE ----------------------------------- */
 

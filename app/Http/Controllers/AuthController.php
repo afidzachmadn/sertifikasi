@@ -10,7 +10,7 @@ use Auth;
 class AuthController extends Controller {
     public function register(Request $request) {
         if($request->session()->get('login')) {
-            return redirect()->action('HomeController@dashboardYesLogin');
+            return redirect()->action('HomeController@dashboard');
         } else {
             return view('auth.register');
         }
@@ -19,7 +19,7 @@ class AuthController extends Controller {
 
     public function login(Request $request) {
         if($request->session()->get('login')) {
-            return redirect()->action('HomeController@dashboardYesLogin');
+            return redirect()->action('HomeController@dashboard');
         } else {
             return view('auth.login');
         }
@@ -40,7 +40,7 @@ class AuthController extends Controller {
             $request->session()->put('id', $usercheck->id);
             $request->session()->put('img_url', $usercheck->img_url);
             if($usercheck->permission == 2) {
-                return redirect()->action('HomeController@dashboardYesLogin');
+                return redirect()->action('HomeController@dashboard');
             }
         } else {
             return redirect()->action('AuthController@login');

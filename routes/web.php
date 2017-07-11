@@ -16,14 +16,9 @@ Route::get('/', function () {
 
 });
 
-
-
-
 /* ------------------------------------------ VIEW USER PAGES ------------------------- */
 
-Route::get('/user/dashboard', function () {
-    return view('user.dashboard');
-});
+Route::get('/user/dashboard', 'HomeController@dashboard');
 Route::get('/user/iso', function () {
     return view('user.iso');
 });
@@ -45,11 +40,6 @@ Route::get('/user/sni', 'UserController@sni');
 Route::post('/sni-proses', "UserController@sniUploadFormProcess");
 /* ------------------------------------------------------------------------------------------ */
 
-
-
-
-
-
 /* ----------------------------------- VIEW ADMIN PAGES ------------------------------------ */
 
 Route::get('/admin/dashboard', function () {
@@ -67,11 +57,6 @@ Route::get('/admin/one-stop-service', function () {
 
 /* ------------------------------------------------------------------------------------------ */
 
-
-
-
-
-
 /*-------------------------------- ESSENTIAL--------------------------------------------- */
 
 Route::get('/register', "AuthController@register");
@@ -85,22 +70,3 @@ Route::post('/login-proses', "AuthController@bacadatabase");
 Route::post('/register-proses', "AuthController@registerproses");
 
 /* ----------------------------------------------------------------------------------- */
-
-
-
-
-
-
-
-
-
-/* ----------------------- KALO ENGGAK LOGIN ENGGAK BISA LANGSUNG MASUK ---------------------- */
-
-Route::get('/user/dashboard', "HomeController@dashboardNoLogin");
-Route::get('/user/profile', "HomeController@profileNoLogin");
-Route::get('/user/edit-profile', "HomeController@editProfileNoLogin");
-Route::get('/user/iso', "HomeController@isoNoLogin");
-Route::get('/user/sni', "HomeController@sniNoLogin");
-
-/* ------------------------------------------------------------------------------------------ */
-

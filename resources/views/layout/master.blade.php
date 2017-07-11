@@ -87,9 +87,9 @@
                         <a href="#" class="waves-effect"><img src="{{env('APP_URL')}}/storage/img/{{Session::get('img_url')}}" alt="user-img" class="img-circle"> <span class="hide-menu">{{Session::get('name')}}<span class="fa arrow"></span></span>
                         </a>
                         <ul class="nav nav-second-level">
-                            <li><a href="/user/profile"><i class="ti-user"></i>Profile Perusahaan</a></li>
-                             <li><a href="/user/edit-profile"><i class=" ti-pencil-alt"></i>Edit Profile Perusahaan</a></li>
-                            <li><a href="/logout"><i class="fa fa-power-off"></i> Logout</a></li>
+                            <li><a href="{{env('APP_URL')}}/user/profile"><i class="ti-user"></i>Profile Perusahaan</a></li>
+                             <li><a href="{{env('APP_URL')}}/user/edit-profile"><i class=" ti-pencil-alt"></i>Edit Profile Perusahaan</a></li>
+                            <li><a href="{{env('APP_URL')}}/logout"><i class="fa fa-power-off"></i> Logout</a></li>
                         </ul>
                     </li>
                     <!-- yield sidebar -->
