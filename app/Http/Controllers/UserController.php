@@ -57,7 +57,7 @@ class UserController extends Controller {
         $id = $request->session()->get('id');
 
         $isoDb = DB::table('users');
-        // $iso_p = $isoDb->where('id', $id)->first();
+        $iso_p = $isoDb->where('id', $id)->first();
         
         return view('user.iso', array('iso_p' => $iso_p));
         //return view('user.iso');
