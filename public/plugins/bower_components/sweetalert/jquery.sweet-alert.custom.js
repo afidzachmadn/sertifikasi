@@ -40,22 +40,16 @@
     //Parameter
     $('#sa-params').click(function(){
         swal({   
-            title: "Are you sure?",   
-            text: "You will not be able to recover this imaginary file!",   
+            title: "Halaman ini sedang dalam tahap pembangunan",   
+            text: "This page is under maintenance!",   
             type: "warning",   
-            showCancelButton: true,   
+            showCancelButton: false,   
             confirmButtonColor: "#DD6B55",   
-            confirmButtonText: "Yes, delete it!",   
-            cancelButtonText: "No, cancel plx!",   
-            closeOnConfirm: false,   
+            confirmButtonText: "Ya, saya mengerti",   
+            //cancelButtonText: "No, cancel plx!",   
+            closeOnConfirm: true,   
             closeOnCancel: false 
-        }, function(isConfirm){   
-            if (isConfirm) {     
-                swal("Deleted!", "Your imaginary file has been deleted.", "success");   
-            } else {     
-                swal("Cancelled", "Your imaginary file is safe :)", "error");   
-            } 
-        });
+        })
     });
 
     //Custom Image

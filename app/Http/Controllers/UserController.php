@@ -11,24 +11,35 @@ class UserController extends Controller {
         $this->middleware('checkLogin');
     }
 
+/* --------------------------- UNTUK STATUS VERIFIKASI ------------------------------------------- */
+    public function StatusSni(Request $request) {
+        $id = $request->session()->get('id');
+
+        $statusSni = DB::table('users');
+        $status_sni = $statusSni->where('id', $id)->first();
+        
+        return view('user.dashboard', array('status_sni' => $status_sni));
+    }
+/* ----------------------------------------------------------------------------------------------- */
+
 /* ---------------------------- UNTUK PROFILE PAGE DAN EDIT-PROFILE PAGE -------------------------*/
 
     public function profile(Request $request) {
         $id = $request->session()->get('id');
 
-        $profileDb = DB::table('users');
-        $profile = $profileDb->where('id', $id)->first();
+        $lihatDokumenSni = DB::table('users');
+        $dokumen_sni = $lihatDokumenSni->where('id', $id)->first();
         
-        return view('user.profile', array('profile' => $profile));
+        return view('user.profile', array('profile' => $dokumen_sni));
     }
 
     public function editProfileForm(Request $request) {
         $id = $request->session()->get('id');
 
-        $profileDb = DB::table('users');
-        $profile = $profileDb->where('id', $id)->first();
+        $lihatDokumenSni = DB::table('users');
+        $dokumen_sni = $lihatDokumenSni->where('id', $id)->first();
 
-        return view('user.profile-edit', array('profile' => $profile));
+        return view('user.profile-edit', array('profile' => $dokumen_sni));
     }
 
     public function editProfile(Request $request) {
@@ -63,26 +74,17 @@ class UserController extends Controller {
         //return view('user.iso');
     }
 
-    public function isoUploadForm(Request $request) {
+   /* public function isoUploadForm(Request $request) {
         $id = $request->session()->get('id');
 
         $isoDb = DB::table('users');
         $iso_p = $isoDb->where('id', $id)->first();
 
         return view('user.iso', array('iso' => $iso_p));
-    }
+    } */
 
     public function isoUploadFormProcess(Request $request) {
-        // dd($request->img->hashName());
-       $id = $request->session()->get('id');
-        /*$name = $request->get('company_name');
-        $email = $request->get('email');
-        $telp = $request->get('telp');
-        $address = $request->get('address');
-        $description = $request->get('description');
-        $file = $request->file('img');
-        $fileName = $file->hashName();
-        $storeFile = $file->store('public/img'); */
+        $id = $request->session()->get('id');
 
         $iso_1 = $request->file('pdf-iso-1');
         $iso_1_name = $iso_1->hashName();
@@ -122,6 +124,15 @@ class UserController extends Controller {
         return redirect()->action('UserController@iso');
     }
 
+    public function lihat_dokumen_iso(Request $request) {
+        $id = $request->session()->get('id');
+
+        $lihatDokumenSni = DB::table('users');
+        $dokumen_sni = $lihatDokumenSni->where('id', $id)->first();
+        
+        return view('user.lihat-dokumen-iso', array('profile' => $dokumen_sni));
+    }
+
 /* ------------------------------------------------------------------------------------------- */
 
 /* ------------------------------------------- UNTUK SNI PAGE ----------------------------------- */
@@ -129,21 +140,21 @@ class UserController extends Controller {
  public function sni(Request $request){
         $id = $request->session()->get('id');
 
-        $sniDb = DB::table('users');
-        $sni_p = $sniDb->where('id', $id)->first();
+        $sniDB = DB::table('users');
+        $sni_p = $sniDB->where('id', $id)->first();
         
         return view('user.sni', array('sni_p' => $sni_p));
        
     }
 
-    public function sniUploadForm(Request $request) {
+   /* public function sniUploadForm(Request $request) {
         $id = $request->session()->get('id');
 
-        $sniDb = DB::table('users');
-        $sni_p = $sniDb->where('id', $id)->first();
+        $sniDB = DB::table('users');
+        $sni_p = $sniDB->where('id', $id)->first();
 
         return view('user.sni', array('sni_p' => $sni_p));
-    }
+    } */
 
     public function sniUploadFormProcess(Request $request) {
       
@@ -188,5 +199,24 @@ class UserController extends Controller {
         return redirect()->action('UserController@sni');
     }
 
+public function lihat_dokumen_sni(Request $request) {
+        $id = $request->session()->get('id');
 
+        $lihatDokumenSni = DB::table('users');
+        $dokumen_sni = $lihatDokumenSni->where('id', $id)->first();
+        
+        return view('user.lihat-dokumen-sni', array('profile' => $dokumen_sni));
+    }
+
+/* ------------------------------------- TIPS PENGGUNAAN PAGE ---------------------------------- */
+
+public function tips_penggunaan(Request $request){
+        $id = $request->session()->get('id');
+
+        $tipsDB = DB::table('users');
+        $tips_p = $tipsDB->where('id', $id)->first();
+        
+        return view('user.tips', array('tips_p' => $tips_p));
+       
+    }
 }

@@ -27,6 +27,8 @@ class Users extends Migration
             $table->string('file_upload_iso_4', 500)->nullable();
             $table->string('file_upload_iso_5', 500)->nullable();
             $table->string('file_upload_iso_6', 500)->nullable();
+            $table->string('status_ISO',100)->default('belum-terverifikasi');
+            $table->string('surat_pengesahan_ISO',100)->default('default-pengesahan-iso.pdf');
 
             $table->string('file_upload_sni_1', 500)->nullable();
             $table->string('file_upload_sni_2', 500)->nullable();
@@ -34,6 +36,9 @@ class Users extends Migration
             $table->string('file_upload_sni_4', 500)->nullable();
             $table->string('file_upload_sni_5', 500)->nullable();
             $table->string('file_upload_sni_6', 500)->nullable();
+            $table->string('status_SNI',100)->default('belum-terverifikasi');
+            $table->string('surat_pengesahan_SNI',100)->default('default-pengesahan-sni.pdf');
+
             $table->text('description')->nullable();
             $table->integer('permission');
         });

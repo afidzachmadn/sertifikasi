@@ -19,6 +19,7 @@ Route::get('/', function () {
 /* ------------------------------------------ VIEW USER PAGES ------------------------- */
 
 Route::get('/user/dashboard', 'HomeController@dashboard');
+
 Route::get('/user/iso', function () {
     return view('user.iso');
 });
@@ -38,22 +39,27 @@ Route::post('/iso-proses', "UserController@isoUploadFormProcess");
 Route::get('/user/sni', 'UserController@sni');
 
 Route::post('/sni-proses', "UserController@sniUploadFormProcess");
+
+Route::get('/user/lihat-dokumen-iso', 'UserController@lihat_dokumen_iso');
+
+Route::get('/user/lihat-dokumen-sni', 'UserController@lihat_dokumen_sni');
+
+Route::get('/user/tips', 'UserController@tips_penggunaan');
+
 /* ------------------------------------------------------------------------------------------ */
 
 /* ----------------------------------- VIEW ADMIN PAGES ------------------------------------ */
 
-Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard');
-});
-Route::get('/admin/iso', function () {
-    return view('admin.iso');
-});
-Route::get('/admin/sni', function () {
-    return view('admin.sni');
-});
-Route::get('/admin/one-stop-service', function () {
-    return view('admin.one-stop-service');
-});
+Route::get('/admin/dashboard', 'HomeController@dashboard_admin');
+Route::get('/admin/iso', 'UserController@iso_admin');
+Route::get('/admin/sni', 'UserController@sni_admin');
+
+Route::get('/admin/profile', 'UserController@profile_admin');
+
+Route::get('/admin/edit-profile', 'UserController@editProfileForm_admin');
+
+Route::post('/edit-profile-proses-admin', "UserController@editProfile_admin");
+
 
 /* ------------------------------------------------------------------------------------------ */
 

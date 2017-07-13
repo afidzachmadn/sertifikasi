@@ -56,21 +56,21 @@
                     <fieldset>
                         <h2 class="fs-title">Form Registrasi</h2>
                         <h3 class="fs-subtitle">Silahkan masukan nama perusahaan yang ingin anda gunakan</h3>
-                        <input type="text" name="company_name" placeholder="Nama Perusahaan" />
+                        <input type="text" name="company_name" placeholder="Nama Perusahaan" required="" />
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
                     <fieldset>
                         <h2 class="fs-title">Form Registrasi</h2>
                         <h3 class="fs-subtitle">Silahkan masukan email yang ingin anda gunakan</h3>
-                        <input type="email" name="email" placeholder="Email" />
+                        <input type="email" name="email" placeholder="Email" required=""/>
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
     
                     <fieldset>
                         <h2 class="fs-title">Form Registrasi</h2>
                         <h3 class="fs-subtitle">Silahkan masukan Password yang ingin anda gunakan</h3>
-                        <input type="password" name="password" placeholder="Password" />
+                        <input type="password" name="password" placeholder="Password" required="" />
                         <input type="button" name="previous" class="previous action-button" value="Previous" />
                         <input type="submit" name="submit" class="action-button" value="Submit" />
                     </fieldset>

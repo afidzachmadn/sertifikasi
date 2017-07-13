@@ -22,6 +22,9 @@
     <link href="{{env('APP_URL')}}/css/animate.css" rel="stylesheet">
     <!-- Menu CSS -->
     <link href="{{env('APP_URL')}}/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!--alerts CSS -->
+    <link href="{{env('APP_URL')}}/plugins/bower_components/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+
     <!--My admin Custom CSS -->
     <link href="{{env('APP_URL')}}/plugins/bower_components/owl.carousel/owl.carousel.min.css" rel="stylesheet" type="text/css" />
     <link href="{{env('APP_URL')}}/plugins/bower_components/owl.carousel/owl.theme.default.css" rel="stylesheet" type="text/css" />
@@ -98,6 +101,7 @@
                     @yield('sidebar-sni-user')
                     @yield('sidebar-one-stop-service-user')
                     @yield('sidebar-profile-user') <!-- sama untuk profile-user maupun profile-edit-user -->
+                    @yield('sidebar-tips-user')
                 </ul>
             </div>
         </div>
@@ -111,7 +115,10 @@
                 @yield('breadcrumb-sni-user')
                 @yield('breadcrumb-one-stop-service-user')
                 @yield('breadcrumb-profile-user')
-                 @yield('breadcrumb-profile-edit-user')
+                @yield('breadcrumb-profile-edit-user')
+                @yield('breadcrumb-lihat-dokumen-iso')
+                @yield('breadcrumb-lihat-dokumen-sni')
+                @yield('breadcrumb-tips-user')
                 
 
                 <!-- contents start here -->
@@ -129,6 +136,9 @@
                      @yield('isi-one-stop-service-user')
                      @yield('isi-profile-user')
                      @yield('isi-profile-edit-user')
+                     @yield('isi-lihat-dokumen-iso')
+                     @yield('isi-lihat-dokumen-sni')
+                     @yield('isi-tips-user')
 
                      @yield('isi-dashboard-admin')
                      @yield('isi-iso-admin')
@@ -159,6 +169,10 @@
     <script src="{{env('APP_URL')}}/js/jquery.slimscroll.js"></script>
     <!--Wave Effects -->
     <script src="{{env('APP_URL')}}/js/waves.js"></script>
+    <!-- Sweet-Alert  -->
+    <script src="{{env('APP_URL')}}/plugins/bower_components/sweetalert/sweetalert.min.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/sweetalert/jquery.sweet-alert.custom.js"></script>
+
     <!--Morris JavaScript -->
     <script src="{{env('APP_URL')}}/plugins/bower_components/raphael/raphael-min.js"></script>
     <script src="{{env('APP_URL')}}/plugins/bower_components/morrisjs/morris.js"></script>

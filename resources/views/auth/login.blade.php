@@ -41,11 +41,11 @@
                         </a>
                     <div class="form-group m-t-40">
                         <div class="col-xs-12">
-                            <input class="form-control" type="email" name="email" required="" placeholder="Email"> </div>
+                            <input class="form-control" type="email" name="email"  placeholder="Email" required=""> </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input class="form-control" name="password" type="password" required="" placeholder="Password"> </div>
+                            <input class="form-control" name="password" type="password"  placeholder="Password" required=""> </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
@@ -65,11 +65,7 @@
                             <p>Tidak punya akun? <a href="/register" class="text-primary m-l-5"><b>Daftar</b></a></p>
                         </div>
                     </div>
-		    <div class="form-group m-b-0">
-                        <div class="col-sm-12 text-center">
-                            <p>Sebelum daftar silahkan dibaca <a href="faq.html" class="text-primary m-l-5"><b>FAQ</b></a></p>
-                        </div>
-                    </div>
+		    
                 </form>
                 <form class="form-horizontal" id="recoverform" action="index.html">
                     <div class="form-group ">
