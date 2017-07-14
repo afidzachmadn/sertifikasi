@@ -85,7 +85,7 @@ class UserController extends Controller {
 
     public function isoUploadFormProcess(Request $request) {
         $id = $request->session()->get('id');
-
+        dd($request);
         $iso_1 = $request->file('pdf-iso-1');
         $iso_1_name = $iso_1->hashName();
         $storeFile_iso_1 = $iso_1->store('public/pdf/iso');
