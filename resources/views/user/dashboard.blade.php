@@ -58,7 +58,7 @@
                                     </div>
                                     <span><button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i> </button>
                                 </span>-->
-                                    <img src="{{env('APP_URL')}}/storage/img/{{$status_iso->status_ISO}}.png" class="text-center" class="img-responsive" />
+                                    <img src="{{env('APP_URL')}}/images/{{$status_iso->status_ISO}}.png" class="text-center" class="img-responsive" />
                                 </div>
                                 </br>
                             </div>
@@ -79,7 +79,7 @@
                                 </div>
                                     <span><button type="button" class="btn btn-success btn-circle"><i class="fa fa-check"></i> </button>
                                 </span>-->
-                                    <img src="{{env('APP_URL')}}/storage/img/{{$status_sni->status_SNI}}.png" class="text-center" class="img-responsive" />
+                                    <img src="{{env('APP_URL')}}/images/{{$status_sni->status_SNI}}.png" class="text-center" class="img-responsive" />
                                 </div>
                                 </br>
                             </div>
