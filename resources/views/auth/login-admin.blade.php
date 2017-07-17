@@ -35,7 +35,7 @@
     <section id="wrapper" class="login-register">
         <div class="login-box login-sidebar">
             <div class="white-box">
-                <form class="form-horizontal form-material" id="loginform" action="{{url('login-proses')}}" method="post">
+                <form class="form-horizontal form-material" id="loginform" action="{{url('login-proses-admin')}}" method="post">
                 {{ csrf_field() }}
                     <a href="javascript:void(0)" class="text-center db"><img src="{{env('APP_URL')}}/plugins/images/bisqa.jpg" alt="Home" />
                         </a>
@@ -62,7 +62,7 @@
                     
                     <div class="form-group m-b-0">
                         <div class="col-sm-12 text-center">
-                            <p>Tidak punya akun? <a href="/register" class="text-primary m-l-5"><b>Daftar</b></a></p>
+                            <p class="text-primary m-l-5"><b>Login Khusus Staff</b></p>
                         </div>
                     </div>
 		    
@@ -84,11 +84,6 @@
                         </div>
                     </div>
                 </form>
-                <div class="col-xs-12">
-                            <a href="{{env('APP_URL')}}/login-admin">
-                            <div class="btn btn-success btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Login Khusus Staff</div>
-                            </a>
-                </div>
             </div>
         </div>
     </section>

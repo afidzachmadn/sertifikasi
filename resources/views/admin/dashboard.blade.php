@@ -1,6 +1,6 @@
-@extends('layout.master')
+@extends('layout.master-admin')
 
-@section ('sidebar-dashboard-user')
+@section ('sidebar-dashboard-admin')
 <li class="nav-small-cap m-t-10">--- Main Menu</li>
                     <li> <a href="/user/dashboard" class="waves-effect active"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
                     <li> <a href="/user/iso" class="waves-effect"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi ISO</span></a> </li>
@@ -8,7 +8,7 @@
                      <li> <a href="one-stop-service.html" class="waves-effect"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
 @endsection
 
-@section ('header-dashboard-user')
+@section ('header-dashboard-admin')
 <div class="row">
                     <div class="col-lg-12">
                         <div class="panel panel-default">
@@ -22,7 +22,7 @@
                 </div>
 @endsection
                 
-@section ('breadcrumb-dashboard-user')
+@section ('breadcrumb-dashboard-admin')
  <div class="row bg-title">
                     <!-- .page title -->
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -41,7 +41,7 @@
 
 @section("isi-dashboard-admin")
  <!-- .row -->
-                <div class="row">
+
                     <div class="col-lg-6 col-sm-6">
                         <div class="white-box">
                             <h3 class="box-title">Sertifikasi ISO</h3>
@@ -74,6 +74,5 @@
                             ></div>
                         </div>
                     </div>
-                </div>
 
 @endsection

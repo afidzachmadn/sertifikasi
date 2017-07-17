@@ -90,18 +90,14 @@
                         <a href="#" class="waves-effect"><img src="{{env('APP_URL')}}/storage/img/{{Session::get('img_url')}}" alt="user-img" class="img-circle"> <span class="hide-menu">{{Session::get('name')}}<span class="fa arrow"></span></span>
                         </a>
                         <ul class="nav nav-second-level">
-                            <li><a href="{{env('APP_URL')}}/user/profile"><i class="ti-user"></i>Profile Perusahaan</a></li>
-                             <li><a href="{{env('APP_URL')}}/user/edit-profile"><i class=" ti-pencil-alt"></i>Edit Profile Perusahaan</a></li>
-                            <li><a href="{{env('APP_URL')}}/logout"><i class="fa fa-power-off"></i> Logout</a></li>
+                            <li><a href="{{env('APP_URL')}}/user/profile"><i class="ti-user"></i>Profile Anda</a></li>
+                             <li><a href="{{env('APP_URL')}}/user/edit-profile"><i class=" ti-pencil-alt"></i>Edit Profile Anda</a></li>
+                            <li><a href="{{env('APP_URL')}}/logout-admin"><i class="fa fa-power-off"></i> Logout</a></li>
                         </ul>
                     </li>
                     <!-- yield sidebar -->
-                    @yield('sidebar-dashboard-user')
-                    @yield('sidebar-iso-user')
-                    @yield('sidebar-sni-user')
-                    @yield('sidebar-one-stop-service-user')
-                    @yield('sidebar-profile-user') <!-- sama untuk profile-user maupun profile-edit-user -->
-                    @yield('sidebar-tips-user')
+                    @yield('sidebar-dashboard-admin')
+                  
                 </ul>
             </div>
         </div>
@@ -110,21 +106,11 @@
             <div class="container-fluid">
                 <!-- letakan yield -->
                 
-                @yield('breadcrumb-dashboard-user')
-                @yield('breadcrumb-iso-user')
-                @yield('breadcrumb-sni-user')
-                @yield('breadcrumb-one-stop-service-user')
-                @yield('breadcrumb-profile-user')
-                @yield('breadcrumb-profile-edit-user')
-                @yield('breadcrumb-lihat-dokumen-iso')
-                @yield('breadcrumb-lihat-dokumen-sni')
-                @yield('breadcrumb-tips-user')
-                @yield('breadcrumb-bukti-pembayaran-iso')
-                @yield('breadcrumb-bukti-pembayaran-sni')
+                @yield('breadcrumb-dashboard-admin')
                 
 
                 <!-- contents start here -->
-                @yield('header-dashboard-user')
+                @yield('header-dashboard-admin')
                     <!-- FOR THIS SECTION IS ONLY FOR DASHBOARD! -->
                 
 
@@ -132,20 +118,8 @@
                 <!-- .row -->
                 <div class="row">
                     
-                     @yield('isi-dashboard-user')
-                     @yield('isi-iso-user')
-                     @yield('isi-sni-user')
-                     @yield('isi-one-stop-service-user')
-                     @yield('isi-profile-user')
-                     @yield('isi-profile-edit-user')
-                     @yield('isi-lihat-dokumen-iso')
-                     @yield('isi-lihat-dokumen-sni')
-                     @yield('isi-tips-user')
-                     @yield('isi-bukti-pembayaran-iso')
-                     @yield('isi-bukti-pembayaran-sni')
-
                      @yield('isi-dashboard-admin')
-                     @yield('isi-iso-admin')
+                     
                     
 
 

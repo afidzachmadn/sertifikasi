@@ -27,8 +27,14 @@ class Users extends Migration
             $table->string('file_upload_iso_4', 500)->nullable();
             $table->string('file_upload_iso_5', 500)->nullable();
             $table->string('file_upload_iso_6', 500)->nullable();
+            $table->string('file_upload_bukti_pembayaran_ISO', 500)->nullable();
+            $table->string('status_pembayaran_ISO',100)->default('belum-terbayar');
             $table->string('status_ISO',100)->default('belum-terverifikasi');
             $table->string('surat_pengesahan_ISO',100)->default('default-pengesahan-iso.pdf');
+
+
+
+
 
             $table->string('file_upload_sni_1', 500)->nullable();
             $table->string('file_upload_sni_2', 500)->nullable();
@@ -36,14 +42,33 @@ class Users extends Migration
             $table->string('file_upload_sni_4', 500)->nullable();
             $table->string('file_upload_sni_5', 500)->nullable();
             $table->string('file_upload_sni_6', 500)->nullable();
+
+            $table->string('file_upload_bukti_pembayaran_SNI', 500)->nullable();
+
+            $table->string('status_pembayaran_SNI',100)->default('belum-terbayar');
             $table->string('status_SNI',100)->default('belum-terverifikasi');
             $table->string('surat_pengesahan_SNI',100)->default('default-pengesahan-sni.pdf');
 
             $table->text('description')->nullable();
             $table->integer('permission');
         });
+        
+        Schema::create('admin', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nip', 50);
+            $table->string('name', 100);
+            $table->string('email', 100)->unique();
+            $table->string('password', 500);
+            $table->string('img_url', 100)->default('users.png');
+            $table->integer('jumlah_total_pendaftar_ISO_yang_diverifikasi');
+            $table->integer('jumlah_total_pendaftar_SNI_yang_diverifikasi');
+
+
+           
+        }); 
     }
 
+   
     /**
      * Reverse the migrations.
      *
@@ -55,5 +80,7 @@ class Users extends Migration
         //     $table->drop()
         // });
         Schema::drop('users');
+        Schema::drop('admin');
     }
+    
 }

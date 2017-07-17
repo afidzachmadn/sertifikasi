@@ -42,6 +42,16 @@ Route::post('/sni-proses', "UserController@sniUploadFormProcess");
 
 Route::get('/user/lihat-dokumen-iso', 'UserController@lihat_dokumen_iso');
 
+Route::get('/user/upload-bukti-pembayaran-iso', 'UserController@pembayaran_iso');
+
+Route::post('/user/upload-bukti-pembayaran-iso-proses', 'UserController@pembayaran_iso_proses');
+
+Route::get('/user/lihat-dokumen-iso', 'UserController@lihat_dokumen_iso');
+
+Route::get('/user/upload-bukti-pembayaran-sni', 'UserController@pembayaran_sni');
+
+Route::post('/user/upload-bukti-pembayaran-sni-proses', 'UserController@pembayaran_sni_proses');
+
 Route::get('/user/lihat-dokumen-sni', 'UserController@lihat_dokumen_sni');
 
 Route::get('/user/tips', 'UserController@tips_penggunaan');
@@ -51,14 +61,7 @@ Route::get('/user/tips', 'UserController@tips_penggunaan');
 /* ----------------------------------- VIEW ADMIN PAGES ------------------------------------ */
 
 Route::get('/admin/dashboard', 'HomeController@dashboard_admin');
-Route::get('/admin/iso', 'UserController@iso_admin');
-Route::get('/admin/sni', 'UserController@sni_admin');
 
-Route::get('/admin/profile', 'UserController@profile_admin');
-
-Route::get('/admin/edit-profile', 'UserController@editProfileForm_admin');
-
-Route::post('/edit-profile-proses-admin', "UserController@editProfile_admin");
 
 
 /* ------------------------------------------------------------------------------------------ */
@@ -75,4 +78,11 @@ Route::post('/login-proses', "AuthController@bacadatabase");
 
 Route::post('/register-proses', "AuthController@registerproses");
 
+
+
+Route::get('/login-admin', "AuthController@login_admin");
+
+Route::get('/logout-admin', "AuthController@logout_admin");
+
+Route::post('/login-proses-admin', "AuthController@bacadatabase_admin");
 /* ----------------------------------------------------------------------------------- */

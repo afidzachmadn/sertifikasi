@@ -34,47 +34,68 @@
                         <div class="white-box" class="col-sm-12 col-md-2 col-xs-12">
                             <h3 class="box-title">File Upload 1</h3>
                             <label for="input-file-max-fs">Silahkan upload file Struktur Organisasi (*PDF) (*Max 2MB)</label>
-                            <input type="file" id="input-file-max-fs" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-sni-1" data-default-file="{{$sni_p->file_upload_sni_1}}" value="{{$sni_p->file_upload_sni_1}}"/> 
+                            <input type="file" id="input-file-max-fs" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-sni-1" data-default-file="{{env('APP_URL')}}/storage/pdf/sni/{{$sni_p->file_upload_sni_1}}" value="{{env('APP_URL')}}/storage/pdf/sni/{{$sni_p->file_upload_sni_1}}" required=""/> 
                         </div>
                     
                     
                         <div class="white-box" class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
                             <h3 class="box-title">File Upload 2</h3>
                             <label for="input-file-max-fs">Silahkan upload file Diagram alir proses produksi/penyedia jasa termasuk jumlah line proses produksi (*PDF) (*Max 2MB)</label>
-                            <input type="file" id="input-file-disable-remove" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-sni-2" data-default-file="{{$sni_p->file_upload_sni_2}}" value="{{$sni_p->file_upload_sni_2}}"/> </div>
+                            <input type="file" id="input-file-disable-remove" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-sni-2" data-default-file="{{env('APP_URL')}}/storage/pdf/sni/{{$sni_p->file_upload_sni_2}}" value="{{env('APP_URL')}}/storage/pdf/sni/{{$sni_p->file_upload_sni_2}}" required=""/> </div>
                     
                     
                         <div class="white-box" class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
                             <h3 class="box-title">File Upload 3</h3>
                             <label for="input-file-disable-remove">Silahkan upload dokumen Sistem Manajemen Mutu (*PDF) (*Max 2MB)</label>
-                            <input type="file" id="input-file-disable-remove" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-sni-3" data-default-file="{{$sni_p->file_upload_sni_3}}" value="{{$sni_p->file_upload_sni_3}}"/> </div>
+                            <input type="file" id="input-file-disable-remove" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-sni-3" data-default-file="{{env('APP_URL')}}/storage/pdf/sni/{{$sni_p->file_upload_sni_3}}" value="{{env('APP_URL')}}/storage/pdf/sni/{{$sni_p->file_upload_sni_3}}" required=""/> </div>
                     
                     
                         <div class="white-box" class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
                             <h3 class="box-title">File Upload 4</h3>
                             <label for="input-file-disable-remove">Silahkan upload Daftar Induk Dokumen / Daftar Informasi terdokumentasi (*PDF) (*Max 2MB)</label>
-                            <input type="file" id="input-file-disable-remove" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-sni-4" data-default-file="{{$sni_p->file_upload_sni_4}}" value="{{$sni_p->file_upload_sni_4}}"/> </div>
+                            <input type="file" id="input-file-disable-remove" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-sni-4" data-default-file="{{env('APP_URL')}}/storage/pdf/sni/{{$sni_p->file_upload_sni_4}}" value="{{env('APP_URL')}}/storage/pdf/sni/{{$sni_p->file_upload_sni_4}}" required=""/> </div>
                     
                     
                         <div class="white-box" class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
                             <h3 class="box-title">File Upload 5</h3>
                             <label for="input-file-disable-remove">Silahkan upload Diagram alir proses Sistem Manajemen Mutu (*PDF) (*Max 2MB)</label>
-                            <input type="file" id="input-file-disable-remove" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-sni-5" data-default-file="{{$sni_p->file_upload_sni_5}}" value="{{$sni_p->file_upload_sni_5}}"/> </div>
+                            <input type="file" id="input-file-disable-remove" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-sni-5" data-default-file="{{env('APP_URL')}}/storage/pdf/sni/{{$sni_p->file_upload_sni_5}}" value="{{env('APP_URL')}}/storage/pdf/sni/{{$sni_p->file_upload_sni_5}}" required=""/> </div>
                     
                     
                         <div class="white-box" class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
                             <h3 class="box-title">File Upload 6</h3>
                             <label for="input-file-disable-remove">Silahkan upload Rekaman Audit Internal dan Tinjauan Manajemen (*PDF) (*Max 2MB)</label>
-                            <input type="file" id="input-file-disable-remove" class="dropify"  data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-sni-6" data-default-file="{{$sni_p->file_upload_sni_6}}" value="{{$sni_p->file_upload_sni_6}}"/>
+                            <input type="file" id="input-file-disable-remove" class="dropify"  data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-sni-6" data-default-file="{{env('APP_URL')}}/storage/pdf/sni/{{$sni_p->file_upload_sni_6}}" value="{{env('APP_URL')}}/storage/pdf/sni/{{$sni_p->file_upload_sni_6}}" required=""/>
                              </div>
                     
-                        <div class="col-lg-12">
-                            <input class="btn btn-success" type="submit" value="Kirim"/>
-                            <a href="/user/lihat-dokumen-sni">
-                            <div  class="btn btn-danger" > Lihat dokumen sni yang telah di kirim</div></a>
-                            <a href="{{env('APP_URL')}}/storage/pdf/sni/{{$sni_p->surat_pengesahan_SNI}}" target="_blank">
-                            <div  class="btn btn-info" > Lihat surat pengesahan SNI perusahaan anda</div></a>
+                         <div class="row button-box">
+                        <div class="col-lg-3 col-sm-6 col-xs-12">
+                            <input class="btn btn-block btn-success" type="submit" value="Kirim"/>
                         </div>
+                        <br>
+
+                        <div class="col-lg-3 col-sm-6 col-xs-12">
+
+                            <a href="/user/lihat-dokumen-sni">
+                            <div  class="btn btn-block btn-danger" >Download</div></a>
+                        </div>
+                       <br>
+
+                        <div class="col-lg-3 col-sm-6 col-xs-12">
+                            <a href="{{env('APP_URL')}}/user/upload-bukti-pembayaran-sni">
+                            <div  class="btn btn-block btn-warning" >Upload bukti pembayaran</div>
+                            </a>
+                        </div>
+                        <br>
+
+                        <div class="col-lg-3 col-sm-6 col-xs-12">
+                            <a href="{{env('APP_URL')}}/storage/pdf/iso/{{$sni_p->surat_pengesahan_ISO}}" target="_blank">
+                            <div  class="btn btn-block btn-info" >Surat pengesahan</div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                    <br>
                     </form>
                 </div>
     @endsection

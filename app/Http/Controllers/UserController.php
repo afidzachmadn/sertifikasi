@@ -11,16 +11,7 @@ class UserController extends Controller {
         $this->middleware('checkLogin');
     }
 
-/* --------------------------- UNTUK STATUS VERIFIKASI ------------------------------------------- */
-    public function StatusSni(Request $request) {
-        $id = $request->session()->get('id');
 
-        $statusSni = DB::table('users');
-        $status_sni = $statusSni->where('id', $id)->first();
-        
-        return view('user.dashboard', array('status_sni' => $status_sni));
-    }
-/* ----------------------------------------------------------------------------------------------- */
 
 /* ---------------------------- UNTUK PROFILE PAGE DAN EDIT-PROFILE PAGE -------------------------*/
 
@@ -74,18 +65,10 @@ class UserController extends Controller {
         //return view('user.iso');
     }
 
-   /* public function isoUploadForm(Request $request) {
-        $id = $request->session()->get('id');
-
-        $isoDb = DB::table('users');
-        $iso_p = $isoDb->where('id', $id)->first();
-
-        return view('user.iso', array('iso' => $iso_p));
-    } */
+ 
 
     public function isoUploadFormProcess(Request $request) {
         $id = $request->session()->get('id');
-        dd($request);
         $iso_1 = $request->file('pdf-iso-1');
         $iso_1_name = $iso_1->hashName();
         $storeFile_iso_1 = $iso_1->store('public/pdf/iso');
@@ -127,10 +110,33 @@ class UserController extends Controller {
     public function lihat_dokumen_iso(Request $request) {
         $id = $request->session()->get('id');
 
-        $lihatDokumenSni = DB::table('users');
-        $dokumen_sni = $lihatDokumenSni->where('id', $id)->first();
+        $lihatDokumenIso = DB::table('users');
+        $dokumen_iso = $lihatDokumenIso->where('id', $id)->first();
         
-        return view('user.lihat-dokumen-iso', array('profile' => $dokumen_sni));
+        return view('user.lihat-dokumen-iso', array('dokumen_iso' => $dokumen_iso));
+    }
+
+
+
+    public function pembayaran_iso(Request $request){
+        $id = $request->session()->get('id');
+
+        $iso_pembayaran = DB::table('users');
+        $iso_pembayaran_p = $iso_pembayaran->where('id', $id)->first();
+        
+        return view('user.upload-bukti-pembayaran-iso', array('iso_pembayaran_p' => $iso_pembayaran_p));
+    }
+    public function pembayaran_iso_proses(Request $request) {
+        $id = $request->session()->get('id');
+
+        $iso_pembayaran = $request->file('pdf-bukti-pembayaran-iso');
+        $iso_pembayaran_name = $iso_pembayaran->hashName();
+        $storeFile_iso_pembayaran = $iso_pembayaran->store('public/img/bukti-pembayaran/iso');
+        $userDb = DB::table('users')->where('id', $id)
+                                    ->update(['file_upload_bukti_pembayaran_ISO' => $iso_pembayaran_name]);
+        $request->session()->put('file_upload_bukti_pembayaran_ISO');
+        return redirect()->action('UserController@pembayaran_iso');
+        
     }
 
 /* ------------------------------------------------------------------------------------------- */
@@ -205,9 +211,29 @@ public function lihat_dokumen_sni(Request $request) {
         $lihatDokumenSni = DB::table('users');
         $dokumen_sni = $lihatDokumenSni->where('id', $id)->first();
         
-        return view('user.lihat-dokumen-sni', array('profile' => $dokumen_sni));
+        return view('user.lihat-dokumen-sni', array('dokumen_sni' => $dokumen_sni));
     }
 
+    public function pembayaran_sni(Request $request){
+        $id = $request->session()->get('id');
+
+        $sni_pembayaran = DB::table('users');
+        $sni_pembayaran_p = $sni_pembayaran->where('id', $id)->first();
+        
+        return view('user.upload-bukti-pembayaran-sni', array('sni_pembayaran_p' => $sni_pembayaran_p));
+    }
+    public function pembayaran_sni_proses(Request $request) {
+        $id = $request->session()->get('id');
+
+        $sni_pembayaran = $request->file('pdf-bukti-pembayaran-sni');
+        $sni_pembayaran_name = $sni_pembayaran->hashName();
+        $storeFile_sni_pembayaran = $sni_pembayaran->store('public/img/bukti-pembayaran/sni');
+        $userDb = DB::table('users')->where('id', $id)
+                                    ->update(['file_upload_bukti_pembayaran_SNI' => $sni_pembayaran_name]);
+        $request->session()->put('file_upload_bukti_pembayaran_SNI');
+        return redirect()->action('UserController@pembayaran_sni');
+        
+    }
 /* ------------------------------------- TIPS PENGGUNAAN PAGE ---------------------------------- */
 
 public function tips_penggunaan(Request $request){

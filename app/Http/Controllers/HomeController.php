@@ -14,8 +14,22 @@ class HomeController extends Controller {
         $status_iso = $statusVer->where('id', $id)->first();
         $status_sni = $statusVer->where('id', $id)->first();
 
+        $status_pembayaran_iso = $statusVer->where('id',$id)->first();
+        $status_pembayaran_sni = $statusVer->where('id',$id)->first();
+
            if($request->session()->get('login')) {
-            return view('user.dashboard',array('status_iso' => $status_iso),array('status_sni' => $status_sni));
+            return view('user.dashboard',array('status_iso' => $status_iso,'status_sni' => $status_sni,'status_pembayaran_iso' => $status_pembayaran_iso,'status_pembayaran_sni' => $status_pembayaran_sni));
+        } else {
+            return view('auth.login');
+        }
+   }
+
+   public function dashboard_admin(Request $request) {
+        $id = $request->session()->get('id');
+
+
+        if($request->session()->get('login')) {
+            return view('admin.dashboard');
         } else {
             return view('auth.login');
         }

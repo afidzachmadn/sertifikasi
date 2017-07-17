@@ -44,9 +44,9 @@
  <!-- .row -->
                
                     
-                     <div class="col-lg-6 col-sm-6">
+                     <div class="col-lg-6 col-sm-6 col-xs-12">
                         <div class="panel panel-info">
-                            <div class="panel-heading"> Status ISO
+                            <div class="panel-heading"> Status Verifikasi ISO
                                 <div class="pull-right"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a> <a href="#" data-perform="panel-dismiss"><i class="ti-close"></i></a> </div>
                             </div>
                             <div class="panel-wrapper collapse in" aria-expanded="true">
@@ -65,9 +65,9 @@
                         </div>
                     </div>
                     
-                    <div class="col-lg-6 col-sm-6">
+                    <div class="col-lg-6 col-sm-6 col-xs-12">
                         <div class="panel panel-primary">
-                            <div class="panel-heading"> Status SNI
+                            <div class="panel-heading"> Status Verifikasi SNI
                                 <div class="pull-right"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a> <a href="#" data-perform="panel-dismiss"><i class="ti-close"></i></a> </div>
                             </div>
                             <div class="panel-wrapper collapse in" aria-expanded="true">
@@ -79,7 +79,50 @@
                                 </div>
                                     <span><button type="button" class="btn btn-success btn-circle"><i class="fa fa-check"></i> </button>
                                 </span>-->
-                                    <img src="{{env('APP_URL')}}/images/{{$status_sni->status_SNI}}.png" class="text-center" class="img-responsive" />
+                                 <img src="{{env('APP_URL')}}/images/{{$status_iso->status_SNI}}.png" class="text-center" class="img-responsive" />
+                                    
+                                </div>
+                                </br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading"> Status Pembayaran ISO
+                                <div class="pull-right"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a> <a href="#" data-perform="panel-dismiss"><i class="ti-close"></i></a> </div>
+                            </div>
+                            <div class="panel-wrapper collapse in" aria-expanded="true">
+                                <div class="panel-body">
+                                     <p>Status konfirmasi biaya sertifikasi SNI untuk perusahaan anda. Status akan berubah jika anda telah melakukan pembayaran dan telah di konfirmasi oleh tim kami </p>
+                                </div>
+                                <div class="text-center">
+                                <!--<div class="btn btn-success">Terverifikasi
+                                </div>
+                                    <span><button type="button" class="btn btn-success btn-circle"><i class="fa fa-check"></i> </button>
+                                </span>-->
+                                    <img src="{{env('APP_URL')}}/images/{{$status_pembayaran_iso->status_pembayaran_ISO}}.png" class="text-center" class="img-responsive" />
+                                </div>
+                                </br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-success">
+                            <div class="panel-heading"> Status Pembayaran SNI
+                                <div class="pull-right"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a> <a href="#" data-perform="panel-dismiss"><i class="ti-close"></i></a> </div>
+                            </div>
+                            <div class="panel-wrapper collapse in" aria-expanded="true">
+                                <div class="panel-body">
+                                    <p>Status konfirmasi biaya sertifikasi SNI untuk perusahaan anda. Status akan berubah jika anda telah melakukan pembayaran dan telah di konfirmasi oleh tim kami </p>
+                                </div>
+                                <div class="text-center">
+                                <!--<div class="btn btn-success">Terverifikasi
+                                </div>
+                                    <span><button type="button" class="btn btn-success btn-circle"><i class="fa fa-check"></i> </button>
+                                </span>-->
+                                    <img src="{{env('APP_URL')}}/images/{{$status_pembayaran_sni->status_pembayaran_SNI}}.png" class="text-center" class="img-responsive" />
                                 </div>
                                 </br>
                             </div>

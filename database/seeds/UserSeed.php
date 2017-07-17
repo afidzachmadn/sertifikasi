@@ -171,5 +171,16 @@ class UserSeed extends Seeder
             'description' => '',
             'permission' => 2
         ]);
+
+
+         DB::table('admin')->insert([
+            'nip' => '12345678910111213',
+            'name' => 'Admin 1',
+            'email' => 'admin1@local.com',
+            'password' => encrypt('admin1'),
+            'img_url' => 'users.png',
+            'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '100',
+            'jumlah_total_pendaftar_SNI_yang_diverifikasi' => '50'
+        ]);
     }
 }
