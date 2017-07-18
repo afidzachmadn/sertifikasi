@@ -25,7 +25,7 @@ class HomeController extends Controller {
    }
 
    public function dashboard_admin(Request $request) {
-        $id = $request->session()->get('id');
+        $email = $request->session()->get('email');
 
 
         if($request->session()->get('login')) {
