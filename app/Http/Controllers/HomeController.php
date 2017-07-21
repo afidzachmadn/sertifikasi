@@ -26,8 +26,6 @@ class HomeController extends Controller {
 
    public function dashboard_admin(Request $request) {
         $email = $request->session()->get('email');
-
-
         if($request->session()->get('login')) {
             return view('admin.dashboard');
         } else {

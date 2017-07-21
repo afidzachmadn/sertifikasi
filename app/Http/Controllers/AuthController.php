@@ -44,6 +44,7 @@ class AuthController extends Controller {
             
         if($password == $decrypt) {
             $request->session()->put('login', true);
+            $request->session()->put('role', 'user');
             $request->session()->put('name', $usercheck->company_name);
             $request->session()->put('id', $usercheck->id);
             $request->session()->put('img_url', $usercheck->img_url);
@@ -70,7 +71,7 @@ class AuthController extends Controller {
             $request->session()->put('id', $usercheck->id);
             $request->session()->put('nip', $usercheck->nip);
             $request->session()->put('img_url', $usercheck->img_url);
-            
+            $request->session()->put('role', 'admin');
             return redirect()->action('HomeController@dashboard_admin');
      
         } else {
@@ -99,6 +100,6 @@ class AuthController extends Controller {
 
      public function logout_admin(Request $request) {
         $request->session()->flush();
-        return redirect()->action('AuthController@logout_admin');
+        return redirect()->action('AuthController@login_admin');
     }
 }

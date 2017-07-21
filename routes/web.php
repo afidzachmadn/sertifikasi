@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 /* ------------------------------------------ VIEW USER PAGES ------------------------- */
 
-Route::get('/user/dashboard', 'HomeController@dashboard');
+Route::get('/user/dashboard', 'HomeController@dashboard')->middleware('checkLogin', 'isUser');;
 
 Route::get('/user/iso', function () {
     return view('user.iso');
@@ -60,7 +60,7 @@ Route::get('/user/tips', 'UserController@tips_penggunaan');
 
 /* ----------------------------------- VIEW ADMIN PAGES ------------------------------------ */
 
-Route::get('/admin/dashboard', 'HomeController@dashboard_admin');
+Route::get('/admin/dashboard', 'HomeController@dashboard_admin')->middleware('checkLogin', 'isAdmin');
 
 
 
