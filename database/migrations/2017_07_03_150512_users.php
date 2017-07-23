@@ -30,6 +30,7 @@ class Users extends Migration
             $table->string('file_upload_bukti_pembayaran_ISO', 500)->nullable();
             $table->string('status_pembayaran_ISO',100)->default('belum-terbayar');
             $table->string('status_ISO',100)->default('belum-terverifikasi');
+            $table->string('Verifikator_ISO_name', 100)->nullable();
             $table->string('surat_pengesahan_ISO',100)->default('default-pengesahan-iso.pdf');
 
 
@@ -42,11 +43,10 @@ class Users extends Migration
             $table->string('file_upload_sni_4', 500)->nullable();
             $table->string('file_upload_sni_5', 500)->nullable();
             $table->string('file_upload_sni_6', 500)->nullable();
-
             $table->string('file_upload_bukti_pembayaran_SNI', 500)->nullable();
-
             $table->string('status_pembayaran_SNI',100)->default('belum-terbayar');
             $table->string('status_SNI',100)->default('belum-terverifikasi');
+            $table->string('Verifikator_SNI_name', 100)->nullable();
             $table->string('surat_pengesahan_SNI',100)->default('default-pengesahan-sni.pdf');
 
             $table->text('description')->nullable();

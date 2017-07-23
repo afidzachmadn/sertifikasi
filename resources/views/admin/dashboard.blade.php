@@ -1,11 +1,11 @@
 @extends('layout.master-admin')
 
 @section ('sidebar-dashboard-admin')
-<li class="nav-small-cap m-t-10">--- Main Menu</li>
+<li class="nav-small-cap m-t-10">--- Menu Utama</li>
                     <li> <a href="/user/dashboard" class="waves-effect active"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
-                    <li> <a href="/user/iso" class="waves-effect"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi ISO</span></a> </li>
-                     <li> <a href="/user/sni" class="waves-effect"><i class="ti-world p-r-10"></i> <span class="hide-menu">Sertifikasi SNI</span></a> </li>
-                     <li> <a href="one-stop-service.html" class="waves-effect"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
+                    <li> <a href="/admin/iso" class="waves-effect"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi ISO</span></a> </li>
+                     <li> <a href="/admin/sni" class="waves-effect"><i class="ti-world p-r-10"></i> <span class="hide-menu">Sertifikasi SNI</span></a> </li>
+                     <li> <a href="/admin/one-stop-service" class="waves-effect"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
 @endsection
 
 @section ('header-dashboard-admin')
@@ -14,7 +14,7 @@
                         <div class="panel panel-default">
                             <div class="panel-wrapper p-b-10 collapse in">
                                 <div id="owl-demo" class="owl-carousel owl-theme">
-                                    <div class="item"><img src="../plugins/images/heading-bg/slide3.jpg" alt="Owl Image"></div>
+                                    <div class="item"><img src="{{env('APP_URL')}}/plugins/images/heading-bg/slide3.jpg" alt="Owl Image"></div>
                                 </div>
                             </div>
                         </div>

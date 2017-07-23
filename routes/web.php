@@ -61,7 +61,9 @@ Route::get('/user/tips', 'UserController@tips_penggunaan');
 /* ----------------------------------- VIEW ADMIN PAGES ------------------------------------ */
 
 Route::get('/admin/dashboard', 'HomeController@dashboard_admin')->middleware('checkLogin', 'isAdmin');
-
+Route::get('/admin/iso', 'AdminController@iso');
+Route::get('/admin/sni', 'AdminController@sni');
+Route::get('/admin/belum-terverifikasi-iso', 'AdminController@belum_terverifikasi_iso');
 
 
 /* ------------------------------------------------------------------------------------------ */

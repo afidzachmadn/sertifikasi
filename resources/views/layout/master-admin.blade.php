@@ -18,6 +18,12 @@
       <!-- Bootstrap Core CSS -->
     <link href="{{env('APP_URL')}}/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{env('APP_URL')}}/plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
+    <!-- Editable CSS -->
+    <link rel="stylesheet" href="{{env('APP_URL')}}/plugins/bower_components/jquery-datatables-editable/datatables.css" />
+    <link href="{{env('APP_URL')}}/plugins/bower_components/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
+
+
     <!-- animation CSS -->
     <link href="{{env('APP_URL')}}/css/animate.css" rel="stylesheet">
     <!-- Menu CSS -->
@@ -63,7 +69,7 @@
                     <li><a href="javascript:void(0)" class="open-close hidden-xs waves-effect waves-light"><i class="icon-arrow-left-circle ti-menu"></i></a></li>
                     <li>
                         <form role="search" class="app-search hidden-xs">
-                            <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
+                            <input type="text" placeholder="Search{{env('APP_URL')}}." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
                     </li>
                 </ul>
                
@@ -87,16 +93,16 @@
                         <!-- /input-group -->
                     </li>
                     <li class="user-pro">
-                        <a href="#" class="waves-effect"><img src="{{env('APP_URL')}}/storage/img/{{Session::get('img_url')}}" alt="user-img" class="img-circle"> <span class="hide-menu">{{Session::get('name')}}<span class="fa arrow"></span></span>
+                        <a href="#" class="waves-effect"><img src="{{env('APP_URL')}}/storage/img/{{Session::get('img_url')}}" alt="user-img" class="img-circle"> <span class="hide-menu">{{Session::get('name')}}</span>
                         </a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="{{env('APP_URL')}}/user/profile"><i class="ti-user"></i>Profile Anda</a></li>
-                             <li><a href="{{env('APP_URL')}}/user/edit-profile"><i class=" ti-pencil-alt"></i>Edit Profile Anda</a></li>
+                         <ul class="nav nav-second-level">
                             <li><a href="{{env('APP_URL')}}/logout-admin"><i class="fa fa-power-off"></i> Logout</a></li>
                         </ul>
                     </li>
                     <!-- yield sidebar -->
                     @yield('sidebar-dashboard-admin')
+                    @yield('sidebar-iso-admin')
+                    @yield('sidebar-sni-admin')
                   
                 </ul>
             </div>
@@ -107,7 +113,10 @@
                 <!-- letakan yield -->
                 
                 @yield('breadcrumb-dashboard-admin')
-                
+                @yield('breadcrumb-iso-admin')
+                @yield('breadcrumb-sni-admin')
+                @yield('breadcrumb-belum-terverifikasi-iso-admin')
+                  
 
                 <!-- contents start here -->
                 @yield('header-dashboard-admin')
@@ -119,6 +128,9 @@
                 <div class="row">
                     
                      @yield('isi-dashboard-admin')
+                     @yield('isi-iso-admin')
+                     @yield('isi-sni-admin')
+                     @yield('isi-belum-terverifikasi-iso-admin')
                      
                     
 
@@ -203,6 +215,66 @@
             })
         });
     </script>
+     <script src="{{env('APP_URL')}}/plugins/bower_components/datatables/jquery.dataTables.min.js"></script>
+    <!-- start - This is for export functionality only -->
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+    <!-- end - This is for export functionality only -->
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+            $(document).ready(function () {
+                var table = $('#example').DataTable({
+                    "columnDefs": [
+                        {
+                            "visible": false
+                            , "targets": 2
+                        }
+          ]
+                    , "order": [[2, 'asc']]
+                    , "displayLength": 25
+                    , "drawCallback": function (settings) {
+                        var api = this.api();
+                        var rows = api.rows({
+                            page: 'current'
+                        }).nodes();
+                        var last = null;
+                        api.column(2, {
+                            page: 'current'
+                        }).data().each(function (group, i) {
+                            if (last !== group) {
+                                $(rows).eq(i).before('<tr class="group"><td colspan="5">' + group + '</td></tr>');
+                                last = group;
+                            }
+                        });
+                    }
+                });
+                // Order by the grouping
+                $('#example tbody').on('click', 'tr.group', function () {
+                    var currentOrder = table.order()[0];
+                    if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
+                        table.order([2, 'desc']).draw();
+                    }
+                    else {
+                        table.order([2, 'asc']).draw();
+                    }
+                });
+            });
+        });
+        $('#example23').DataTable({
+            dom: 'Bfrtip'
+            , buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+        });
+    </script>
+
+
     <!--Style Switcher -->
     <script src="{{env('APP_URL')}}/plugins/bower_components/styleswitcher/jQuery.style.switcher.js">
     </script>
