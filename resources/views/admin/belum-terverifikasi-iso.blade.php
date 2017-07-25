@@ -63,125 +63,158 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Subur Jaya</td>
-                                            <td>subur-jaya@local.com</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td>belum-terbayar</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>
-                                        </tr>
+                                        @foreach($userList as $user)
+                                            <tr>
+                                                <td>{{$user->company_name}}</td>
+                                                <td>{{$user->email}}</td>
+                                                <td>
+                                                    <a href="{{$user->file_upload_iso_1 ? $user->file_upload_iso_1 : '#'}}">Lihat</a>
+                                                </td>
+                                                <td>
+                                                    <a href="{{$user->file_upload_iso_2 ? $user->file_upload_iso_2 : '#'}}">Lihat</a>
+                                                </td>
+                                                <td>
+                                                    <a href="{{$user->file_upload_iso_3 ? $user->file_upload_iso_3 : '#'}}">Lihat</a>
+                                                </td>
+                                                <td>
+                                                    <a href="{{$user->file_upload_iso_4 ? $user->file_upload_iso_4 : '#'}}">Lihat</a>
+                                                </td>
+                                                <td>
+                                                    <a href="{{$user->file_upload_iso_5 ? $user->file_upload_iso_5 : '#'}}">Lihat</a>
+                                                </td>
+                                                <td>
+                                                    <a href="{{$user->file_upload_iso_6 ? $user->file_upload_iso_6 : '#'}}">Lihat</a>
+                                                </td>
+                                                <td>{{$user->status_pembayaran_ISO}}</td>
+                                                <td>
+                                                    <a href="{{env('APP_URL')}}/storage/pdf/{{$user->surat_pengesahan_ISO}}">Lihat</a>
+                                                </td>
+                                                <td>
+                                                    <a href="#">
+                                                        <img src="{{env('APP_URL')}}/images/{{$user->status_ISO}}.png">
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                        {{--<tr>--}}
+                                            {{--<td>Subur Jaya</td>--}}
+                                            {{--<td>subur-jaya@local.com</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td>belum-terbayar</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>--}}
+                                        {{--</tr>--}}
 
-                                        <tr>
-                                            <td>Subur Jaya</td>
-                                            <td>subur-jaya@local.com</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td>belum-terbayar</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>
-                                        </tr>
+                                        {{--<tr>--}}
+                                            {{--<td>Subur Jaya</td>--}}
+                                            {{--<td>subur-jaya@local.com</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td>belum-terbayar</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>--}}
+                                        {{--</tr>--}}
 
-                                        <tr>
-                                            <td>Subur Jaya</td>
-                                            <td>subur-jaya@local.com</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td>belum-terbayar</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Subur Jaya</td>
-                                            <td>subur-jaya@local.com</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td>belum-terbayar</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Subur Jaya</td>
-                                            <td>subur-jaya@local.com</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td>belum-terbayar</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Subur Jaya</td>
-                                            <td>subur-jaya@local.com</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td>belum-terbayar</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Subur Jaya</td>
-                                            <td>subur-jaya@local.com</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td>belum-terbayar</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Subur Jaya</td>
-                                            <td>subur-jaya@local.com</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td>belum-terbayar</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Subur Jaya</td>
-                                            <td>subur-jaya@local.com</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td>belum-terbayar</td>
-                                            <td><a href="#">lihat</a></td>
-                                            <td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>
-                                        </tr>
+                                        {{--<tr>--}}
+                                            {{--<td>Subur Jaya</td>--}}
+                                            {{--<td>subur-jaya@local.com</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td>belum-terbayar</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>--}}
+                                        {{--</tr>--}}
+                                        {{--<tr>--}}
+                                            {{--<td>Subur Jaya</td>--}}
+                                            {{--<td>subur-jaya@local.com</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td>belum-terbayar</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>--}}
+                                        {{--</tr>--}}
+                                        {{--<tr>--}}
+                                            {{--<td>Subur Jaya</td>--}}
+                                            {{--<td>subur-jaya@local.com</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td>belum-terbayar</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>--}}
+                                        {{--</tr>--}}
+                                        {{--<tr>--}}
+                                            {{--<td>Subur Jaya</td>--}}
+                                            {{--<td>subur-jaya@local.com</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td>belum-terbayar</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>--}}
+                                        {{--</tr>--}}
+                                        {{--<tr>--}}
+                                            {{--<td>Subur Jaya</td>--}}
+                                            {{--<td>subur-jaya@local.com</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td>belum-terbayar</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>--}}
+                                        {{--</tr>--}}
+                                        {{--<tr>--}}
+                                            {{--<td>Subur Jaya</td>--}}
+                                            {{--<td>subur-jaya@local.com</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td>belum-terbayar</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>--}}
+                                        {{--</tr>--}}
+                                        {{--<tr>--}}
+                                            {{--<td>Subur Jaya</td>--}}
+                                            {{--<td>subur-jaya@local.com</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td>belum-terbayar</td>--}}
+                                            {{--<td><a href="#">lihat</a></td>--}}
+                                            {{--<td><a href="#"><img src="/images/belum-terverifikasi.png" class=""></img></a></td>--}}
+                                        {{--</tr>--}}
                                         
                                     </tbody>
                                     <thead>

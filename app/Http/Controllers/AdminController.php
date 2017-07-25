@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -21,8 +22,10 @@ class AdminController extends Controller
 
      public function belum_terverifikasi_iso(Request $request){
      $email = $request->session()->get('email');
+     $userList = DB::table('users')->where('status_ISO', 'belum-terverifikasi')->get();
+
         if($request->session()->get('login')) {
-            return view('admin.belum-terverifikasi-iso');
+            return view('admin.belum-terverifikasi-iso', array('userList' => $userList));
         } else {
             return view('auth.login-admin');
         }
