@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{env('APP_URL')}}/plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{env('APP_URL')}}/images/bisqa.png">
      <title>Sistem Sertifikasi Terpadu - Kementrian Perindustrian Republik Indonesia</title>
       <!-- Bootstrap Core CSS -->
     <link href="{{env('APP_URL')}}/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -116,6 +116,9 @@
                 @yield('breadcrumb-iso-admin')
                 @yield('breadcrumb-sni-admin')
                 @yield('breadcrumb-belum-terverifikasi-iso-admin')
+                @yield('breadcrumb-terverifikasi-iso-admin')
+                @yield('breadcrumb-belum-terverifikasi-pembayaran-iso-admin')
+                @yield('breadcrumb-terverifikasi-pembayaran-iso-admin')
                   
 
                 <!-- contents start here -->
@@ -131,6 +134,9 @@
                      @yield('isi-iso-admin')
                      @yield('isi-sni-admin')
                      @yield('isi-belum-terverifikasi-iso-admin')
+                     @yield('isi-terverifikasi-iso-admin')
+                     @yield('isi-belum-terverifikasi-pembayaran-iso-admin')
+                     @yield('isi-terverifikasi-pembayaran-iso-admin')
                      
                     
 

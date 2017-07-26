@@ -13,8 +13,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{env('APP_URL')}}/plugins/images/favicon.png">
-     <title>Sistem Sertifikasi Terpadu - Kementrian Perindustrian Republik Indonesia</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{env('APP_URL')}}/images/bisqa.png">
+
+    <title>Sistem Sertifikasi Terpadu - Kementrian Perindustrian Republik Indonesia</title>
       <!-- Bootstrap Core CSS -->
     <link href="{{env('APP_URL')}}/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{env('APP_URL')}}/plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">

@@ -61,9 +61,26 @@ Route::get('/user/tips', 'UserController@tips_penggunaan');
 /* ----------------------------------- VIEW ADMIN PAGES ------------------------------------ */
 
 Route::get('/admin/dashboard', 'HomeController@dashboard_admin')->middleware('checkLogin', 'isAdmin');
+
 Route::get('/admin/iso', 'AdminController@iso');
+
 Route::get('/admin/sni', 'AdminController@sni');
+
 Route::get('/admin/belum-terverifikasi-iso', 'AdminController@belum_terverifikasi_iso');
+
+Route::post('/verifikasi-iso-proses', "AdminController@proses_verifikasi_iso");
+
+Route::get('/admin/terverifikasi-iso', 'AdminController@terverifikasi_iso');
+
+Route::post('/verifikasi-batal-iso-proses', "AdminController@proses_batal_verifikasi_iso");
+
+Route::get('/admin/pembayaran-belum-terkonfirmasi-iso', 'AdminController@belum_terverifikasi_pembayaran_iso');
+
+Route::post('/konfirmasi-pembayaran-iso-proses', "AdminController@proses_verifikasi_pembayaran_iso");
+
+Route::get('/admin/pembayaran-terkonfirmasi-iso', 'AdminController@terverifikasi_pembayaran_iso');
+
+Route::post('/konfirmasi-pembatalan-pembayaran-iso-proses', "AdminController@proses_pembatalan_verifikasi_pembayaran_iso");
 
 
 /* ------------------------------------------------------------------------------------------ */
@@ -87,4 +104,6 @@ Route::get('/login-admin', "AuthController@login_admin");
 Route::get('/logout-admin', "AuthController@logout_admin");
 
 Route::post('/login-proses-admin', "AuthController@bacadatabase_admin");
+
+
 /* ----------------------------------------------------------------------------------- */
