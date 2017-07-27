@@ -30,6 +30,30 @@
 
 @section("isi-iso-admin")
 
+                     <div class="col-md-12">
+                        <div class="white-box">
+                            <h3 class="text-center" class="box-title" >URUTAN UNTUK MEMVERIFIKASI PERUSAHAAN</h3>
+                            <div class="row thin-steps" >
+                                <div class="col-md-4 column-step active" style="background-color:#5c74b8">
+                                    <div class="step-number">1</div>
+                                    <div class="step-title">Pembayaran</div>
+                                    <div class="step-info">Konfirmasi Pembayarannya</div>
+                                </div>
+                                <div class="col-md-4 column-step active" style="background-color:#5c74b8">
+                                    <div class="step-number">2</div>
+                                    <div class="step-title">Upload</div>
+                                    <div class="step-info">Upload hasil terbit sertifikatnya</div>
+                                </div>
+                                <div class="col-md-4 column-step active" style="background-color:#5c74b8">
+                                    <div class="step-number">3</div>
+                                    <div class="step-title">Final</div>
+                                    <div class="step-info">Konfirmasi verifikasinya</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
 
 
                     <div class="col-lg-6 col-sm-6 text-center">
@@ -76,7 +100,7 @@
                                 <div class="panel-body">
                                     <p>Menu ini digunakan untk mengupload hasil sertifikat iso yang telah terbit</p>
                                 </div>
-                                <a href="status-pembayaran-iso.html" class="btn btn-block btn-success waves-effect waves-light" style="color: white">Disini</a>
+                                <a href="/admin/upload-sertifikat-iso" class="btn btn-block btn-success waves-effect waves-light" style="color: white">Disini</a>
                                 <br>
                             </div>
                         </div>

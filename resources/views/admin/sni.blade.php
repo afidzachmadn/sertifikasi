@@ -29,6 +29,83 @@
 @endsection
 
 @section("isi-sni-admin")
+
+<div class="col-md-12">
+                        <div class="white-box">
+                            <h3 class="text-center" class="box-title" >URUTAN UNTUK MEMVERIFIKASI PERUSAHAAN</h3>
+                            <div class="row thin-steps" >
+                                <div class="col-md-4 column-step active" style="background-color:#c1b5b1">
+                                    <div class="step-number">1</div>
+                                    <div class="step-title">Pembayaran</div>
+                                    <div class="step-info">Konfirmasi Pembayarannya</div>
+                                </div>
+                                <div class="col-md-4 column-step active" style="background-color:#c1b5b1">
+                                    <div class="step-number">2</div>
+                                    <div class="step-title">Upload</div>
+                                    <div class="step-info">Upload hasil terbit sertifikatnya</div>
+                                </div>
+                                <div class="col-md-4 column-step active" style="background-color:#c1b5b1">
+                                    <div class="step-number">3</div>
+                                    <div class="step-title">Final</div>
+                                    <div class="step-info">Konfirmasi verifikasinya</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col-lg-6 col-sm-6 text-center">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading"> Pendaftar yang menunggu konfirmasi pembayaran
+                                <div class="pull-right"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a> <a href="#" data-perform="panel-dismiss"><i class="ti-close"></i></a> </div>
+                            </div>
+                            <div class="panel-wrapper collapse in" aria-expanded="true">
+                                <div class="panel-body">
+                                    <p>Menu ini akan menampilkan seluruh pendaftar SNI yang pembayarannya belum di konfirmasi</p>
+                                </div>
+                                
+                                <a href="/admin/pembayaran-belum-terkonfirmasi-sni" class="btn btn-block btn-danger waves-effect waves-light" style="color: white">Lihat</a>
+                                
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-6 text-center">
+                        <div class="panel">
+                            <div class="panel-heading" style="background-color:#01c0c8;color:white"> Pendaftar yang sudah terkonfirmasi pembayarannya
+                                <div class="pull-right"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a> <a href="#" data-perform="panel-dismiss"><i class="ti-close"></i></a> </div>
+                            </div>
+                            <div class="panel-wrapper collapse in" aria-expanded="true">
+                                <div class="panel-body">
+                                    <p>Menu ini akan menampilkan seluruh pendaftar yang pembayarannya SNI-nya sudah terkonfirmasi</p>
+                                </div>
+                                
+                                <a href="/admin/pembayaran-terkonfirmasi-sni" class="btn btn-block btn-default waves-effect waves-light" style="background-color:#01c0c8;color:white">Lihat</a>
+                                
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-12 col-sm-12 text-center">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">Upload hasil sertifikat SNI
+                                <div class="pull-right"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a> <a href="#" data-perform="panel-dismiss"><i class="ti-close"></i></a> </div>
+                            </div>
+                            <div class="panel-wrapper collapse in" aria-expanded="true">
+                                <div class="panel-body">
+                                    <p>Menu ini digunakan untk mengupload hasil sertifikat SNI yang telah terbit</p>
+                                </div>
+                                <a href="/admin/upload-sertifikat-sni" class="btn btn-block btn-success waves-effect waves-light" style="color: white">Disini</a>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="col-lg-6 col-sm-6 text-center">
                         <div class="panel panel-info">
                             <div class="panel-heading"> Pendaftar yang menunggu verifikasi anda
@@ -36,10 +113,10 @@
                             </div>
                             <div class="panel-wrapper collapse in" aria-expanded="true">
                                 <div class="panel-body">
-                                    <p>Menu ini akan menampilkan seluruh pendaftar untuk sertifikasi ISO yang belum anda konfirmasi</p>
+                                    <p>Menu ini akan menampilkan seluruh pendaftar untuk sertifikasi SNI yang belum anda konfirmasi</p>
                                 </div>
                                 
-                                <a href="list-seluruh-iso-terverifikasi.html" class="btn btn-block btn-info waves-effect waves-light" style="color: white">Lihat</a>
+                                <a href="/admin/belum-terverifikasi-sni" class="btn btn-block btn-info waves-effect waves-light" style="color: white">Lihat</a>
                                 
                                 <br>
                             </div>
@@ -53,31 +130,12 @@
                             </div>
                             <div class="panel-wrapper collapse in" aria-expanded="true">
                                 <div class="panel-body">
-                                    <p>Menu ini akan menampilkan seluruh pendaftar untuk sertifikasi ISO yang telah terkonfirmasi</p>
+                                    <p>Menu ini akan menampilkan seluruh pendaftar untuk sertifikasi SNI yang telah terkonfirmasi</p>
                                 </div>
-                                <a href="list-seluruh-iso-belum-terverifikasi.html" class="btn btn-block btn-primary waves-effect waves-light" style="color: white">Lihat</a>
+                                <a href="/admin/terverifikasi-sni" class="btn btn-block btn-primary waves-effect waves-light" style="color: white">Lihat</a>
                                 <br>
                             </div>
                         </div>
                     </div>
-
-                   
-
-                    <div class="col-lg-12 col-sm-12 text-center">
-                        <div class="panel panel-warning">
-                            <div class="panel-heading">Cek pembayaran
-                                <div class="pull-right"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a> <a href="#" data-perform="panel-dismiss"><i class="ti-close"></i></a> </div>
-                            </div>
-                            <div class="panel-wrapper collapse in" aria-expanded="true">
-                                <div class="panel-body">
-                                    <p>Menu ini akan menampilkan pendaftar yang telah ataupun belum melakukan pembayaran untuk sertifikasi ISO</p>
-                                </div>
-                                <a href="status-pembayaran-iso.html" class="btn btn-block btn-warning waves-effect waves-light" style="color: white">Lihat</a>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
 
 @endsection

@@ -28,6 +28,15 @@
     <link href="{{env('APP_URL')}}/css/animate.css" rel="stylesheet">
     <!-- Menu CSS -->
     <link href="{{env('APP_URL')}}/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- page CSS -->
+    <link href="{{env('APP_URL')}}/plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{env('APP_URL')}}/plugins/bower_components/custom-select/custom-select.css" rel="stylesheet" type="text/css" />
+    <link href="{{env('APP_URL')}}/plugins/bower_components/switchery/dist/switchery.min.css" rel="stylesheet" />
+    <link href="{{env('APP_URL')}}/plugins/bower_components/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="{{env('APP_URL')}}/plugins/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet" />
+    <link href="{{env('APP_URL')}}/plugins/bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+    <link href="{{env('APP_URL')}}/plugins/bower_components/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+
     <!--alerts CSS -->
     <link href="{{env('APP_URL')}}/plugins/bower_components/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
 
@@ -69,7 +78,7 @@
                     <li><a href="javascript:void(0)" class="open-close hidden-xs waves-effect waves-light"><i class="icon-arrow-left-circle ti-menu"></i></a></li>
                     <li>
                         <form role="search" class="app-search hidden-xs">
-                            <input type="text" placeholder="Search{{env('APP_URL')}}." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
+                            <input type="text" placeholder="Search" class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
                     </li>
                 </ul>
                
@@ -119,6 +128,13 @@
                 @yield('breadcrumb-terverifikasi-iso-admin')
                 @yield('breadcrumb-belum-terverifikasi-pembayaran-iso-admin')
                 @yield('breadcrumb-terverifikasi-pembayaran-iso-admin')
+                @yield('breadcrumb-upload-hasil-sertifikasi-iso-admin')
+                
+                @yield('breadcrumb-belum-terverifikasi-sni-admin')
+                @yield('breadcrumb-belum-terverifikasi-pembayaran-sni-admin')
+                @yield('breadcrumb-terverifikasi-pembayaran-sni-admin')
+                @yield('breadcrumb-upload-hasil-sertifikasi-sni-admin')
+                @yield('breadcrumb-terverifikasi-sni-admin')
                   
 
                 <!-- contents start here -->
@@ -133,10 +149,19 @@
                      @yield('isi-dashboard-admin')
                      @yield('isi-iso-admin')
                      @yield('isi-sni-admin')
+
                      @yield('isi-belum-terverifikasi-iso-admin')
                      @yield('isi-terverifikasi-iso-admin')
                      @yield('isi-belum-terverifikasi-pembayaran-iso-admin')
                      @yield('isi-terverifikasi-pembayaran-iso-admin')
+                     @yield("isi-upload-hasil-sertifikasi-iso-admin")
+
+                     @yield('isi-belum-terverifikasi-sni-admin')
+                     @yield('isi-belum-terverifikasi-pembayaran-sni-admin')
+                     @yield('isi-terverifikasi-pembayaran-sni-admin')
+                     @yield("isi-upload-hasil-sertifikasi-sni-admin")
+                     @yield('isi-terverifikasi-sni-admin')
+
                      
                     
 
@@ -190,6 +215,14 @@
      <!-- Custom Theme JavaScript -->
     <script src="{{env('APP_URL')}}/js/custom.min.js"></script>
     <script src="{{env('APP_URL')}}/js/jasny-bootstrap.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+    <script src="{{env('APP_URL')}}/plugins/bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="{{env('APP_URL')}}/plugins/bower_components/multiselect/js/jquery.multi-select.js"></script>
+    
+
+
+
     <!-- jQuery file upload -->
     <script src="{{env('APP_URL')}}/plugins/bower_components/dropify/dist/js/dropify.min.js"></script>
     <script>

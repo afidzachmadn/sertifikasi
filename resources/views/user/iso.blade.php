@@ -32,41 +32,41 @@
 @section('isi-iso-user')
 
                     
-                <div>
+                <div class="col-sm-12">
                     <form action="{{url('iso-proses')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
-                        <div class="white-box" class="col-sm-12 col-md-2 col-xs-12">
+                        <div class="white-box">
                             <h3 class="box-title">File Upload 1</h3>
                             <label for="input-file-max-fs">Silahkan upload file Struktur Organisasi (*PDF) (*Max 2MB)</label>
                             <input type="file" id="input-file-max-fs" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-iso-1" data-default-file="{{env('APP_URL')}}/storage/pdf/iso/hasil-terbit-sertifikat/{{$iso_p->file_upload_iso_1}}" value="{{env('APP_URL')}}/storage/pdf/iso/hasil-terbit-sertifikat/{{$iso_p->file_upload_iso_1}}" required=""/> 
                         </div>
                     
                     
-                        <div class="white-box" class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                        <div class="white-box">
                             <h3 class="box-title">File Upload 2</h3>
                             <label for="input-file-max-fs">Silahkan upload file Diagram alir proses produksi/penyedia jasa termasuk jumlah line proses produksi (*PDF) (*Max 2MB)</label>
                             <input type="file" id="input-file-disable-remove" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-iso-2" data-default-file="{{env('APP_URL')}}/storage/pdf/iso/hasil-terbit-sertifikat/{{$iso_p->file_upload_iso_2}}" value="{{env('APP_URL')}}/storage/pdf/iso/hasil-terbit-sertifikat/{{$iso_p->file_upload_iso_2}}" required=""/> </div>
                     
                     
-                        <div class="white-box" class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                        <div class="white-box">
                             <h3 class="box-title">File Upload 3</h3>
                             <label for="input-file-disable-remove">Silahkan upload dokumen Sistem Manajemen Mutu (*PDF) (*Max 2MB)</label>
                             <input type="file" id="input-file-disable-remove" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-iso-3" data-default-file="{{env('APP_URL')}}/storage/pdf/iso/hasil-terbit-sertifikat/{{$iso_p->file_upload_iso_3}}" value="{{env('APP_URL')}}/storage/pdf/iso/hasil-terbit-sertifikat/{{$iso_p->file_upload_iso_3}}" required=""/> </div>
                     
                     
-                        <div class="white-box" class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                        <div class="white-box">
                             <h3 class="box-title">File Upload 4</h3>
                             <label for="input-file-disable-remove">Silahkan upload Daftar Induk Dokumen / Daftar Informasi terdokumentasi (*PDF) (*Max 2MB)</label>
                             <input type="file" id="input-file-disable-remove" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-iso-4" data-default-file="{{env('APP_URL')}}/storage/pdf/iso/hasil-terbit-sertifikat/{{$iso_p->file_upload_iso_4}}" value="{{env('APP_URL')}}/storage/pdf/iso/hasil-terbit-sertifikat/{{$iso_p->file_upload_iso_4}}" required=""/> </div>
                     
                     
-                        <div class="white-box" class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                        <div class="white-box" >
                             <h3 class="box-title">File Upload 5</h3>
                             <label for="input-file-disable-remove">Silahkan upload Diagram alir proses Sistem Manajemen Mutu (*PDF) (*Max 2MB)</label>
                             <input type="file" id="input-file-disable-remove" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-iso-5" data-default-file="{{env('APP_URL')}}/storage/pdf/iso/hasil-terbit-sertifikat/{{$iso_p->file_upload_iso_5}}" value="{{env('APP_URL')}}/storage/pdf/iso/hasil-terbit-sertifikat/{{$iso_p->file_upload_iso_5}}" required=""/> </div>
                     
                     
-                        <div class="white-box" class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                        <div class="white-box">
                             <h3 class="box-title">File Upload 6</h3>
                             <label for="input-file-disable-remove">Silahkan upload Rekaman Audit Internal dan Tinjauan Manajemen (*PDF) (*Max 2MB)</label>
                             <input type="file" id="input-file-disable-remove" class="dropify"  data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-iso-6" data-default-file="{{env('APP_URL')}}/storage/pdf/iso/hasil-terbit-sertifikat/{{$iso_p->file_upload_iso_6}}" value="{{env('APP_URL')}}/storage/pdf/iso/hasil-terbit-sertifikat/{{$iso_p->file_upload_iso_6}}" required=""/>

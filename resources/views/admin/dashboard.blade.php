@@ -46,33 +46,33 @@
                         <div class="white-box">
                             <h3 class="box-title">Sertifikasi ISO</h3>
                             <div class="stats-row">
+                                
                                 <div class="stat-item">
-                                    <h6>Jumlah keseluruhan</h6> <b>500</b></div>
-                                <div class="stat-item">
-                                    <h6>Yang sudah terverifikasi oleh anda</h6> <b>450</b></div>
-                                <div class="stat-item">
-                                    <h6>Yang belum terverifikasi oleh anda</h6> <b>50</b></div>
-                            </div>
+                                    <h6>Hi,&nbsp{{Session::get('name')}}. Anda sudah melakukan verifikasi ISO sebanyak :</h6> <b>450</b>
+                                </div>
+                                
                             <div id="sparkline8">
                                 <canvas width="245" height="50" style="display: inline-block; width: 245px; height: 50px; vertical-align: top;"></canvas>
                             </div>
                         </div>
                     </div>
+                </div>
+
                     <div class="col-lg-6 col-sm-6">
                         <div class="white-box">
                             <h3 class="box-title">Sertifikasi SNI</h3>
                             <div class="stats-row">
+                                
                                 <div class="stat-item">
-                                    <h6>Jumlah keseluruhan</h6> <b>150</b></div>
-                                <div class="stat-item">
-                                    <h6>Yang sudah terverifikasi oleh anda</h6> <b>50</b></div>
-                                <div class="stat-item">
-                                    <h6>Yang belum terverifikasi oleh anda</h6> <b>100</b></div>
-                            </div>
+                                    <h6>Hi,&nbsp{{Session::get('name')}}. Anda sudah melakukan verifikasi SNI sebanyak :</h6> <b>450</b>
+                                </div>
+                                
                             <div id="sparkline9">
-                                <canvas width="245" height="50" style="display: inline-block; width: 245px; height: 50px; vertical-align: top;"></canvas
-                            ></div>
+                                <canvas width="245" height="50" style="display: inline-block; width: 245px; height: 50px; vertical-align: top;"></canvas>
+                            </div>
                         </div>
                     </div>
+                </div>
+                
 
 @endsection

@@ -33,7 +33,7 @@
 @section('isi-bukti-pembayaran-sni')
 
                     
-                <div>
+                <div class="col-sm-12">
                     <form action="{{url('/user/upload-bukti-pembayaran-sni-proses')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <div class="white-box" class="col-sm-12 col-md-2 col-xs-12 col-lg-12">

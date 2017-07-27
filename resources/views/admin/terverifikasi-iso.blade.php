@@ -36,6 +36,9 @@
                             <p class="text-muted">Untuk membatalkan verifikasi, klik tombol &nbsp<span><button type="button" class="btn btn-success">Terverifikasi</button></span> &nbsp yang ada di kolom <code>Status Sertifikasi ISO</code> dan ikuti instruksi yang muncul.
                             </br>
                             Jika berhasil, maka perusahaan yang anda konfirmasi akan hilang dari tabel ini. Untuk mengeceknya, silahkan ke menu pendaftar yang belum terverifikasi.
+
+                            </br>
+                            <strong>Catatan: Jika anda membatalkan verifikasi, anda harus mengupload kembali sertifikat terbit ISO untuk perusahaan yang anda batalkan verifikasinya di menu upload hasil sertifikat SNI.</strong>
                             </p>
                             
                             </br>
@@ -55,6 +58,7 @@
                                             <th>Status Konfirmasi Pembayaran</th>
                                             <th>Hasil Penerbitan Sertifikasi ISO</th>
                                             <th>Status Sertifikasi ISO</th>
+                                            <th>Verifikator</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -93,6 +97,7 @@
                                                         <img src="{{env('APP_URL')}}/images/{{$user->status_ISO}}.png"> -->
                                                     </a>
                                                 </td>
+                                                <td>{{$user->Verifikator_ISO_name}}</td>
                                             </tr>
                                         @endforeach
                                        
@@ -112,6 +117,7 @@
                                             <th>Status Konfirmasi Pembayaran</th>
                                             <th>Hasil Penerbitan Sertifikasi ISO</th>
                                             <th>Status Sertifikasi ISO</th>
+                                            <th>Verifikator</th>
                                         </tr>
                                     </thead>
                                 </table>

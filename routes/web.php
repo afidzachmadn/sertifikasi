@@ -66,6 +66,7 @@ Route::get('/admin/iso', 'AdminController@iso');
 
 Route::get('/admin/sni', 'AdminController@sni');
 
+//--------------------------------------------------------------------------------//
 Route::get('/admin/belum-terverifikasi-iso', 'AdminController@belum_terverifikasi_iso');
 
 Route::post('/verifikasi-iso-proses', "AdminController@proses_verifikasi_iso");
@@ -73,7 +74,10 @@ Route::post('/verifikasi-iso-proses', "AdminController@proses_verifikasi_iso");
 Route::get('/admin/terverifikasi-iso', 'AdminController@terverifikasi_iso');
 
 Route::post('/verifikasi-batal-iso-proses', "AdminController@proses_batal_verifikasi_iso");
+//---------------------------------------------------------------------------------//
 
+
+//---------------------------------------------------------------------------------//
 Route::get('/admin/pembayaran-belum-terkonfirmasi-iso', 'AdminController@belum_terverifikasi_pembayaran_iso');
 
 Route::post('/konfirmasi-pembayaran-iso-proses', "AdminController@proses_verifikasi_pembayaran_iso");
@@ -81,6 +85,49 @@ Route::post('/konfirmasi-pembayaran-iso-proses', "AdminController@proses_verifik
 Route::get('/admin/pembayaran-terkonfirmasi-iso', 'AdminController@terverifikasi_pembayaran_iso');
 
 Route::post('/konfirmasi-pembatalan-pembayaran-iso-proses', "AdminController@proses_pembatalan_verifikasi_pembayaran_iso");
+//----------------------------------------------------------------------------------//
+
+
+//--------------------------------------------------------------------------------------//
+Route::get('/admin/upload-sertifikat-iso', 'AdminController@upload_sertifikat_iso');
+
+Route::post('/upload-hasil-terbit-sertifikat-iso', "AdminController@proses_upload_sertifikat_iso");
+//--------------------------------------------------------------------------------------//
+
+
+
+//------------------------------------------------------------------------------------//
+Route::get('/admin/pembayaran-belum-terkonfirmasi-sni', 'AdminController@belum_terverifikasi_pembayaran_sni');
+
+Route::post('/konfirmasi-pembayaran-sni-proses', "AdminController@proses_verifikasi_pembayaran_sni");
+
+Route::get('/admin/pembayaran-terkonfirmasi-sni', 'AdminController@terverifikasi_pembayaran_sni');
+
+Route::post('/konfirmasi-pembatalan-pembayaran-sni-proses', "AdminController@proses_pembatalan_verifikasi_pembayaran_sni");
+//-------------------------------------------------------------------------------------//
+
+
+
+//--------------------------------------------------------------------------------------//
+Route::get('/admin/upload-sertifikat-sni', 'AdminController@upload_sertifikat_sni');
+
+Route::post('/upload-hasil-terbit-sertifikat-sni', "AdminController@proses_upload_sertifikat_sni");
+//--------------------------------------------------------------------------------------//
+
+
+
+
+
+//--------------------------------------------------------------------------------//
+Route::get('/admin/belum-terverifikasi-sni', 'AdminController@belum_terverifikasi_sni');
+
+Route::post('/verifikasi-sni-proses', "AdminController@proses_verifikasi_sni");
+
+Route::get('/admin/terverifikasi-sni', 'AdminController@terverifikasi_sni');
+
+Route::post('/verifikasi-batal-sni-proses', "AdminController@proses_batal_verifikasi_sni");
+//---------------------------------------------------------------------------------//
+
 
 
 /* ------------------------------------------------------------------------------------------ */
