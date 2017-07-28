@@ -45,24 +45,12 @@ class AdminController extends Controller
  
 
      $id = $request->get('no');
-     $name = $request->session()->get('name');
+     $userId = $request->session()->get('id');
      $status_iso = $request->get('texted');
      $userDb = DB::table('users')->where('id', $id)
-                                 ->update(['status_ISO' => $status_iso,'Verifikator_ISO_name' => $name]);
+                                 ->update(['status_ISO' => $status_iso,'Verifikator_ISO_name' => $userId]);
 
-
-     
-
-     $nilai_di_database = $request->session()->get('jumlah_total_pendaftar_ISO_yang_diverifikasi');
-     $inital_nilai = 1;
-     $nilai_akhir = $nilai_di_database + $inital_nilai;
-//     $adminDb = DB::table('admin')->where('id', $id)
-//                                 ->update(['jumlah_total_pendaftar_ISO_yang_diverifikasi' => $nilai_akhir]);
-//
-//
-//
-//
-//     return redirect()->action('AdminController@belum_terverifikasi_iso');
+     return redirect()->action('AdminController@belum_terverifikasi_iso');
     }
 
     public function terverifikasi_iso(Request $request){

@@ -25,11 +25,15 @@ class HomeController extends Controller {
    }
 
    public function dashboard_admin(Request $request) {
-        $email = $request->session()->get('email');
-        if($request->session()->get('login')) {
-            return view('admin.dashboard');
-        } else {
-            return view('auth.login');
-        }
+       $id = $request->session()->get('id');
+       $db = DB::table('users');
+       $verifiedIso = $db->where('Verifikator_ISO_name', $id)->count();
+       $verifiedSni = $db->where('Verifikator_SNI_name', $id)->count();
+
+       if($request->session()->get('login')) {
+           return view('admin.dashboard', array('verifiedIso' => $verifiedIso, 'verifiedSni' => $verifiedSni));
+       } else {
+           return view('auth.login');
+       }
    }
 }

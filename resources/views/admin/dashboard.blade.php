@@ -48,7 +48,7 @@
                             <div class="stats-row">
                                 
                                 <div class="stat-item">
-                                    <h6>Hi,&nbsp{{Session::get('name')}}. Anda sudah melakukan verifikasi ISO sebanyak :</h6> <b>450</b>
+                                    <h6>Hi,&nbsp{{Session::get('name')}}. Anda sudah melakukan verifikasi ISO sebanyak :</h6> <b>{{$verifiedIso}}</b>
                                 </div>
                                 
                             <div id="sparkline8">
@@ -64,7 +64,7 @@
                             <div class="stats-row">
                                 
                                 <div class="stat-item">
-                                    <h6>Hi,&nbsp{{Session::get('name')}}. Anda sudah melakukan verifikasi SNI sebanyak :</h6> <b>450</b>
+                                    <h6>Hi,&nbsp{{Session::get('name')}}. Anda sudah melakukan verifikasi SNI sebanyak :</h6> <b>{{$verifiedSni}}</b>
                                 </div>
                                 
                             <div id="sparkline9">
