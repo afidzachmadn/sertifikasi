@@ -2,9 +2,9 @@
 
 @section ('sidebar-sni-admin')
 <li class="nav-small-cap m-t-10">--- Menu Utama</li>
-                    <li> <a href="/admin/dashboard" class="waves-effect"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
-                    <li> <a href="/admin/iso" class="waves-effect"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi ISO</span></a> </li>
-                     <li> <a href="/admin/sni" class="waves-effect active"><i class="ti-world p-r-10"></i> <span class="hide-menu">Sertifikasi SNI</span></a> </li>
+                    <li> <a href="{{env('APP_URL')}}/admin/dashboard" class="waves-effect"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
+                    <li> <a href="{{env('APP_URL')}}/admin/iso" class="waves-effect"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi ISO</span></a> </li>
+                     <li> <a href="{{env('APP_URL')}}/admin/sni" class="waves-effect active"><i class="ti-world p-r-10"></i> <span class="hide-menu">Sertifikasi SNI</span></a> </li>
                      <li> <a href="one-stop-service.html" class="waves-effect"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
 @endsection
 
@@ -20,7 +20,7 @@
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         <ol class="breadcrumb">
                             <li><a href="#">System</a></li>
-                            <li><a href="/admin/dashboard">Dashboard</a></li>
+                            <li><a href="{{env('APP_URL')}}/admin/dashboard">Dashboard</a></li>
                             <li class="active">SNI</li>
                         </ol>
                     </div>
@@ -66,7 +66,7 @@
                                     <p>Menu ini akan menampilkan seluruh pendaftar SNI yang pembayarannya belum di konfirmasi</p>
                                 </div>
                                 
-                                <a href="/admin/pembayaran-belum-terkonfirmasi-sni" class="btn btn-block btn-danger waves-effect waves-light" style="color: white">Lihat</a>
+                                <a href="{{env('APP_URL')}}/admin/pembayaran-belum-terkonfirmasi-sni" class="btn btn-block btn-danger waves-effect waves-light" style="color: white">Lihat</a>
                                 
                                 <br>
                             </div>
@@ -83,7 +83,7 @@
                                     <p>Menu ini akan menampilkan seluruh pendaftar yang pembayarannya SNI-nya sudah terkonfirmasi</p>
                                 </div>
                                 
-                                <a href="/admin/pembayaran-terkonfirmasi-sni" class="btn btn-block btn-default waves-effect waves-light" style="background-color:#01c0c8;color:white">Lihat</a>
+                                <a href="{{env('APP_URL')}}/admin/pembayaran-terkonfirmasi-sni" class="btn btn-block btn-default waves-effect waves-light" style="background-color:#01c0c8;color:white">Lihat</a>
                                 
                                 <br>
                             </div>
@@ -100,7 +100,7 @@
                                 <div class="panel-body">
                                     <p>Menu ini digunakan untk mengupload hasil sertifikat SNI yang telah terbit</p>
                                 </div>
-                                <a href="/admin/upload-sertifikat-sni" class="btn btn-block btn-success waves-effect waves-light" style="color: white">Disini</a>
+                                <a href="{{env('APP_URL')}}/admin/upload-sertifikat-sni" class="btn btn-block btn-success waves-effect waves-light" style="color: white">Disini</a>
                                 <br>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                                     <p>Menu ini akan menampilkan seluruh pendaftar untuk sertifikasi SNI yang belum anda konfirmasi</p>
                                 </div>
                                 
-                                <a href="/admin/belum-terverifikasi-sni" class="btn btn-block btn-info waves-effect waves-light" style="color: white">Lihat</a>
+                                <a href="{{env('APP_URL')}}/admin/belum-terverifikasi-sni" class="btn btn-block btn-info waves-effect waves-light" style="color: white">Lihat</a>
                                 
                                 <br>
                             </div>
@@ -132,7 +132,7 @@
                                 <div class="panel-body">
                                     <p>Menu ini akan menampilkan seluruh pendaftar untuk sertifikasi SNI yang telah terkonfirmasi</p>
                                 </div>
-                                <a href="/admin/terverifikasi-sni" class="btn btn-block btn-primary waves-effect waves-light" style="color: white">Lihat</a>
+                                <a href="{{env('APP_URL')}}/admin/terverifikasi-sni" class="btn btn-block btn-primary waves-effect waves-light" style="color: white">Lihat</a>
                                 <br>
                             </div>
                         </div>

@@ -56,13 +56,13 @@ class AdminController extends Controller
      $nilai_di_database = $request->session()->get('jumlah_total_pendaftar_ISO_yang_diverifikasi');
      $inital_nilai = 1;
      $nilai_akhir = $nilai_di_database + $inital_nilai;
-     $adminDb = DB::table('admin')->where('id', $id)
-                                 ->update(['jumlah_total_pendaftar_ISO_yang_diverifikasi' => $nilai_akhir]);
-
-
-
-     
-     return redirect()->action('AdminController@belum_terverifikasi_iso');
+//     $adminDb = DB::table('admin')->where('id', $id)
+//                                 ->update(['jumlah_total_pendaftar_ISO_yang_diverifikasi' => $nilai_akhir]);
+//
+//
+//
+//
+//     return redirect()->action('AdminController@belum_terverifikasi_iso');
     }
 
     public function terverifikasi_iso(Request $request){

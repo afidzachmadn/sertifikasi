@@ -2,11 +2,11 @@
 
 @section ('sidebar-sni-user')
 <li class="nav-small-cap m-t-10">--- Pilihan Menu</li>
-                    <li> <a href="/user/dashboard" class="waves-effect"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
-                    <li> <a href="/user/iso" class="waves-effect"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi ISO</span></a> </li>
-                     <li> <a href="/user/sni" class="waves-effect active"><i class="ti-world p-r-10"></i> <span class="hide-menu">Sertifikasi SNI</span></a> </li>
+                    <li> <a href="{{env('APP_URL')}}/user/dashboard" class="waves-effect"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
+                    <li> <a href="{{env('APP_URL')}}/user/iso" class="waves-effect"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi ISO</span></a> </li>
+                     <li> <a href="{{env('APP_URL')}}/user/sni" class="waves-effect active"><i class="ti-world p-r-10"></i> <span class="hide-menu">Sertifikasi SNI</span></a> </li>
                      <li> <a href="#"class="waves-effect" alt="alert" class="img-responsive model_img" id="sa-params"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
-                     <li> <a href="/user/tips" class="waves-effect"><i class="ti-help p-r-10"></i> <span class="hide-menu">Tips Penggunaan</span></a> </li>
+                     <li> <a href="{{env('APP_URL')}}/user/tips" class="waves-effect"><i class="ti-help p-r-10"></i> <span class="hide-menu">Tips Penggunaan</span></a> </li>
 @endsection
 
 @section ('breadcrumb-sni-user')
@@ -19,7 +19,7 @@
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         <ol class="breadcrumb">
                             <li><a href="#">System</a></li>
-                            <li><a href="/user/dashboard">Dashboard</a></li>
+                            <li><a href="{{env('APP_URL')}}/user/dashboard">Dashboard</a></li>
                             <li class="active">SNI</li>
                         </ol>
                     </div>
@@ -76,7 +76,7 @@
 
                         <div class="col-lg-3 col-sm-6 col-xs-12">
 
-                            <a href="/user/lihat-dokumen-sni">
+                            <a href="{{env('APP_URL')}}/user/lihat-dokumen-sni">
                             <div  class="btn btn-block btn-danger" >Download</div></a>
                         </div>
                        <br>
