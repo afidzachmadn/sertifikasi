@@ -5,7 +5,7 @@
                     <li> <a href="{{env('APP_URL')}}/admin/dashboard" class="waves-effect"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
                     <li> <a href="{{env('APP_URL')}}/admin/iso" class="waves-effect"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi ISO</span></a> </li>
                      <li> <a href="{{env('APP_URL')}}/admin/sni" class="waves-effect active"><i class="ti-world p-r-10"></i> <span class="hide-menu">Sertifikasi SNI</span></a> </li>
-                     <li> <a href="one-stop-service.html" class="waves-effect"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
+                     <li> <a href="#" class="waves-effect" alt="alert" class="img-responsive model_img" id="sa-params"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
 @endsection
 
 
@@ -31,7 +31,7 @@
 @section("isi-sni-admin")
 
 <div class="col-md-12">
-                        <div class="white-box">
+                        <div class="white-box animated jello">
                             <h3 class="text-center" class="box-title" >URUTAN UNTUK MEMVERIFIKASI PERUSAHAAN</h3>
                             <div class="row thin-steps" >
                                 <div class="col-md-4 column-step active" style="background-color:#c1b5b1">

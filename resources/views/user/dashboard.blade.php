@@ -54,10 +54,7 @@
                                     <p>Jika permintaan sertifikasi ISO anda sudah di tindak lanjuti oleh tim kami, maka anda akan melihat status permintaan anda menjadi "Terverifikasi". Jika anda merasa telah mengirimkan data-data pendukung dan status sertifikasi ISO anda masih "Belum Terverifikasi" dalam kurun waktu yang di tentukan, dimohon untuk menginformasikannya kepada kami melalui form bantuan yang ada di menu tips penggunaan atau silahkan telpon di call center kami. </p>
                                 </div>
                                 <div class="text-center">
-                                <!--<div class="btn btn-danger">Belum Terverifikasi
-                                    </div>
-                                    <span><button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i> </button>
-                                </span>-->
+                               
                                     <img src="{{env('APP_URL')}}/images/{{$status_iso->status_ISO}}.png" class="text-center" class="img-responsive" />
                                 </div>
                                 </br>
@@ -75,10 +72,7 @@
                                     <p>Jika permintaan sertifikasi SNI anda sudah di tindak lanjuti oleh tim kami, maka anda akan melihat status permintaan anda menjadi "Terverifikasi". Jika anda merasa telah mengirimkan data-data pendukung dan status sertifikasi SNI anda masih "Belum Terverifikasi" dalam kurun waktu yang di tentukan, dimohon untuk menginformasikannya kepada kami melalui form bantuan yang ada di menu tips penggunaan atau silahkan telpon di call center kami. </p>
                                 </div>
                                 <div class="text-center">
-                                <!--<div class="btn btn-success">Terverifikasi
-                                </div>
-                                    <span><button type="button" class="btn btn-success btn-circle"><i class="fa fa-check"></i> </button>
-                                </span>-->
+                               
                                  <img src="{{env('APP_URL')}}/images/{{$status_iso->status_SNI}}.png" class="text-center" class="img-responsive" />
                                     
                                 </div>
@@ -97,10 +91,7 @@
                                      <p>Status konfirmasi biaya sertifikasi SNI untuk perusahaan anda. Status akan berubah jika anda telah melakukan pembayaran dan telah di konfirmasi oleh tim kami </p>
                                 </div>
                                 <div class="text-center">
-                                <!--<div class="btn btn-success">Terverifikasi
-                                </div>
-                                    <span><button type="button" class="btn btn-success btn-circle"><i class="fa fa-check"></i> </button>
-                                </span>-->
+                             
                                     <img src="{{env('APP_URL')}}/images/{{$status_pembayaran_iso->status_pembayaran_ISO}}.png" class="text-center" class="img-responsive" />
                                 </div>
                                 </br>
@@ -118,10 +109,7 @@
                                     <p>Status konfirmasi biaya sertifikasi SNI untuk perusahaan anda. Status akan berubah jika anda telah melakukan pembayaran dan telah di konfirmasi oleh tim kami </p>
                                 </div>
                                 <div class="text-center">
-                                <!--<div class="btn btn-success">Terverifikasi
-                                </div>
-                                    <span><button type="button" class="btn btn-success btn-circle"><i class="fa fa-check"></i> </button>
-                                </span>-->
+                               
                                     <img src="{{env('APP_URL')}}/images/{{$status_pembayaran_sni->status_pembayaran_SNI}}.png" class="text-center" class="img-responsive" />
                                 </div>
                                 </br>

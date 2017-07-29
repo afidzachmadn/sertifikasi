@@ -182,5 +182,25 @@ class UserSeed extends Seeder
             'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',
             'jumlah_total_pendaftar_SNI_yang_diverifikasi' => '0'
         ]);
+
+        DB::table('admin')->insert([
+            'nip' => '123456722210111213',
+            'name' => 'Admin 2',
+            'email' => 'admin2@local.com',
+            'password' => encrypt('admin2'),
+            'img_url' => 'users.png',
+            'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',
+            'jumlah_total_pendaftar_SNI_yang_diverifikasi' => '0'
+        ]);
+
+        DB::table('admin')->insert([
+            'nip' => '123226722210111213',
+            'name' => 'Admin 3',
+            'email' => 'admin3@local.com',
+            'password' => encrypt('admin3'),
+            'img_url' => 'users.png',
+            'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',
+            'jumlah_total_pendaftar_SNI_yang_diverifikasi' => '0'
+        ]);
     }
 }

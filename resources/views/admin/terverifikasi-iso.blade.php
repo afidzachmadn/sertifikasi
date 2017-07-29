@@ -5,7 +5,7 @@
                     <li> <a href="{{env('APP_URL')}}/admin/dashboard" class="waves-effect"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
                     <li> <a href="{{env('APP_URL')}}/admin/iso" class="waves-effect active"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi ISO</span></a> </li>
                      <li> <a href="{{env('APP_URL')}}/admin/sni" class="waves-effect"><i class="ti-world p-r-10"></i> <span class="hide-menu">Sertifikasi SNI</span></a> </li>
-                     <li> <a href="one-stop-service.html" class="waves-effect"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
+                    <li> <a href="#" class="waves-effect" alt="alert" class="img-responsive model_img" id="sa-params"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
 @endsection
 
 
@@ -92,10 +92,8 @@
                                                 <td>
                                                     
                                                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Terverifikasi</button>
+                                                 
                                                     
-                                                    <!-- <a href="#">
-                                                        <img src="{{env('APP_URL')}}/images/{{$user->status_ISO}}.png"> -->
-                                                    </a>
                                                 </td>
                                                 <td>{{$user->Verifikator_ISO_name}}</td>
                                             </tr>
@@ -141,10 +139,10 @@
                                              {{csrf_field()}}
                                                 <div class="form-group">
                                                     <label for="recipient-name" class="control-label">Masukan no perusahaan yang barusan anda pilih: </label>
-                                                    <input type="text" class="form-control" id="no" name="no"> </div>
+                                                    <input type="text" class="form-control" id="no" name="no" required=""> </div>
                                                 <div class="form-group">
                                                     <label for="message-text" class="control-label">Ketik "belum-terverifikasi" tanpa tanda petik:</label>
-                                                    <input class="form-control" id="texted" name="texted"></input>
+                                                    <input class="form-control" id="texted" name="texted" required=""></input>
                                                 </div>
                                         </div>
                                         <div class="modal-footer">

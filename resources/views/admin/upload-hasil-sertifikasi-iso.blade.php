@@ -5,7 +5,7 @@
                     <li> <a href="{{env('APP_URL')}}/admin/dashboard" class="waves-effect"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
                     <li> <a href="{{env('APP_URL')}}/admin/iso" class="waves-effect active"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi ISO</span></a> </li>
                      <li> <a href="{{env('APP_URL')}}/admin/sni" class="waves-effect"><i class="ti-world p-r-10"></i> <span class="hide-menu">Sertifikasi SNI</span></a> </li>
-                     <li> <a href="one-stop-service.html" class="waves-effect"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
+                     <li> <a href="#" class="waves-effect" alt="alert" class="img-responsive model_img" id="sa-params"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
 @endsection
 
 
@@ -55,7 +55,7 @@
                         </div>
                         <div class="white-box">
                             <label for="input-file-max-fs">Silahkan upload disini</label>
-                            <input type="file" id="input-file-max-fs" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-hasil-terbit-sertifikat-iso" data-default-file=""/> 
+                            <input type="file" id="input-file-max-fs" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="pdf" name="pdf-hasil-terbit-sertifikat-iso" data-default-file="" required=""/> 
                         </div>
 
                         <div class="row button-box">
@@ -76,27 +76,7 @@
 
 
 
-<!--
-  <div>
-                    <form action="http://localhost/user/upload-bukti-pembayaran-iso-proses" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="_token" value="UgXxrjXQ53NfZRkYelltEnyg0PMffYXTLjNRSC4g">
-                        <div class="white-box" class="col-sm-12 col-md-2 col-xs-12 col-lg-12">
-                            <h3 class="box-title">File Upload Bukti Pembayaran ISO</h3>
-                            <label for="input-file-max-fs">Silahkan upload bukti pembayaran untuk permintaan sertifikasi ISO anda (*JPG) (*Max 2MB)</label>
-                            <input type="file" id="input-file-max-fs" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="jpg" name="pdf-bukti-pembayaran-iso" data-default-file="http://localhost/storage/img/bukti-pembayaran/iso/ArqlQUT30Xj9XKaShLv3HFVZlSacJhqYQB3JN5aK.jpeg" value="http://localhost/storage/img/bukti-pembayaran/iso/ArqlQUT30Xj9XKaShLv3HFVZlSacJhqYQB3JN5aK.jpeg"/> 
-                        </div>
 
-                        <div class="row button-box">
-                            <div class="col-lg-12">
-                                <input class="btn btn-block btn-success" type="submit" value="Kirim"/>
-
-                            </div>
-                        </div>
-                        
-                    </form>
-    </div>
-  
--->
 
     
 @endsection

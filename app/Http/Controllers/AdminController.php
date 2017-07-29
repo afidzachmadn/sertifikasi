@@ -44,11 +44,12 @@ class AdminController extends Controller
     public function proses_verifikasi_iso(Request $request){
  
 
-     $id = $request->get('no');
-     $userId = $request->session()->get('id');
+     $no = $request->get('no');
+     $id= $request->session()->get('id');
+     $name = $request->session()->get('name');
      $status_iso = $request->get('texted');
-     $userDb = DB::table('users')->where('id', $id)
-                                 ->update(['status_ISO' => $status_iso,'Verifikator_ISO_name' => $userId]);
+     $userDb = DB::table('users')->where('id', $no)
+                                 ->update(['status_ISO' => $status_iso,'Verifikator_ISO_name' => $name,'Verifikator_ID_ISO' => $id]);
 
      return redirect()->action('AdminController@belum_terverifikasi_iso');
     }
@@ -71,7 +72,7 @@ class AdminController extends Controller
      $name = $request->session()->get('');
      $status_iso = $request->get('texted');
      $userDb = DB::table('users')->where('id', $id)
-                                 ->update(['status_ISO' => $status_iso,'Verifikator_ISO_name' => $name,'surat_pengesahan_ISO'=>'default-pengesahan-iso.pdf']);
+                                 ->update(['status_ISO' => $status_iso,'Verifikator_ISO_name' => $name,'surat_pengesahan_ISO'=>'default-pengesahan-iso.pdf', 'Verifikator_ID_ISO' => '']);
      return redirect()->action('AdminController@terverifikasi_iso');
     }
 //----------------------------------------------------------------------------------------------//
@@ -263,11 +264,13 @@ class AdminController extends Controller
     public function proses_verifikasi_sni(Request $request){
  
 
-     $id = $request->get('no');
+     $no = $request->get('no');
+     $id= $request->session()->get('id');
      $name = $request->session()->get('name');
      $status_sni = $request->get('texted');
-     $userDb = DB::table('users')->where('id', $id)
-                                 ->update(['status_SNI' => $status_sni,'Verifikator_SNI_name' => $name]);
+     $userDb = DB::table('users')->where('id', $no)
+                                 ->update(['status_SNI' => $status_sni,'Verifikator_SNI_name' => $name,'Verifikator_ID_SNI' => $id]);
+
      return redirect()->action('AdminController@belum_terverifikasi_sni');
     }
 
@@ -289,9 +292,10 @@ class AdminController extends Controller
      $name = $request->session()->get('');
      $status_iso = $request->get('texted');
      $userDb = DB::table('users')->where('id', $id)
-                                 ->update(['status_SNI' => $status_iso,'Verifikator_SNI_name' => $name,'surat_pengesahan_SNI'=>'default-pengesahan-sni.pdf']);
+                                 ->update(['status_SNI' => $status_iso,'Verifikator_SNI_name' => $name,'surat_pengesahan_SNI'=>'default-pengesahan-sni.pdf', 'Verifikator_ID_SNI' => $id]);
      return redirect()->action('AdminController@terverifikasi_sni');
     }
 //----------------------------------------------------------------------------------------------//
 /* ------------------------------------------------------------------------------------------------- */
 }
+

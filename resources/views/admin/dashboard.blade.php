@@ -5,7 +5,7 @@
                     <li> <a href="{{env('APP_URL')}}/admin/dashboard" class="waves-effect active"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
                     <li> <a href="{{env('APP_URL')}}/admin/iso" class="waves-effect"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi ISO</span></a> </li>
                      <li> <a href="{{env('APP_URL')}}/admin/sni" class="waves-effect"><i class="ti-world p-r-10"></i> <span class="hide-menu">Sertifikasi SNI</span></a> </li>
-                     <li> <a href="{{env('APP_URL')}}/admin/one-stop-service" class="waves-effect"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
+                     <li> <a href="#" class="waves-effect" alt="alert" class="img-responsive model_img" id="sa-params"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
 @endsection
 
 @section ('header-dashboard-admin')
@@ -40,39 +40,23 @@
 @endsection
 
 @section("isi-dashboard-admin")
- <!-- .row -->
-
-                    <div class="col-lg-6 col-sm-6">
-                        <div class="white-box">
-                            <h3 class="box-title">Sertifikasi ISO</h3>
-                            <div class="stats-row">
-                                
-                                <div class="stat-item">
-                                    <h6>Hi,&nbsp{{Session::get('name')}}. Anda sudah melakukan verifikasi ISO sebanyak :</h6> <b>{{$verifiedIso}}</b>
-                                </div>
-                                
-                            <div id="sparkline8">
-                                <canvas width="245" height="50" style="display: inline-block; width: 245px; height: 50px; vertical-align: top;"></canvas>
-                            </div>
+ 
+            <div class="col-md-6 col-xs-12 col-sm-6 ">
+                        <div class="white-box text-center bg-info animated bounceInLeft" >
+                            <h1 class="text-white counter">{{$verifiedIso}}</h1>
+                            <p class="text-white">Jumlah perusahaan yang sudah anda verifikasi pengajuan ISO nya</p>
                         </div>
-                    </div>
-                </div>
+                    
+            </div>
 
-                    <div class="col-lg-6 col-sm-6">
-                        <div class="white-box">
-                            <h3 class="box-title">Sertifikasi SNI</h3>
-                            <div class="stats-row">
-                                
-                                <div class="stat-item">
-                                    <h6>Hi,&nbsp{{Session::get('name')}}. Anda sudah melakukan verifikasi SNI sebanyak :</h6> <b>{{$verifiedSni}}</b>
-                                </div>
-                                
-                            <div id="sparkline9">
-                                <canvas width="245" height="50" style="display: inline-block; width: 245px; height: 50px; vertical-align: top;"></canvas>
-                            </div>
+            <div class="col-md-6 col-xs-12 col-sm-6">
+                        <div class="white-box text-center bg-purple  animated bounceInRight">
+                            <h1 class="text-white counter">{{$verifiedSni}}</h1>
+                            <p class="text-white">Jumlah perusahaan yang sudah anda verifikasi pengajuan SNI nya</p>
                         </div>
-                    </div>
-                </div>
+                    
+            </div>
+            
                 
 
 @endsection
