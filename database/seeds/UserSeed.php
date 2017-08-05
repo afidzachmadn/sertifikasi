@@ -11,6 +11,7 @@ class UserSeed extends Seeder
      */
     public function run()
     {
+//-------------------------------------------------------------------------------------------------//
         DB::table('users')->insert([
             'company_name' => 'bulanbintang',
             'email' => 'bulanbintang@local.com',
@@ -172,7 +173,14 @@ class UserSeed extends Seeder
             'permission' => 2
         ]);
 
+//-----------------------------------------------------------------------------------------------//
 
+
+
+
+
+
+//-------------------------------------------------------------------------------------------------//
          DB::table('admin')->insert([
             'nip' => '12345678910111213',
             'name' => 'Admin 1',
@@ -199,6 +207,62 @@ class UserSeed extends Seeder
             'email' => 'admin3@local.com',
             'password' => encrypt('admin3'),
             'img_url' => 'users.png',
+            'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',
+            'jumlah_total_pendaftar_SNI_yang_diverifikasi' => '0'
+        ]);
+//-----------------------------------------------------------------------------------------------//
+
+
+
+
+
+
+
+
+//------------------------------------------------------------------------------------------------//
+        DB::table('pegawai_lapangan')->insert([
+            'nip' => '12345678910',
+            'name' => 'Parto',
+            'jabatan' => 'Pelaksana Junior',
+            'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',
+            'jumlah_total_pendaftar_SNI_yang_diverifikasi' => '0'
+        ]);
+
+        DB::table('pegawai_lapangan')->insert([
+            'nip' => '12345678911',
+            'name' => 'Bapak',
+            'jabatan' => 'Pelaksana Junior',
+            'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',
+            'jumlah_total_pendaftar_SNI_yang_diverifikasi' => '0'
+        ]);
+
+        DB::table('pegawai_lapangan')->insert([
+            'nip' => '12345678912',
+            'name' => 'Ciripa',
+            'jabatan' => 'Pelaksana Junior',
+            'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',
+            'jumlah_total_pendaftar_SNI_yang_diverifikasi' => '0'
+        ]);
+
+        DB::table('pegawai_lapangan')->insert([
+            'nip' => '12345678913',
+            'name' => 'Elvis',
+            'jabatan' => 'Pelaksana Junior',
+            'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',
+            'jumlah_total_pendaftar_SNI_yang_diverifikasi' => '0'
+        ]);
+
+        DB::table('pegawai_lapangan')->insert([
+            'nip' => '12345678914',
+            'name' => 'Handoko',
+            'jabatan' => 'Pelaksana Junior',
+            'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',
+            'jumlah_total_pendaftar_SNI_yang_diverifikasi' => '0'
+        ]);
+        DB::table('pegawai_lapangan')->insert([
+            'nip' => '12345678915',
+            'name' => 'Dery',
+            'jabatan' => 'Pelaksana Junior',
             'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',
             'jumlah_total_pendaftar_SNI_yang_diverifikasi' => '0'
         ]);

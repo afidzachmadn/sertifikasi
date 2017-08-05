@@ -41,14 +41,22 @@
                                 </div>
                                 <div class="col-md-4 column-step active" style="background-color:#5c74b8">
                                     <div class="step-number">2</div>
-                                    <div class="step-title">Upload</div>
-                                    <div class="step-info">Upload hasil terbit sertifikatnya</div>
+                                    <div class="step-title">Survei</div>
+                                    <div class="step-info">Pilih pegawai surveinya</div>
                                 </div>
                                 <div class="col-md-4 column-step active" style="background-color:#5c74b8">
                                     <div class="step-number">3</div>
+                                    <div class="step-title">Upload</div>
+                                    <div class="step-info">Upload hasil terbit sertifikatnya</div>
+                                </div>
+                                <div  class="col-md-12 column-step active"  style="background-color:#5c74b8" >
+                                    <center>
+                                    <div class="step-number">4</div>
                                     <div class="step-title">Final</div>
                                     <div class="step-info">Konfirmasi verifikasinya</div>
+                                    </center>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -85,6 +93,22 @@
                                 
                                 <a href="{{env('APP_URL')}}/admin/pembayaran-terkonfirmasi-iso" class="btn btn-block btn-default waves-effect waves-light" style="background-color:#01c0c8;color:white">Lihat</a>
                                 
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+
+                     <div class="col-lg-12 col-sm-12 text-center">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="background-color:#ff497a;color:white;">Pegawai
+                                <div class="pull-right"><a href="#" data-perform="panel-collapse"><i class="ti-minus"></i></a> <a href="#" data-perform="panel-dismiss"><i class="ti-close"></i></a> </div>
+                            </div>
+                            <div class="panel-wrapper collapse in" aria-expanded="true">
+                                <div class="panel-body" >
+                                    <p>Pilih pegawai untuk melakukan inspeksi dan terjun ke lapangan</p>
+                                </div>
+                                <a href="{{env('APP_URL')}}/admin/pilih-pegawai-inspeksi-iso" class="btn btn-block btn-default waves-effect waves-light" style="color:white;background-color:#ff497a">Disini</a>
                                 <br>
                             </div>
                         </div>

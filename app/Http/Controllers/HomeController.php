@@ -30,6 +30,9 @@ class HomeController extends Controller {
        $verifiedIso = $db->where('Verifikator_ID_ISO', $id)->count();
        $verifiedSni = $db->where('Verifikator_ID_SNI', $id)->count();
 
+       $db_admin = DB::table('admin')->where('id',$id)
+                                 ->update(['jumlah_total_pendaftar_ISO_yang_diverifikasi' => $verifiedIso,'jumlah_total_pendaftar_SNI_yang_diverifikasi' => $verifiedSni]);
+
        if($request->session()->get('login')) {
            return view('admin.dashboard', array('verifiedIso' => $verifiedIso, 'verifiedSni' => $verifiedSni));
        } else {

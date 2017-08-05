@@ -32,6 +32,8 @@ class Users extends Migration
             $table->string('status_ISO',100)->default('belum-terverifikasi');
             $table->string('Verifikator_ISO_name', 100)->nullable();
             $table->string('Verifikator_ID_ISO', 100)->nullable();
+            $table->string('petugas_inspeksi_ISO_name', 100)->nullable();
+            $table->string('petugas_inspeksi_nip_ISO', 100)->nullable();
             $table->string('surat_pengesahan_ISO',100)->default('default-pengesahan-iso.pdf');
 
 
@@ -49,6 +51,8 @@ class Users extends Migration
             $table->string('status_SNI',100)->default('belum-terverifikasi');
             $table->string('Verifikator_SNI_name', 100)->nullable();
             $table->string('Verifikator_ID_SNI', 100)->nullable();
+            $table->string('petugas_inspeksi_SNI_name', 100)->nullable();
+            $table->string('petugas_inspeksi_nip_SNI', 100)->nullable();
             $table->string('surat_pengesahan_SNI',100)->default('default-pengesahan-sni.pdf');
 
             $table->text('description')->nullable();
@@ -68,6 +72,18 @@ class Users extends Migration
 
            
         }); 
+
+        Schema::create('pegawai_lapangan', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nip', 50);
+            $table->string('name', 100);
+            $table->string('jabatan', 100);
+            $table->integer('jumlah_total_pendaftar_ISO_yang_diverifikasi');
+            $table->integer('jumlah_total_pendaftar_SNI_yang_diverifikasi');
+
+
+           
+        });
     }
 
    

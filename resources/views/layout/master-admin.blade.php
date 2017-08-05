@@ -126,6 +126,7 @@
                 @yield('breadcrumb-belum-terverifikasi-pembayaran-iso-admin')
                 @yield('breadcrumb-terverifikasi-pembayaran-iso-admin')
                 @yield('breadcrumb-upload-hasil-sertifikasi-iso-admin')
+                @yield('breadcrumb-pilih-pegawai-inspeksi-iso-admin')
                 
                 @yield('breadcrumb-belum-terverifikasi-sni-admin')
                 @yield('breadcrumb-belum-terverifikasi-pembayaran-sni-admin')
@@ -152,6 +153,7 @@
                      @yield('isi-belum-terverifikasi-pembayaran-iso-admin')
                      @yield('isi-terverifikasi-pembayaran-iso-admin')
                      @yield("isi-upload-hasil-sertifikasi-iso-admin")
+                     @yield("isi-pilih-pegawai-inspeksi-iso-admin")
 
                      @yield('isi-belum-terverifikasi-sni-admin')
                      @yield('isi-belum-terverifikasi-pembayaran-sni-admin')

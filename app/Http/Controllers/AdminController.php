@@ -83,7 +83,7 @@ class AdminController extends Controller
 //----------------------------------------------------------------------------------------------//
     public function belum_terverifikasi_pembayaran_iso(Request $request){
      $email = $request->session()->get('email');
-     $userList = DB::table('users')->where('status_pembayaran_ISO', 'belum-terbayar')->get();
+     $userList = DB::table('users')->where([['file_upload_bukti_pembayaran_ISO','!=',null],['status_pembayaran_ISO','=','belum-terbayar'],])->get();
 
         if($request->session()->get('login')) {
             return view('admin.pembayaran-belum-terkonfirmasi-iso', array('userList' => $userList));
@@ -127,6 +127,43 @@ class AdminController extends Controller
    
 
 
+//---------------------------------------------------------------------------------------------//
+    public function pegawai_inspeksi_iso(Request $request){
+    // $email = $request->session()->get('email');
+     $userList = DB::table('users')->where([['status_pembayaran_ISO','=','terbayar'],['surat_pengesahan_ISO','=','default-pengesahan-iso.pdf'],])->get();
+     $pegawaiList = DB::table('pegawai_lapangan')->get();
+
+     
+
+    
+
+        if($request->session()->get('login')) {
+            return view('admin.pilih-pegawai-inspeksi-iso', array('userList'=>$userList,'pegawaiList' => $pegawaiList));
+        } else {
+            return view('auth.login-admin');
+        }
+    }
+
+    public function pegawai_inspeksi_iso_proses(Request $request){
+ 
+
+    $nip = $request->get('nip');
+    $pilihan_perusahaan=$request->get('pilihan-perusahaan');
+    $nama_petugas_inspeksi_iso= DB::table('pegawai_lapangan')->where('nip',$nip)->get(['name']);
+    //$nama_petugas_inspeksi_iso_next = $nama_petugas_inspeksi_iso['name'];
+
+    $inspeksiISOHitung = DB::table('users')->where('petugas_inspeksi_nip_ISO', $nip)->count();
+    
+    $userDb = DB::table('users')->where('company_name', $pilihan_perusahaan)
+                                 ->update(['petugas_inspeksi_ISO_name' => $nama_petugas_inspeksi_iso,'petugas_inspeksi_nip_ISO' => $nip]);
+
+    $petugasDb = DB::table('pegawai_lapangan')->where('nip', $nip)
+                                 ->update(['jumlah_total_pendaftar_ISO_yang_diverifikasi' => $inspeksiISOHitung]);
+
+     return redirect()->action('AdminController@pegawai_inspeksi_iso');
+    }
+
+//--------------------------------------------------------------------------------------------//
 
 
 //----------------------------------------------------------------------------------------------//
@@ -155,8 +192,8 @@ class AdminController extends Controller
 //-----------------------------------------------------------------------------------------------//
 
 
-/* ------------------------------------------------------------------------------------------------ */
 
+    
 
 
 /* ------------------------------------- Kumpulan fungsi2 untuk SNI -------------------------------- */
@@ -173,7 +210,7 @@ class AdminController extends Controller
 //--------------------------------------------------------------------------------------------//
     public function belum_terverifikasi_pembayaran_sni(Request $request){
      $email = $request->session()->get('email');
-     $userList = DB::table('users')->where('status_pembayaran_SNI', 'belum-terbayar')->get();
+     $userList = DB::table('users')->where([['file_upload_bukti_pembayaran_SNI','!=',null],['status_pembayaran_SNI','=','belum-terbayar'],])->get();
 
         if($request->session()->get('login')) {
             return view('admin.pembayaran-belum-terkonfirmasi-sni', array('userList' => $userList));

@@ -35,7 +35,10 @@
                             <h3 class="box-title">List pendaftar ISO yang belum dikonfirmasi pembayarannya</h3>
                             <p class="text-muted">Untuk mengkonfirmasi, klik tombol &nbsp<span><button type="button" class="btn btn-danger">Konfirmasi ini</button></span> &nbsp yang ada di kolom <code>Aksi</code> dan ikuti instruksi yang muncul.
                             </br>
-                            Jika berhasil, maka perusahaan yang anda konfirmasi pembayarannya akan hilang dari tabel ini. Untuk mengeceknya, silahkan ke menu pendaftar yang sudah terkonfirmasi pembayarannya.
+                            Jika berhasil, maka perusahaan yang anda konfirmasi pembayarannya akan hilang dari tabel ini. Untuk mengeceknya, silahkan ke menu pendaftar yang sudah terkonfirmasi pembayarannya.</p>
+                            </br>
+                            <p>
+                            <b>Catatan: Hanya menampilkan data perusahaan yang telah melakukan upload untuk pembayaran verifikasi ISO nya</b>
                             </p>
                             
                             </br>

@@ -67,6 +67,12 @@ Route::get('/admin/iso', 'AdminController@iso');
 Route::get('/admin/sni', 'AdminController@sni');
 
 //--------------------------------------------------------------------------------//
+
+
+
+
+
+//---------------------------------------------------------------------------------------//
 Route::get('/admin/belum-terverifikasi-iso', 'AdminController@belum_terverifikasi_iso');
 
 Route::post('/verifikasi-iso-proses', "AdminController@proses_verifikasi_iso");
@@ -75,6 +81,18 @@ Route::get('/admin/terverifikasi-iso', 'AdminController@terverifikasi_iso');
 
 Route::post('/verifikasi-batal-iso-proses', "AdminController@proses_batal_verifikasi_iso");
 //---------------------------------------------------------------------------------//
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //---------------------------------------------------------------------------------//
@@ -86,6 +104,28 @@ Route::get('/admin/pembayaran-terkonfirmasi-iso', 'AdminController@terverifikasi
 
 Route::post('/konfirmasi-pembatalan-pembayaran-iso-proses', "AdminController@proses_pembatalan_verifikasi_pembayaran_iso");
 //----------------------------------------------------------------------------------//
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------------------------------------------------//
+Route::get('/admin/pilih-pegawai-inspeksi-iso', 'AdminController@pegawai_inspeksi_iso');
+Route::post('/pegawai-inspeksi-iso-proses', "AdminController@pegawai_inspeksi_iso_proses");
+
+
+
+
+//----------------------------------------------------------------------------------------//
+
+
+
+
 
 
 //--------------------------------------------------------------------------------------//
