@@ -3,6 +3,14 @@
 <html lang="en">
 
 <head>
+
+<!--#######################################################################################################
+ * @application		<Sistem_Sertifikasi_Terpadu_BISQA_SYSTEMS>
+ * @author         Afidz Achmad Novendi <afidzachmadn@gmail.com>
+ * @version         1.0
+ * @copyright        Copyright © 2017 Afidz Achmad Novendi <afidzachmadn@gmail.com>
+############################################################################################################-->
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Tell the browser to be responsive to screen width -->
@@ -127,6 +135,7 @@
                 @yield('breadcrumb-terverifikasi-pembayaran-iso-admin')
                 @yield('breadcrumb-upload-hasil-sertifikasi-iso-admin')
                 @yield('breadcrumb-pilih-pegawai-inspeksi-iso-admin')
+                @yield('breadcrumb-riwayat-pegawai-inspeksi-iso-admin')
                 
                 @yield('breadcrumb-belum-terverifikasi-sni-admin')
                 @yield('breadcrumb-belum-terverifikasi-pembayaran-sni-admin')
@@ -154,6 +163,7 @@
                      @yield('isi-terverifikasi-pembayaran-iso-admin')
                      @yield("isi-upload-hasil-sertifikasi-iso-admin")
                      @yield("isi-pilih-pegawai-inspeksi-iso-admin")
+                     @yield("isi-riwayat-pegawai-inspeksi-iso-admin")
 
                      @yield('isi-belum-terverifikasi-sni-admin')
                      @yield('isi-belum-terverifikasi-pembayaran-sni-admin')

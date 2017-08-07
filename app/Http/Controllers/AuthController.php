@@ -40,18 +40,27 @@ class AuthController extends Controller {
         $usersTable = DB::table('users');
         //cek username dan pass di database
         $usercheck= $usersTable->where('email', $email)->first();
-        $decrypt = decrypt($usercheck->password);
+        //dd($usercheck);
+        if($usercheck != null){
+
+        
+            $decrypt = decrypt($usercheck->password);
             
-        if($password == $decrypt) {
-            $request->session()->put('login', true);
-            $request->session()->put('role', 'user');
-            $request->session()->put('name', $usercheck->company_name);
-            $request->session()->put('id', $usercheck->id);
-            $request->session()->put('img_url', $usercheck->img_url);
-            if($usercheck->permission == 2) {
-                return redirect()->action('HomeController@dashboard');
+            if($password == $decrypt) {
+                $request->session()->put('login', true);
+                $request->session()->put('role', 'user');
+                $request->session()->put('name', $usercheck->company_name);
+                $request->session()->put('id', $usercheck->id);
+                $request->session()->put('img_url', $usercheck->img_url);
+                if($usercheck->permission == 2) {
+                    return redirect()->action('HomeController@dashboard');
+                }
+            } 
+            else {
+            return redirect()->action('AuthController@login');
             }
-        } else {
+    }
+        else{
             return redirect()->action('AuthController@login');
         }
     }
@@ -63,18 +72,23 @@ class AuthController extends Controller {
         $usersTable = DB::table('admin');
         //cek username dan pass di database
         $usercheck= $usersTable->where('email', $email)->first();
-        $decrypt = decrypt($usercheck->password);
+        if($usercheck != null){
+            $decrypt = decrypt($usercheck->password);    
+            if($password == $decrypt) {
             
-        if($password == $decrypt) {
-            $request->session()->put('login', true);
-            $request->session()->put('name', $usercheck->name);
-            $request->session()->put('id', $usercheck->id);
-            $request->session()->put('nip', $usercheck->nip);
-            $request->session()->put('img_url', $usercheck->img_url);
-            $request->session()->put('role', 'admin');
-            return redirect()->action('HomeController@dashboard_admin');
-     
-        } else {
+                $request->session()->put('login', true);
+                $request->session()->put('name', $usercheck->name);
+                $request->session()->put('id', $usercheck->id);
+                $request->session()->put('nip', $usercheck->nip);
+                $request->session()->put('img_url', $usercheck->img_url);
+                $request->session()->put('role', 'admin');
+                return redirect()->action('HomeController@dashboard_admin');
+            } 
+            else {
+            return redirect()->action('AuthController@login_admin');
+            }
+        }
+        else{
             return redirect()->action('AuthController@login_admin');
         }
     }

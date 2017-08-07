@@ -105,6 +105,7 @@ class AdminController extends Controller
     public function terverifikasi_pembayaran_iso(Request $request){
      $email = $request->session()->get('email');
      $userList = DB::table('users')->where('status_pembayaran_ISO', 'terbayar')->get();
+     //dd($userList);
 
         if($request->session()->get('login')) {
             return view('admin.pembayaran-terkonfirmasi-iso', array('userList' => $userList));
@@ -130,7 +131,7 @@ class AdminController extends Controller
 //---------------------------------------------------------------------------------------------//
     public function pegawai_inspeksi_iso(Request $request){
     // $email = $request->session()->get('email');
-     $userList = DB::table('users')->where([['status_pembayaran_ISO','=','terbayar'],['surat_pengesahan_ISO','=','default-pengesahan-iso.pdf'],])->get();
+     $userList = DB::table('users')->where([['status_pembayaran_ISO','=','terbayar'],['surat_pengesahan_ISO','=','default-pengesahan-iso.pdf'],['petugas_inspeksi_ISO_name','=',null],])->get();
      $pegawaiList = DB::table('pegawai_lapangan')->get();
 
      
@@ -148,14 +149,18 @@ class AdminController extends Controller
  
 
     $nip = $request->get('nip');
-    $pilihan_perusahaan=$request->get('pilihan-perusahaan');
-    $nama_petugas_inspeksi_iso= DB::table('pegawai_lapangan')->where('nip',$nip)->get(['name']);
-    //$nama_petugas_inspeksi_iso_next = $nama_petugas_inspeksi_iso['name'];
+    $id = $request->get('no');
 
-    $inspeksiISOHitung = DB::table('users')->where('petugas_inspeksi_nip_ISO', $nip)->count();
+    $pilihan_perusahaan=$request->get('pilihan-perusahaan');
+    $nama_petugas_inspeksi_iso= DB::table('pegawai_lapangan')->where('nip',$nip)->get();
+    $nama_petugas_inspeksi_iso_next = $nama_petugas_inspeksi_iso[0]->name;
+
+    
     
     $userDb = DB::table('users')->where('company_name', $pilihan_perusahaan)
-                                 ->update(['petugas_inspeksi_ISO_name' => $nama_petugas_inspeksi_iso,'petugas_inspeksi_nip_ISO' => $nip]);
+                                 ->update(['petugas_inspeksi_ISO_name' => $nama_petugas_inspeksi_iso_next,'petugas_inspeksi_nip_ISO' => $nip,'petugas_inspeksi_ISO_ID' => $id]);
+
+    $inspeksiISOHitung = DB::table('users')->where('petugas_inspeksi_ISO_ID', $id)->count();
 
     $petugasDb = DB::table('pegawai_lapangan')->where('nip', $nip)
                                  ->update(['jumlah_total_pendaftar_ISO_yang_diverifikasi' => $inspeksiISOHitung]);
@@ -193,7 +198,46 @@ class AdminController extends Controller
 
 
 
+
+
+//--------------------------------------------------------------------------------------------------//
+public function riwayat_pegawai_ISO(Request $request){
     
+}
+
+public function riwayat_pegawai_ISO_process(Request $request){
+     $email = $request->session()->get('email');
+     $id = $request->get('no');
+
+     $userList = DB::table('users')->where([['petugas_inspeksi_ISO_ID','=',$id],])->get();
+
+     //dd($userList);
+     
+
+        if($request->session()->get('login')) {
+            return view('admin.riwayat-pegawai-inspeksi-iso', array('userList' => $userList));
+        } else {
+            return view('auth.login-admin');
+        }
+
+}
+//-------------------------------------------------------------------------------------------------// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ------------------------------------- Kumpulan fungsi2 untuk SNI -------------------------------- */

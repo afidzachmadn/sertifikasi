@@ -118,6 +118,8 @@ Route::post('/konfirmasi-pembatalan-pembayaran-iso-proses', "AdminController@pro
 Route::get('/admin/pilih-pegawai-inspeksi-iso', 'AdminController@pegawai_inspeksi_iso');
 Route::post('/pegawai-inspeksi-iso-proses', "AdminController@pegawai_inspeksi_iso_proses");
 
+Route::post('/riwayat-pegawai-inspeksi-iso-proses', "AdminController@riwayat_pegawai_ISO_process");
+
 
 
 

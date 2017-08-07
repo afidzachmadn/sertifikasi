@@ -41,21 +41,34 @@
                                 </div>
                                 <div class="col-md-4 column-step active" style="background-color:#5c74b8">
                                     <div class="step-number">2</div>
-                                    <div class="step-title">Survei</div>
-                                    <div class="step-info">Pilih pegawai surveinya</div>
+                                    <div class="step-title">Pilih Petugas</div>
+                                    <div class="step-info">Pilih Petugas survei lapangannya</div>
                                 </div>
                                 <div class="col-md-4 column-step active" style="background-color:#5c74b8">
                                     <div class="step-number">3</div>
+                                    <div class="step-title">Konfirmasi Petugas</div>
+                                    <div class="step-info">Tunggu konfirmasi data-datanya</div>
+                                </div>
+                                <div class="col-md-4 column-step active" style="background-color:#5c74b8">
+                                    <div class="step-number">4</div>
+                                    <div class="step-title">Double Checklist</div>
+                                    <div class="step-info">Teliti kembali seluruh persyaratannya</div>
+                                </div>
+
+                                <div class="col-md-4 column-step active" style="background-color:#5c74b8">
+                                    <div class="step-number">5</div>
                                     <div class="step-title">Upload</div>
                                     <div class="step-info">Upload hasil terbit sertifikatnya</div>
                                 </div>
-                                <div  class="col-md-12 column-step active"  style="background-color:#5c74b8" >
-                                    <center>
-                                    <div class="step-number">4</div>
+                                
+                                <div  class="col-md-4 column-step active" style="background-color:#5c74b8" >
+                                    
+                                    <div class="step-number">6</div>
                                     <div class="step-title">Final</div>
                                     <div class="step-info">Konfirmasi verifikasinya</div>
-                                    </center>
+                                    
                                 </div>
+                               
                                 
                             </div>
                         </div>
