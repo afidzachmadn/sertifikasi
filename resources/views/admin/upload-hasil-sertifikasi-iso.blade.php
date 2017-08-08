@@ -38,7 +38,10 @@
                             <h3 class="box-title m-b-0">Upload hasil sertifikat yang telah terbit</h3>
                             <p class="text-muted m-b-30"> Untuk mengupload silahkan pilih perusahaan yang anda ingin terbitkan sertifikat ISO nya. 
                             </br>
-                            <strong>Jika nama perusahaan tidak terdapat pada pilihan, silahkan konfirmasi pembayaran untuk sertifikasi ISO dari perusahaan tersebut terlebih dahulu.</strong>
+                            <strong>
+                            Catatan:<br>
+                            1.Jika nama perusahaan tidak terdapat pada pilihan, silahkan konfirmasi pembayaran untuk sertifikasi ISO dari perusahaan tersebut terlebih dahulu.<br>
+                            2. Pastikan petugas/pegawai survei lapangan telah melaporkan laporan perusahaan yang anda maksud.</strong>
                             </p>
                             <h5 class="m-t-30">Pilih:</h5>
                            
