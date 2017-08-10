@@ -58,6 +58,7 @@
                                             <th>Status Konfirmasi Pembayaran</th>
                                             <th>Hasil Penerbitan Sertifikasi ISO</th>
                                             <th>Status Sertifikasi ISO</th>
+                                            <th>Petugas Survei</th>
                                             <th>Verifikator</th>
                                         </tr>
                                     </thead>
@@ -95,6 +96,9 @@
                                                  
                                                     
                                                 </td>
+                                                <td>
+                                                    {{$user->petugas_inspeksi_ISO_name}}
+                                                </td>
                                                 <td>{{$user->Verifikator_ISO_name}}</td>
                                             </tr>
                                         @endforeach
@@ -115,6 +119,7 @@
                                             <th>Status Konfirmasi Pembayaran</th>
                                             <th>Hasil Penerbitan Sertifikasi ISO</th>
                                             <th>Status Sertifikasi ISO</th>
+                                            <th>Petugas Survei</th>
                                             <th>Verifikator</th>
                                         </tr>
                                     </thead>

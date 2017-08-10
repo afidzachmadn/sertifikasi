@@ -39,7 +39,7 @@
                         <div class="white-box" class="col-sm-12 col-md-2 col-xs-12 col-lg-12">
                             <h3 class="box-title">File Upload Bukti Pembayaran ISO</h3>
                             <label for="input-file-max-fs">Silahkan upload bukti pembayaran untuk permintaan sertifikasi ISO anda (*JPG) (*Max 2MB)</label>
-                            <input type="file" id="input-file-max-fs" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="jpg" name="pdf-bukti-pembayaran-iso" data-default-file="{{env('APP_URL')}}/storage/img/bukti-pembayaran/iso/{{$iso_pembayaran_p->file_upload_bukti_pembayaran_ISO}}" value="{{env('APP_URL')}}/storage/img/bukti-pembayaran/iso/{{$iso_pembayaran_p->file_upload_bukti_pembayaran_ISO}}"/> 
+                            <input type="file" id="input-file-max-fs" class="dropify" data-max-file-size="2M" data-allowed-file-extensions="jpg" name="pdf-bukti-pembayaran-iso" data-default-file="{{env('APP_URL')}}/storage/img/bukti-pembayaran/iso/{{$iso_pembayaran_p->file_upload_bukti_pembayaran_ISO}}" value="{{env('APP_URL')}}/storage/img/bukti-pembayaran/iso/{{$iso_pembayaran_p->file_upload_bukti_pembayaran_ISO}}" required=""/> 
                         </div>
 
                         <div class="row button-box">

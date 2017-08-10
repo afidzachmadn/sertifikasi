@@ -56,6 +56,7 @@
                                             <th>Rekaman Audit Internal dan Tinjauan Manajemen</th>
                                             <th>Status Konfirmasi Pembayaran</th>
                                             <th>Hasil Penerbitan Sertifikasi ISO</th>
+                                            <th>Petugas Survei</th>
                                             <th>Status Sertifikasi ISO</th>
                                         </tr>
                                     </thead>
@@ -88,6 +89,9 @@
                                                     <a href="{{env('APP_URL')}}/storage/pdf/iso/hasil-terbit-sertifikat/{{$user->surat_pengesahan_ISO ? $user->surat_pengesahan_ISO : '#'}}" target="_blank">Lihat</a>
                                                 </td>
                                                 <td>
+                                                    {{$user->petugas_inspeksi_ISO_name}}
+                                                </td>
+                                                <td>
                                                     
                                                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Belum Terverifikasi</button>
                                                     
@@ -111,6 +115,7 @@
                                             <th>Rekaman Audit Internal dan Tinjauan Manajemen</th>
                                             <th>Status Konfirmasi Pembayaran</th>
                                             <th>Hasil Penerbitan Sertifikasi ISO</th>
+                                            <th>Petugas Survei</th>
                                             <th>Status Sertifikasi ISO</th>
                                         </tr>
                                     </thead>

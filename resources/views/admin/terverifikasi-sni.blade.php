@@ -57,6 +57,7 @@
                                             <th>Status Konfirmasi Pembayaran</th>
                                             <th>Hasil Penerbitan Sertifikasi sni</th>
                                             <th>Status Sertifikasi sni</th>
+                                            <th>Petugas Survei</th>
                                             <th>Verifikator</th>
                                         </tr>
                                     </thead>
@@ -95,6 +96,9 @@
                                 
                                                    
                                                 </td>
+                                                <td>
+                                                    {{$user->petugas_inspeksi_ISO_name}}
+                                                </td>
                                                 <td>{{$user->Verifikator_SNI_name}}</td>
                                             </tr>
                                         @endforeach
@@ -115,6 +119,7 @@
                                             <th>Status Konfirmasi Pembayaran</th>
                                             <th>Hasil Penerbitan Sertifikasi sni</th>
                                             <th>Status Sertifikasi sni</th>
+                                            <th>Petugas Survei</th>
                                             <th>Verifikator</th>
                                         </tr>
                                     </thead>

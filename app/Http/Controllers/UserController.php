@@ -114,7 +114,20 @@ class UserController extends Controller {
         $lihatDokumenIso = DB::table('users');
         $dokumen_iso = $lihatDokumenIso->where('id', $id)->first();
         
-        return view('user.lihat-dokumen-iso', array('dokumen_iso' => $dokumen_iso));
+        $iso_1 = $dokumen_iso->file_upload_iso_1;
+        $iso_2 = $dokumen_iso->file_upload_iso_2;
+        $iso_3 = $dokumen_iso->file_upload_iso_3;
+        $iso_4 = $dokumen_iso->file_upload_iso_4;
+        $iso_5 = $dokumen_iso->file_upload_iso_5;
+        $iso_6 = $dokumen_iso->file_upload_iso_6;
+
+        if($iso_1 && $iso_2 && $iso_3 && $iso_4 && $iso_5 && $iso_6 != null){
+            return view('user.lihat-dokumen-iso', array('dokumen_iso' => $dokumen_iso));
+        }
+        else{
+            
+             return redirect()->action('UserController@iso');
+        }        
     }
 
 
@@ -154,14 +167,6 @@ class UserController extends Controller {
        
     }
 
-   /* public function sniUploadForm(Request $request) {
-        $id = $request->session()->get('id');
-
-        $sniDB = DB::table('users');
-        $sni_p = $sniDB->where('id', $id)->first();
-
-        return view('user.sni', array('sni_p' => $sni_p));
-    } */
 
     public function sniUploadFormProcess(Request $request) {
       
@@ -211,6 +216,21 @@ public function lihat_dokumen_sni(Request $request) {
 
         $lihatDokumenSni = DB::table('users');
         $dokumen_sni = $lihatDokumenSni->where('id', $id)->first();
+
+        $sni_1 = $dokumen_sni->file_upload_sni_1;
+        $sni_2 = $dokumen_sni->file_upload_sni_2;
+        $sni_3 = $dokumen_sni->file_upload_sni_3;
+        $sni_4 = $dokumen_sni->file_upload_sni_4;
+        $sni_5 = $dokumen_sni->file_upload_sni_5;
+        $sni_6 = $dokumen_sni->file_upload_sni_6;
+
+        if($sni_1 && $sni_2 && $sni_3 && $sni_4 && $sni_5 && $sni_6 != null){
+            return view('user.lihat-dokumen-sni', array('dokumen_sni' => $dokumen_sni));
+        }
+        else{
+            
+             return redirect()->action('UserController@sni');
+        }        
         
         return view('user.lihat-dokumen-sni', array('dokumen_sni' => $dokumen_sni));
     }
