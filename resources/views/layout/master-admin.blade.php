@@ -5,10 +5,10 @@
 <head>
 
 <!--#######################################################################################################
- * @application		<Sistem_Sertifikasi_Terpadu_BISQA_SYSTEMS>
- * @author         Afidz Achmad Novendi <afidzachmadn@gmail.com>
+ * @application		<Sistem_Informasi_Sertifikasi>
+ * @author          Afidz Achmad Novendi <afidzachmadn@gmail.com>
  * @version         1.0
- * @copyright        Copyright © 2017 Afidz Achmad Novendi <afidzachmadn@gmail.com>
+ * @copyright       Copyright © 2017 Afidz Achmad Novendi <afidzachmadn@gmail.com>
 ############################################################################################################-->
 
     <meta charset="utf-8">
@@ -18,8 +18,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{env('APP_URL')}}/images/bisqa.png">
-     <title>Sistem Sertifikasi Terpadu - Kementrian Perindustrian Republik Indonesia</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{env('APP_URL')}}/images/bbtppi2.png">
+     <title>Sistem Informasi Sertifikasi - Balai Besar Teknologi Pencegahan Pencemaran Industri  -  Kementrian Perindustrian Republik Indonesia</title>
       <!-- Bootstrap Core CSS -->
     <link href="{{env('APP_URL')}}/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{env('APP_URL')}}/plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
@@ -56,7 +56,7 @@
     <link href="{{env('APP_URL')}}/css/style.min.css" rel="stylesheet">
                               
     <!-- color CSS -->
-    <link href="{{env('APP_URL')}}/css/colors/megna.css" id="theme" rel="stylesheet">
+    <link href="{{env('APP_URL')}}/css/colors/green.css" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -76,7 +76,7 @@
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header">
                 <!-- Toggle icon for mobile view --><a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
-                <div class="top-left-part"><a class="logo" href="/user/dashboard"><b><img src="{{env('APP_URL')}}/plugins/images/eliteadmin-logo.png" alt="home" /></b><span class="hidden-xs"><strong>BISQA</strong>&nbspsystems</span></a></div>
+                <div class="top-left-part"><a class="logo" href="/user/dashboard"><b><img src="{{env('APP_URL')}}/plugins/images/eliteadmin-logo.png" alt="home" /></b><span class="hidden-xs"><strong>SIS</strong>&nbspBBTPPI</span></a></div>
                 <!-- /Logo -->
                 <!-- Search input and Toggle icon -->
                 <ul class="nav navbar-top-links navbar-right hidden-xs">
@@ -110,7 +110,7 @@
                         <a href="#" class="waves-effect"><img src="{{env('APP_URL')}}/storage/img/{{Session::get('img_url')}}" alt="user-img" class="img-circle"> <span class="hide-menu">{{Session::get('name')}}</span>
                         </a>
                          <ul class="nav nav-second-level">
-                            <li><a href="{{env('APP_URL')}}/logout-admin"><i class="fa fa-power-off"></i> Logout</a></li>
+                            <li><a href="{{env('APP_URL')}}/logout-admin"><i class="fa fa-power-off"></i>Keluar</a></li>
                         </ul>
                     </li>
                     <!-- yield sidebar -->
@@ -182,7 +182,7 @@
                 <!-- /.right-sidebar -->
             </div>
             <!-- /.container-fluid -->
-            <footer class="footer text-center"> 2017 &copy; KEMENTERIAN PERINDUSTRIAN REPUBLIK INDONESIA </footer>
+            <footer class="footer text-center"> 2017 &copy; Balai Besar Teknologi Pencegahan Pencemaran Industri Semarang  -  Kementrian Perindustrian Republik Indonesia</footer>
         </div>
         <!-- /#page-wrapper -->
     </div>

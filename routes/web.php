@@ -120,6 +120,8 @@ Route::post('/pegawai-inspeksi-iso-proses', "AdminController@pegawai_inspeksi_is
 
 Route::post('/riwayat-pegawai-inspeksi-iso-proses', "AdminController@riwayat_pegawai_ISO_process");
 
+Route::post('/input-pegawai-inspeksi-iso-proses', "AdminController@input_pegawai_ISO_process");
+
 
 
 

@@ -14,12 +14,12 @@
  <div class="row bg-title">
                     <!-- .page title -->
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Sistem Sertifikasi Terpadu</h4> </div>
+                        <h4 class="page-title">Sistem Informasi Sertifikasi</h4> </div>
                     <!-- /.page title -->
                     <!-- .breadcrumb -->
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         <ol class="breadcrumb">
-                            <li><a href="#">System</a></li>
+                            <li><a href="#">Sistem</a></li>
                             <li><a href="{{env('APP_URL')}}/admin/dashboard">Dashboard</a></li>
                             <li><a href="{{env('APP_URL')}}/admin/iso">ISO</a></li>
                             <li class="active">Pegawai Inspeksi ISO</li>
@@ -86,6 +86,7 @@
                                 </table>
                             </div>
                         </div>
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal3" data-whatever="@mdo">Input Pegawai</button>
                     </div>
 
 
@@ -172,6 +173,45 @@
                                                 <div class="form-group">
                                                     <label for="message-text" class="control-label">Ketik "pilih" tanpa tanda petik:</label>
                                                     <input class="form-control" id="texted" name="texted" required=""></input>
+                                                </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+                                            <input class="btn btn-block btn-primary" type="submit" value="Lihat!"/>
+                                        </div>
+                                            </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="exampleModalLabel1">Lihat riwayat survei petugas/pegawai</h4> </div>
+                                        <div class="modal-body">
+                                            <form action="{{url('input-pegawai-inspeksi-iso-proses')}}" method="post" enctype="multipart/form-data">
+                                             {{csrf_field()}}
+                                                <div class="form-group">
+                                                    <label for="recipient-name" class="control-label">Masukan nama Pegawai: </label>
+                                                    <input type="text" class="form-control" id="no" name="nama_pegawai" required=""> 
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="recipient-name" class="control-label">Masukan NIP Pegawai</label>
+                                                    <input type="text" class="form-control" id="no" name="nip" required=""> 
+                                                </div>
+                                               
+                                                <div class="form-group">
+                                                
+                                    
+                                                <div class="form-group">
+                                                    <label for="message-text" class="control-label">Jabatan:</label>
+                                                    <input class="form-control" id="texted" name="jabatan" required="" ></input>
                                                 </div>
                                         </div>
                                         <div class="modal-footer">

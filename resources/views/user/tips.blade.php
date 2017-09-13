@@ -13,12 +13,12 @@
  <div class="row bg-title">
                     <!-- .page title -->
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Sistem Sertifikasi Terpadu</h4> </div>
+                        <h4 class="page-title">Sistem Informasi Sertifikasi</h4> </div>
                     <!-- /.page title -->
                     <!-- .breadcrumb -->
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         <ol class="breadcrumb">
-                            <li><a href="#">System</a></li>
+                            <li><a href="#">Sistem</a></li>
                             <li><a href="{{env('APP_URL')}}/user/dashboard">Dashboard</a></li>
                             <li class="active">Tips Penggunaan</li>
                         </ol>
@@ -35,7 +35,7 @@
                                     <div class="timeline-badge success"><i class="ti-gift"></i> </div>
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h4 class="timeline-title">Selamat datang di BISQA Systems!</h4>
+                                            <h4 class="timeline-title">Selamat datang di Sistem Informasi Sertifikasi BBTPPI Semarang</h4>
                                         </div>
                                         <div class="timeline-body">
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero laboriosam dolor perspiciatis omnis exercitationem. Beatae, officia pariatur? Est cum veniam excepturi. Maiores praesentium, porro voluptas suscipit facere rem dicta, debitis.</p>
@@ -112,7 +112,7 @@
 <div class="col-sm-12">
                         <div class="white-box p-l-20 p-r-20">
                             <h3 class="box-title m-b-0">Form Bantuan</h3>
-                            <p class="text-muted m-b-30 font-13">Jika anda mengalami kesulitan ataupun masalah di dalam system kami, mohon untuk mengisi bagian keluhan yang terdapat pada form bantuan ini.</p>
+                            <p class="text-muted m-b-30 font-13">Jika anda mengalami kesulitan ataupun masalah di dalam sistem kami, mohon untuk mengisi bagian keluhan yang terdapat pada form bantuan ini.</p>
                             <div class="row">
                                 <div class="col-md-12">
                                     <form class="floating-labels ">
@@ -127,12 +127,12 @@
                                         
                                         <div class="form-group m-b-40">
                                             <input type="text" class="form-control" id="input1" required value="{{$tips_p->email}}"><span class="highlight"></span> <span class="bar"></span>
-                                            <label for="input1">E-mail</label>
+                                            <label for="input1">Email</label>
                                         </div>
 
                                         <div class="form-group m-b-40">
                                             <input type="text" class="form-control" id="input1" required value="{{$tips_p->telp}}"><span class="highlight"></span> <span class="bar"></span>
-                                            <label for="input1">No Telfon</label>
+                                            <label for="input1">Nomor Telpon</label>
                                         </div>
                                         <div class="form-group m-b-40">
                                             <input type="text" class="form-control" id="input1" required value="{{$tips_p->status_ISO}}"><span class="highlight"></span> <span class="bar"></span>
@@ -149,7 +149,7 @@
                                         </div>
                                         </br>
                                         <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Batal</button>
 
                                     </form>
                                 </div>

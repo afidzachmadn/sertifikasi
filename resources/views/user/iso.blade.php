@@ -13,13 +13,13 @@
  <div class="row bg-title">
                     <!-- .page title -->
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Sistem Sertifikasi Terpadu</h4> 
+                        <h4 class="page-title">Sistem Informasi Sertifikasi</h4> 
                     </div>
                     <!-- /.page title -->
                     <!-- .breadcrumb -->
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         <ol class="breadcrumb">
-                            <li><a href="#">System</a></li>
+                            <li><a href="#">Sistem</a></li>
                             <li><a href="{{env('APP_URL')}}/user/dashboard">Dashboard</a></li>
                             <li class="active">ISO</li>
 
@@ -89,14 +89,14 @@
 
                         <div class="col-lg-3 col-sm-6 col-xs-12">
                             <a href="{{env('APP_URL')}}/user/upload-bukti-pembayaran-iso">
-                            <div  class="btn btn-block btn-warning" >Upload bukti pembayaran</div>
+                            <div  class="btn btn-block btn-warning" >Upload Bukti Pembayaran</div>
                             </a>
                         </div>
                         <br>
 
                         <div class="col-lg-3 col-sm-6 col-xs-12">
                             <a href="{{env('APP_URL')}}/storage/pdf/iso/hasil-terbit-sertifikat/{{$iso_p->surat_pengesahan_ISO}}" target="_blank">
-                            <div  class="btn btn-block btn-info" >Surat pengesahan</div>
+                            <div  class="btn btn-block btn-info" >Surat Pengesahan</div>
                             </a>
                         </div>
                         

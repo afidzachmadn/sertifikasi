@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-   <link rel="icon" type="image/png" sizes="16x16" href="{{env('APP_URL')}}/plugins/images/bisqa.jpg">
-    <title>Sistem Sertifikasi Terpadu - Kementrian Perindustrian Republik Indonesia</title>
+   <link rel="icon" type="image/png" sizes="16x16" href="{{env('APP_URL')}}/plugins/images/bbtppi2.png">
+    <title>Sistem Informasi Sertifikasi - Balai Besar Teknologi Pencegahan Pencemaran Industri Semarang  -  Kementrian Perindustrian Republik Indonesia</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{env('APP_URL')}}/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{env('APP_URL')}}/plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
@@ -36,40 +36,40 @@
     </div>
     
     <section  id="wrapper" class="step-register" style="background-color:rgba(3, 169, 243, 0.36)">
-         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> <a href="/login"  class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline waves-effect waves-light">Kembali ke halaman login</a>
+         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> <a href="/login"  class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline waves-effect waves-light">Kembali Ke Halaman Login</a>
                    
                      </div>
         <div class="register-box">
             <div class="">
-                <a href="javascript:void(0)" class="text-center db m-b-40"><img src="../plugins/images/bisqa.jpg" alt="Home" />
+                <a href="javascript:void(0)" class="text-center db m-b-40"><img src="" alt="Home" />
                     </a>
                 <!-- multistep form -->
                 <form id="msform" action="{{url('register-proses')}}" method="post">
                 {{ csrf_field() }}
                     <!-- progressbar -->
                     <ul id="eliteregister">
-                        <li class="active">NAMA PERUSAHAAN</li>
-                        <li>EMAIL</li>
-                        <li>PASSWORD</li>
+                        <li class="active">Nama Perusahaan</li>
+                        <li>Email Perusahaan Yang Dimiliki</li>
+                        <li>Kata Sandi</li>
                     </ul>
                     <!-- fieldsets -->
                     <fieldset>
                         <h2 class="fs-title">Form Registrasi</h2>
-                        <h3 class="fs-subtitle">Silahkan masukan nama perusahaan yang ingin anda gunakan</h3>
+                        <h3 class="fs-subtitle">Sihlakan Masukan Nama Perusahaan</h3>
                         <input type="text" name="company_name" placeholder="Nama Perusahaan" required="" />
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 
                     <fieldset>
                         <h2 class="fs-title">Form Registrasi</h2>
-                        <h3 class="fs-subtitle">Silahkan masukan email yang ingin anda gunakan</h3>
+                        <h3 class="fs-subtitle">Silahkan Masukan Email Perusahaan Yang Dimiliki</h3>
                         <input type="email" name="email" placeholder="Email" required=""/>
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
     
                     <fieldset>
                         <h2 class="fs-title">Form Registrasi</h2>
-                        <h3 class="fs-subtitle">Silahkan masukan Password yang ingin anda gunakan</h3>
+                        <h3 class="fs-subtitle">Silahkan Masukan Kata Sandi</h3>
                         <input type="password" name="password" placeholder="Password" required="" />
                         <input type="button" name="previous" class="previous action-button" value="Previous" />
                         <input type="submit" name="submit" class="action-button" value="Submit" />

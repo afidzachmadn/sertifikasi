@@ -221,6 +221,30 @@ public function riwayat_pegawai_ISO_process(Request $request){
         }
 
 }
+
+public function input_pegawai_ISO_process(Request $request){
+
+    $nama_pegawai = $request->get('nama_pegawai');
+    $nip = $request->get('nip');
+    $jabatan = $request->get('jabatan');
+    $total_pendaftar_iso_yang_diverifikasi = 0;
+    $total_pendaftar_sni_yang_diverifikasi = 0;
+   // dd($jabatan);
+
+    $petugasDb = DB::table('pegawai_lapangan')->where('nip', $nip)
+                                 ->insert(['jumlah_total_pendaftar_ISO_yang_diverifikasi' => $total_pendaftar_iso_yang_diverifikasi,
+                                 'jumlah_total_pendaftar_SNI_yang_diverifikasi' =>
+                                 $total_pendaftar_sni_yang_diverifikasi,
+                                 'name' => $nama_pegawai,
+                                 'nip' => $nip,
+                                 'jabatan' => $jabatan,
+
+                                 
+                                 ]);
+
+     return redirect()->action('AdminController@pegawai_inspeksi_iso');
+    
+}
 //-------------------------------------------------------------------------------------------------// 
 
 

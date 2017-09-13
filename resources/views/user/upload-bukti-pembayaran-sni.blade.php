@@ -13,13 +13,13 @@
  <div class="row bg-title">
                     <!-- .page title -->
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Sistem Sertifikasi Terpadu</h4> 
+                        <h4 class="page-title">Sistem Informasi Sertifikasi</h4> 
                     </div>
                     <!-- /.page title -->
                     <!-- .breadcrumb -->
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         <ol class="breadcrumb">
-                            <li><a href="#">System</a></li>
+                            <li><a href="#">Sistem</a></li>
                             <li><a href="{{env('APP_URL')}}/user/dashboard">Dashboard</a></li>
                             <li><a href="{{env('APP_URL')}}/user/sni">SNI</a></li>
                             <li class="active">Upload Bukti Pembayaran SNI</li>
@@ -56,9 +56,11 @@
                             <div class="panel-heading">No Rekening <span class="label label-warning m-l-5">perhatian!</span></div>
                             <div class="panel-wrapper collapse in">
                                 <div class="panel-body">
-                                    <p>Pembayaran hanya dilakukan di:</br>
-                                    <strong> BANK MANDIRI : </strong> A/n Hehe Haha Huhu <span><strong>NO REK : 123456789</strong></span>
-                                    </p>
+                                <p>Pembayaran hanya dilakukan di:</br>
+                                <strong> BANK MANDIRI Cabang Pahlawan : </strong> A/N BBTPPI Semarang <span><strong>NO REK : 136-00-0000000-0</strong></span>
+                                <p><strong> BANK BNI 46 Cabang Pandanaran: </strong> A/N BBTPPI Semarang <span><strong>NO REK : 0000000000</strong></span>
+                                </p>
+                                </p>
                                 </div>
                             </div>
                         </div>

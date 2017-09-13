@@ -14,12 +14,12 @@
  <div class="row bg-title">
                     <!-- .page title -->
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Sistem Sertifikasi Terpadu</h4> </div>
+                        <h4 class="page-title">Sistem Informasi Sertifikasi</h4> </div>
                     <!-- /.page title -->
                     <!-- .breadcrumb -->
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         <ol class="breadcrumb">
-                            <li><a href="#">System</a></li>
+                            <li><a href="#">Sistem</a></li>
                             <li><a href="{{env('APP_URL')}}/admin/dashboard">Dashboard</a></li>
                             <li><a href="{{env('APP_URL')}}/admin/sni">SNI</a></li>
                             <li class="active">Upload Hasil Sertifikasi sni</li>

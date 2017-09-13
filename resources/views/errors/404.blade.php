@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Terjadi Kesalahan</title>
+    <title>Upss... Terjadi Kesalahan</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{env('APP_URL')}}/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{env('APP_URL')}}/plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
@@ -30,8 +30,8 @@
         <div class="row-flex">
           <div class="messge500">
             <h1><span>Perhatian!</span> <br><br>
-            terjadi kesalahan</h1>
-            <p>Harap tenang, ini bukan kesalahan anda. Kami akan membawa anda pulang...</p>
+            Telah Terjadi Kesalahan</h1>
+            <p>Harap Tenang, Ini Bukan Kesalahan Anda. Kami Akan Membawa Anda Pulang...</p>
             <br>
             <a href="{{env('APP_URL')}}/user/dashboard"><button type="button" class="btn btn-warning">Disini</button></a>
           </div>

@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{env('APP_URL')}}/plugins/images/bisqa.jpg">
-    <title>Sistem Sertifikasi Terpadu - Kementrian Perindustrian Republik Indonesia</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{env('APP_URL')}}/plugins/images/bbtppi2.png">
+    <title>Sistem Informasi Sertifikasi - Balai Besar Teknologi Pencegahan Pencemaran Industri Semarang  -  Kementrian Perindustrian Republik Indonesia</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{env('APP_URL')}}/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{env('APP_URL')}}/plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
@@ -33,11 +33,11 @@
         <div class="cssload-speeding-wheel"></div>
     </div>
     <section id="wrapper" class="login-register">
-        <div class="login-box login-sidebar">
+        <div class="login-box login-sidebar" style="opacity:0.8">
             <div class="white-box">
                 <form class="form-horizontal form-material" id="loginform" action="{{url('login-proses')}}" method="post">
                 {{ csrf_field() }}
-                    <a href="javascript:void(0)" class="text-center db"><img src="{{env('APP_URL')}}/images/bisqa.png" alt="Home" />
+                    <a href="javascript:void(0)" class="text-center db"><img src="{{env('APP_URL')}}/images/bbtppi.png" alt="Home" />
                         </a>
                     <div class="form-group m-t-40">
                         <div class="col-xs-12">
@@ -51,8 +51,8 @@
                         <div class="col-md-12">
                             <div class="checkbox checkbox-primary pull-left p-t-0">
                                 <input id="checkbox-signup" type="checkbox">
-                                <label for="checkbox-signup"> Ingat saya </label>
-                            </div> <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> Lupa password?</a> </div>
+                                <label for="checkbox-signup"> Ingatkan Saya </label>
+                            </div> <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> Lupa Kata Sandi ?</a> </div>
                     </div>
                     <div class="form-group text-center m-t-20">
                         <div class="col-xs-12">
@@ -62,7 +62,7 @@
                     
                     <div class="form-group m-b-0">
                         <div class="col-sm-12 text-center">
-                            <p>Tidak punya akun? <a href="/register" class="text-primary m-l-5"><b>Daftar</b></a></p>
+                            <p>Tidak Punya Akun ? <a href="/register" class="text-primary m-l-5"><b>Daftar Disini</b></a></p>
                         </div>
                     </div>
 		    
@@ -70,8 +70,8 @@
                 <form class="form-horizontal" id="recoverform" action="index.html">
                     <div class="form-group ">
                         <div class="col-xs-12">
-                            <h3>Recover Password</h3>
-                            <p class="text-muted">Enter your Email and instructions will be sent to you! </p>
+                            <h3>Pulihkan Kata Sandi Anda</h3>
+                            <p class="text-muted">Masukan Email Anda dan Tunggu Instruksi Dari Kami</p>
                         </div>
                     </div>
                     <div class="form-group ">
@@ -86,7 +86,7 @@
                 </form>
                 <div class="col-xs-12">
                             <a href="{{env('APP_URL')}}/login-admin">
-                            <div class="btn btn-success btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Login Khusus Staff</div>
+                            <div class="btn btn-success btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Login Khusus Pegawai</div>
                             </a>
                 </div>
             </div>

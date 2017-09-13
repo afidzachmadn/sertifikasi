@@ -13,13 +13,13 @@
  <div class="row bg-title">
                     <!-- .page title -->
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Sistem Sertifikasi Terpadu</h4> </div>
+                        <h4 class="page-title">Sistem Informasi Sertifikasi</h4> </div>
                     <!-- /.page title -->
                     <!-- .breadcrumb -->
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         <ol class="breadcrumb">
-                            <li><a href="#">System</a></li>
-                            <li class="active">Profile</li>
+                            <li><a href="#">Sistem</a></li>
+                            <li class="active">Profil</li>
                         </ol>
                     </div>
                     <!-- /.breadcrumb -->
@@ -50,7 +50,7 @@
                                 <hr>
                                 <!-- .row-->
                                 <div class="row text-center m-t-10">
-                                    <div class="col-md-12 b-r"><strong>E-mail</strong>
+                                    <div class="col-md-12 b-r"><strong>Email</strong>
                                         <p>{{$profile->email}}</p>
                                     </div>     
                                 </div>
