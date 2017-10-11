@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Input;
 use Auth;
 
 
@@ -36,32 +38,43 @@ class AuthController extends Controller {
     public function bacadatabase(Request $request) {
         $email = $request->input('email');
         $password=$request->input('password');
+        $rules = ['captcha' => 'required|captcha'];
+        $validator = Validator::make(Input::all(), $rules);
         // login ke db
         $usersTable = DB::table('users');
         //cek username dan pass di database
         $usercheck= $usersTable->where('email', $email)->first();
         //dd($usercheck);
-        if($usercheck != null){
+        if($validator->fails()){
+            $pesan = 'captcha salah!';
+
+            return redirect()->action('AuthController@login')->with('message','kode yang anda masukan salah');
+            
+            
+        }
+        else{
+            if($usercheck != null){
 
         
-            $decrypt = decrypt($usercheck->password);
+                $decrypt = decrypt($usercheck->password);
             
-            if($password == $decrypt) {
-                $request->session()->put('login', true);
-                $request->session()->put('role', 'user');
-                $request->session()->put('name', $usercheck->company_name);
-                $request->session()->put('id', $usercheck->id);
-                $request->session()->put('img_url', $usercheck->img_url);
-                if($usercheck->permission == 2) {
-                    return redirect()->action('HomeController@dashboard');
+                if($password == $decrypt) {
+                    $request->session()->put('login', true);
+                    $request->session()->put('role', 'user');
+                    $request->session()->put('name', $usercheck->company_name);
+                    $request->session()->put('id', $usercheck->id);
+                    $request->session()->put('img_url', $usercheck->img_url);
+                    if($usercheck->permission == 2) {
+                        return redirect()->action('HomeController@dashboard');
+                    }
+                } 
+                else {
+                    return redirect()->action('AuthController@login');
                 }
-            } 
-            else {
-            return redirect()->action('AuthController@login');
             }
-    }
-        else{
-            return redirect()->action('AuthController@login');
+            else{
+                return redirect()->action('AuthController@login');
+            }
         }
     }
 
