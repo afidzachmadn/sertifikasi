@@ -49,26 +49,92 @@
                                             <th>Nama Pegawai</th>
                                             <th>Jabatan</th>
                                             <th>Banyaknya Inspeksi ISO yang pernah dikerjakan</th>
+                                            <th>Pilih Perusahaan yang akan di inspeksi</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach($pegawaiList as $pegawai)
+                                        
                                             <tr>
-                                                
-                                                <td>{{$pegawai->id}}</td>
-                                                <td>{{$pegawai->nip}}</td>
-                                                <td>{{$pegawai->name}}</td>
-                                                <td>{{$pegawai->jabatan}}</td>
-                                                <td>{{$pegawai->jumlah_total_pendaftar_ISO_yang_diverifikasi}}&nbsp&nbsp<span><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">Lihat detail</button></span></td>
+                                                <form action="{{url('pegawai-inspeksi-iso-proses')}}" method="post" enctype="multipart/form-data">
+                                                {{csrf_field()}}
+                                                <td>{{$pegawai->id}}
+                                                    <div class="form-group">
+                                                        <input style="visibility:hidden" type="text" class="form-control text-center" id="no" required="" name="no" value="{{$pegawai->id}}"/>
+                                                    </div>
+                                                </td>
                                                 
                                                 <td>
+                                                {{$pegawai->nip}}
+                                                <div class="form-group">
+                                                <input style="visibility:hidden" type="text" class="form-control text-center" id="nip" required="" name="nip" value="{{$pegawai->nip}}"/>
+                                                </div>
+                                                
+                                                </td>
+                                                <td>{{$pegawai->name}}</td>
+                                                <td>{{$pegawai->jabatan}}</td>
+                                                <td>{{$pegawai->jumlah_total_pendaftar_ISO_yang_diverifikasi}}&nbsp&nbsp<span>
+                                                <form action="{{url('riwayat-pegawai-inspeksi-iso-proses')}}" method="post" enctype="multipart/form-data">
+
+                                                <div class="form-group">
+                                                        <input style="visibility:hidden" type="text" class="form-control text-center" id="no" required="" name="no" value="{{$pegawai->id}}"/>
+                                                </div>
+
+
+                                                <div class="form-group">
                                                     
-                                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Pilih</button>
+                                                        <input class="btn btn-block btn-success" type="submit" value="lihat"/>
+                                                </div>
+                                                </form>
+                                                 
+                                                </span></td>
+
+                                                @if($pegawai->jumlah_total_pendaftar_ISO_yang_diverifikasi >5)
+                                                <td>
+                                                    <div class="form-group">
+                                                
+                                                        <label class="control-label">Nama Perusahaan yang akan di inspeksi oleh pegawai ini</label>
+                                                        <select class="form-control select2" type="text" name="pilihan-perusahaan">
+                                                            <option></option>
+
+                                                            @foreach($userList as $user)
+                                                            <option value="{{$user->company_name}}">{{$user->company_name}}</option>
+                                    
+                                                            @endforeach  
+                                                        </select>
+                                                    </div>  
+                                                </td>
+                                                @else
+                                                <td>-</td>
+                                                @endif
+
+
+
+                                                @if($pegawai->jumlah_total_pendaftar_ISO_yang_diverifikasi <5)
+
+                                                <td>
+                                                    
+                                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" disabled>Pilih</button>
                                                     
                                                  
                                                 </td>
+                                                   
+                                                @else
+
+                                                <td>
+
+                                                    <div class="form-group">
+                                                    
+                                                        <input class="btn btn-block btn-primary" type="submit" value="pilih"/>
+                                                    </div>
+                                                 
+                                                </td>
+
+                                                @endif
+                                            </form>
                                             </tr>
+                                        
                                         @endforeach
                                        
                                         
@@ -80,6 +146,7 @@
                                             <th>Nama Pegawai</th>
                                             <th>Jabatan</th>
                                             <th>Banyaknya Inspeksi ISO</th>
+                                            <th>Pilih Perusahaan yang akan di inspeksi</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>

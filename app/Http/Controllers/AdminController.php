@@ -133,13 +133,15 @@ class AdminController extends Controller
     // $email = $request->session()->get('email');
      $userList = DB::table('users')->where([['status_pembayaran_ISO','=','terbayar'],['surat_pengesahan_ISO','=','default-pengesahan-iso.pdf'],['petugas_inspeksi_ISO_name','=',null],])->get();
      $pegawaiList = DB::table('pegawai_lapangan')->get();
-
+    
+     //dd($pegawaiList);
+     $status = '';
      
 
     
 
         if($request->session()->get('login')) {
-            return view('admin.pilih-pegawai-inspeksi-iso', array('userList'=>$userList,'pegawaiList' => $pegawaiList));
+            return view('admin.pilih-pegawai-inspeksi-iso', array('userList'=>$userList,'pegawaiList' => $pegawaiList, 'status'=>$status));
         } else {
             return view('auth.login-admin');
         }
@@ -150,6 +152,7 @@ class AdminController extends Controller
 
     $nip = $request->get('nip');
     $id = $request->get('no');
+    dd($nip);
 
     $pilihan_perusahaan=$request->get('pilihan-perusahaan');
     $nama_petugas_inspeksi_iso= DB::table('pegawai_lapangan')->where('nip',$nip)->get();
@@ -208,6 +211,7 @@ public function riwayat_pegawai_ISO(Request $request){
 public function riwayat_pegawai_ISO_process(Request $request){
      $email = $request->session()->get('email');
      $id = $request->get('no');
+     dd($id);
 
      $userList = DB::table('users')->where([['petugas_inspeksi_ISO_ID','=',$id],])->get();
 
