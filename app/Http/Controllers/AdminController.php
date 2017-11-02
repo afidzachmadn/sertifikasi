@@ -152,7 +152,7 @@ class AdminController extends Controller
 
     $nip = $request->get('nip');
     $id = $request->get('no');
-    dd($nip);
+    //dd($nip);
 
     $pilihan_perusahaan=$request->get('pilihan-perusahaan');
     $nama_petugas_inspeksi_iso= DB::table('pegawai_lapangan')->where('nip',$nip)->get();
@@ -211,11 +211,15 @@ public function riwayat_pegawai_ISO(Request $request){
 public function riwayat_pegawai_ISO_process(Request $request){
      $email = $request->session()->get('email');
      $id = $request->get('no');
-     dd($id);
+     //dd($id);
 
      $userList = DB::table('users')->where([['petugas_inspeksi_ISO_ID','=',$id],])->get();
 
+    // $surat_inspeksi = DB::table('users')->where([['surat_inspeksi_ISO','=',null],['surat_inspeksi_ISO','!=',null],])->get();
+
      //dd($userList);
+
+     //dd($surat_inspeksi);
      
 
         if($request->session()->get('login')) {

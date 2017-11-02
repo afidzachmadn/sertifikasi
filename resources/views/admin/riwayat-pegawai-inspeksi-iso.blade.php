@@ -47,17 +47,29 @@
                                             <th>Nama Perusahan</th>
                                             <th>Email</th>
                                             <th>Status Sertifikasi ISO</th>
+                                            <th>Status Inspeksi</th>
+                                            <th>Surat Hasil Inspeksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($userList as $user)
+                                        
                                             <tr>
+                                            @foreach($userList as $user)
                                                 <td>{{$user->id}}</td>
                                                 <td>{{$user->company_name}}</td>
                                                 <td>{{$user->email}}</td>
                                                 <td>{{$user->status_ISO}}</td>
+                                                @if($user->surat_inspeksi_ISO == null)
+                                                <td>Belum/sedang di survei</td>
+                                                @else
+                                                <td>Sudah selesai di survei</td>
+                                                @endif
+                                                
+                                                <td>{{$user->surat_inspeksi_ISO}}</td>
+                                            @endforeach
+                                                
                                             </tr>
-                                        @endforeach
+                                       
                                        
                                         
                                     </tbody>
@@ -67,6 +79,8 @@
                                             <th>Nama Perusahan</th>
                                             <th>Email</th>
                                             <th>Status Sertifikasi ISO</th>
+                                            <th>Status Inspeksi ISO</th>
+                                            <th>Surat Hasil Inspeksi ISO</th>
                                         </tr>
                                     </thead>
                                 </table>

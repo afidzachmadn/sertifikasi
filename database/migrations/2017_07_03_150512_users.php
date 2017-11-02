@@ -35,6 +35,7 @@ class Users extends Migration
             $table->string('petugas_inspeksi_ISO_ID', 100)->nullable();
             $table->string('petugas_inspeksi_ISO_name', 100)->nullable();
             $table->string('petugas_inspeksi_nip_ISO', 100)->nullable();
+            $table->string('surat_inspeksi_ISO', 100)->nullable();            
             $table->string('surat_pengesahan_ISO',100)->default('default-pengesahan-iso.pdf');
 
 
@@ -55,6 +56,7 @@ class Users extends Migration
             $table->string('petugas_inspeksi_SNI_ID', 100)->nullable();
             $table->string('petugas_inspeksi_SNI_name', 100)->nullable();
             $table->string('petugas_inspeksi_nip_SNI', 100)->nullable();
+            $table->string('surat_inspeksi_SNI', 100)->nullable();            
             $table->string('surat_pengesahan_SNI',100)->default('default-pengesahan-sni.pdf');
 
             $table->text('description')->nullable();
