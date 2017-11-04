@@ -129,4 +129,67 @@ class AuthController extends Controller {
         $request->session()->flush();
         return redirect()->action('AuthController@login_admin');
     }
+
+    public function logout_pegawai_lapangan(Request $request) {
+        $request->session()->flush();
+        return redirect()->action('AuthController@login_pegawai_lapangan');
+    }
+
+
+
+    public function login_pegawai_lapangan(Request $request) {
+        if($request->session()->get('login')) {
+            return redirect()->action('PegawaiLapangan@dashboard');
+        } else {
+            return view('auth.login-pegawai-lapangan');
+        }
+    }
+
+
+    public function bacadatabase_pegawai_lapangan(Request $request) {
+        $email = $request->input('email');
+        $password=$request->input('password');
+        // login ke db
+        $usersTable = DB::table('pegawai_lapangan');
+        //cek username dan pass di database
+        $usercheck= $usersTable->where('email', $email)->first();
+        if($usercheck != null){
+            $decrypt = decrypt($usercheck->password);    
+            if($password == $decrypt) {
+            
+                $request->session()->put('login', true);
+                $request->session()->put('name', $usercheck->name);
+                $request->session()->put('id', $usercheck->id);
+                $request->session()->put('nip', $usercheck->nip);
+                //$request->session()->put('img_url', $usercheck->img_url);
+                $request->session()->put('role', 'pegawai_lapangan');
+                return redirect()->action('PegawaiLapangan@dashboard');
+            } 
+            else {
+            return redirect()->action('AuthController@login_pegawai_lapangan');
+            }
+        }
+        else{
+            return redirect()->action('AuthController@login_pegawai_lapangan');
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

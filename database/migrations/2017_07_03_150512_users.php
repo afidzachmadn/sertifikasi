@@ -79,6 +79,9 @@ class Users extends Migration
 
         Schema::create('pegawai_lapangan', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('email', 100)->unique();
+            $table->string('password', 500);
+            
             $table->string('nip', 50);
             $table->string('name', 100);
             $table->string('jabatan', 100);
@@ -103,6 +106,8 @@ class Users extends Migration
         // });
         Schema::drop('users');
         Schema::drop('admin');
+        Schema::drop('pegawai_lapangan');
+        
     }
     
 }

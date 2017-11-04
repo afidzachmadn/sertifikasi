@@ -222,6 +222,8 @@ class UserSeed extends Seeder
 //------------------------------------------------------------------------------------------------//
         DB::table('pegawai_lapangan')->insert([
             'nip' => '12345678910',
+            'email'=>'parto@local.com',
+            'password'=>encrypt('parto'),
             'name' => 'Parto',
             'jabatan' => 'Pelaksana Junior',
             'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',
@@ -230,6 +232,8 @@ class UserSeed extends Seeder
 
         DB::table('pegawai_lapangan')->insert([
             'nip' => '12345678911',
+            'email'=>'bapak@local.com',
+            'password'=>encrypt('bapak'),
             'name' => 'Bapak',
             'jabatan' => 'Pelaksana Junior',
             'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',
@@ -238,6 +242,8 @@ class UserSeed extends Seeder
 
         DB::table('pegawai_lapangan')->insert([
             'nip' => '12345678912',
+            'email'=>'ciripa@local.com',
+            'password'=>encrypt('ciripa'),
             'name' => 'Ciripa',
             'jabatan' => 'Pelaksana Junior',
             'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',
@@ -246,6 +252,8 @@ class UserSeed extends Seeder
 
         DB::table('pegawai_lapangan')->insert([
             'nip' => '12345678913',
+            'email'=>'elvis@local.com',
+            'password'=>encrypt('elvis'),
             'name' => 'Elvis',
             'jabatan' => 'Pelaksana Junior',
             'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',
@@ -254,6 +262,8 @@ class UserSeed extends Seeder
 
         DB::table('pegawai_lapangan')->insert([
             'nip' => '12345678914',
+            'email'=>'handoko@local.com',
+            'password'=>encrypt('handoko'),
             'name' => 'Handoko',
             'jabatan' => 'Pelaksana Junior',
             'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',
@@ -261,6 +271,8 @@ class UserSeed extends Seeder
         ]);
         DB::table('pegawai_lapangan')->insert([
             'nip' => '12345678915',
+            'email'=>'dery@local.com',
+            'password'=>encrypt('dery'),
             'name' => 'Dery',
             'jabatan' => 'Pelaksana Junior',
             'jumlah_total_pendaftar_ISO_yang_diverifikasi' => '0',

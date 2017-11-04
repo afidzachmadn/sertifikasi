@@ -198,6 +198,13 @@ Route::get('/logout-admin', "AuthController@logout_admin");
 Route::post('/login-proses-admin', "AuthController@bacadatabase_admin");
 
 
+Route::get('/login-pegawai-lapangan', "AuthController@login_pegawai_lapangan");
+
+Route::get('/logout-pegawai-lapangan', "AuthController@logout_pegawai_lapangan");
+
+Route::post('/login-proses-pegawai-lapangan', "AuthController@bacadatabase_pegawai_lapangan");
+
+
 /* ----------------------------------------------------------------------------------- */
 
 
@@ -226,3 +233,10 @@ Route::any('captcha-test', function()
         $form .= '</form>';
         return $form;
 });
+
+
+
+
+//pegawailapangan
+
+Route::get('/pegawailapangan/dashboard', 'PegawaiLapangan@dashboard')->middleware('checkLogin', 'isPegawaiLapangan');;

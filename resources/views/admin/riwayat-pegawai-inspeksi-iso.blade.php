@@ -52,9 +52,9 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        
-                                            <tr>
                                             @foreach($userList as $user)
+                                            <tr>
+                                            
                                                 <td>{{$user->id}}</td>
                                                 <td>{{$user->company_name}}</td>
                                                 <td>{{$user->email}}</td>
@@ -66,9 +66,10 @@
                                                 @endif
                                                 
                                                 <td>{{$user->surat_inspeksi_ISO}}</td>
-                                            @endforeach
+                                            
                                                 
                                             </tr>
+                                            @endforeach
                                        
                                        
                                         
