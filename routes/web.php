@@ -240,3 +240,7 @@ Route::any('captcha-test', function()
 //pegawailapangan
 
 Route::get('/pegawailapangan/dashboard', 'PegawaiLapangan@dashboard')->middleware('checkLogin', 'isPegawaiLapangan');;
+
+Route::get('/pegawailapangan/upload-hasil-survei', 'PegawaiLapangan@upload_hasil_survei');
+
+Route::get('/pegawailapangan/hapus-hasil-survei', 'PegawaiLapangan@hapus_hasil_survei');

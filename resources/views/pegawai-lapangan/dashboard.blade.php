@@ -2,9 +2,9 @@
 
 @section ('sidebar-dashboard-pegawai-lapangan')
 <li class="nav-small-cap m-t-10">--- Menu Utama</li>
-                    <li> <a href="{{env('APP_URL')}}/pegawai-lapangan/dashboard" class="waves-effect active"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
-                    <li> <a href="{{env('APP_URL')}}/pegawai-lapangan/upload-hasil-survei" class="waves-effect"><i class="ti-upload p-r-10"></i> <span class="hide-menu">Upload Hasil Survei</span></a> </li>
-                     <li> <a href="{{env('APP_URL')}}/pegawai-lapangan/hapus-hasil-survei" class="waves-effect"><i class="ti-close p-r-10"></i> <span class="hide-menu">Hapus Hasil Survei</span></a> </li>
+                    <li> <a href="{{env('APP_URL')}}/pegawailapangan/dashboard" class="waves-effect active"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
+                    <li> <a href="{{env('APP_URL')}}/pegawailapangan/upload-hasil-survei" class="waves-effect"><i class="ti-upload p-r-10"></i> <span class="hide-menu">Upload Hasil Survei</span></a> </li>
+                     <li> <a href="{{env('APP_URL')}}/pegawailapangan/hapus-hasil-survei" class="waves-effect"><i class="ti-close p-r-10"></i> <span class="hide-menu">Hapus Hasil Survei</span></a> </li>
                      
 @endsection
 
