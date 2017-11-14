@@ -35,15 +35,16 @@
                             <p class="text-muted m-b-30 font-13">Pilih perusahaan, lali silahkan pilih hasil data untuk di upload</p>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <form class="form-material form-horizontal">
+                                    <form action="{{url('upload-hasil-survei-lapangan-proses')}}" method="post" enctype="multipart/form-data">
+                                                    {{csrf_field()}}
                                         
                                         <div class="form-group">
                                             <label class="col-sm-12">Perusahaan pilihan:</label>
                                             <div class="col-sm-12">
-                                                <select class="form-control" required>
+                                                <select class="form-control" type="text" name="nama-perusahaan" required>
                                                     <option></option>
                                                     @foreach ($nama_perusahaan as $namaPer)
-                                                    <option>{{$namaPer->company_name}}</option>
+                                                    <option value="{{$namaPer->company_name}}">{{$namaPer->company_name}}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
@@ -53,8 +54,13 @@
                                             <div class="col-sm-12">
                                                 <div class="fileinput fileinput-new input-group" data-provides="fileinput">
                                                     <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div> <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Select file</span> <span class="fileinput-exists">Change</span>
-                                                    <input type="file" name="..."> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
+                                                    <input type="file" name="hasil_upload" required> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
                                             </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                                    
+                                            <input class="btn btn-block btn-primary" type="submit" value="kirim"/>
                                         </div>
                                         
                                     </form>

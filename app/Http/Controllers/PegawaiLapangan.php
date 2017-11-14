@@ -43,14 +43,40 @@ class PegawaiLapangan extends Controller
         }
     }
 
+
+    public function upload_hasil_survei_proses(Request $request) {
+        $name = $request->get('nama-perusahaan');
+        $hasil = $request->file('hasil_upload');
+        $hasil_name = $hasil->hashName();
+        $storeFile_hasil = $hasil->store('public/pdf/iso/hasil-survei-lapangan');
+        
+        $userDb = DB::table('users')->where('company_name', $name)
+                                    ->update(['surat_inspeksi_ISO' => $hasil_name]);
+        return redirect()->action('PegawaiLapangan@upload_hasil_survei');
+   
+    }
+
     public function hapus_hasil_survei(Request $request) {
         $id = $request->session()->get('id');
        
         if($request->session()->get('login')) {
+
+            $userList= DB::table('users')->where([['petugas_inspeksi_ISO_id','=', $id],['surat_inspeksi_ISO','!=',null],])->get();
             
-            return view('pegawai-lapangan.hapus-hasil-survei');
+            return view('pegawai-lapangan.hapus-hasil-survei', array('userList'=>$userList));
         } else {
             return view('auth.login');
         }
+    }
+
+
+    public function delete_hasil_survei_proses(Request $request) {
+        $email = $request->get('email');
+        
+        
+        $userDb = DB::table('users')->where('email', $email)
+                                    ->update(['surat_inspeksi_ISO' => null]);
+        return redirect()->action('PegawaiLapangan@hapus_hasil_survei');
+   
     }
 }

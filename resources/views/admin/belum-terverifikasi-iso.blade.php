@@ -57,6 +57,7 @@
                                             <th>Status Konfirmasi Pembayaran</th>
                                             <th>Hasil Penerbitan Sertifikasi ISO</th>
                                             <th>Petugas Survei</th>
+                                            <th>Hasil Survei</th>
                                             <th>Status Sertifikasi ISO</th>
                                         </tr>
                                     </thead>
@@ -91,6 +92,10 @@
                                                 <td>
                                                     {{$user->petugas_inspeksi_ISO_name}}
                                                 </td>
+
+                                                <td><a href="{{env('APP_URL')}}/storage/pdf/iso/hasil-survei-lapangan/{{$user->surat_inspeksi_ISO}}" target="_Blank">Lihat</a>
+                                                </td>
+                                                
                                                 <td>
                                                     
                                                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Belum Terverifikasi</button>
@@ -116,6 +121,7 @@
                                             <th>Status Konfirmasi Pembayaran</th>
                                             <th>Hasil Penerbitan Sertifikasi ISO</th>
                                             <th>Petugas Survei</th>
+                                            <th>Hasil Survei</th>
                                             <th>Status Sertifikasi ISO</th>
                                         </tr>
                                     </thead>

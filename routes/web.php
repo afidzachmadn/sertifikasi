@@ -130,6 +130,22 @@ Route::post('/input-pegawai-inspeksi-iso-proses', "AdminController@input_pegawai
 
 
 
+//----------------------------------------------------------------------------------------//
+Route::get('/admin/pilih-pegawai-inspeksi-sni', 'AdminController@pegawai_inspeksi_sni');
+Route::post('/pegawai-inspeksi-sni-proses', "AdminController@pegawai_inspeksi_sni_proses");
+
+Route::post('/riwayat-pegawai-inspeksi-sni-proses', "AdminController@riwayat_pegawai_sni_process");
+
+Route::post('/input-pegawai-inspeksi-sni-proses', "AdminController@input_pegawai_sni_process");
+
+
+
+
+//----------------------------------------------------------------------------------------//
+
+
+
+
 
 
 
@@ -243,4 +259,8 @@ Route::get('/pegawailapangan/dashboard', 'PegawaiLapangan@dashboard')->middlewar
 
 Route::get('/pegawailapangan/upload-hasil-survei', 'PegawaiLapangan@upload_hasil_survei');
 
+Route::post('/upload-hasil-survei-lapangan-proses', 'PegawaiLapangan@upload_hasil_survei_proses');
+
 Route::get('/pegawailapangan/hapus-hasil-survei', 'PegawaiLapangan@hapus_hasil_survei');
+
+Route::post('/delete-hasil-survei-lapangan-proses', 'PegawaiLapangan@delete_hasil_survei_proses');

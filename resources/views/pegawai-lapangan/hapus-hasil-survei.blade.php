@@ -28,7 +28,85 @@
 @endsection
 
 @section("isi-dashboard-pegawai-lapangan")
- 
+
+<div class="col-sm-12">
+                        <div class="white-box">
+                            <h3 class="box-title">List pendaftar ISO yang sudah di survei dan telah mempunyai laporan survei/bukti laporan hasil survei
+                            </br>
+                            <p>Jika ingin menghapus/membatalkan/ingin mengupload ulang. Silahkan klik tombol delete</p>
+                            </br>
+                            
+                            
+                            </br>
+                            <div class="table-responsive">
+                                <table id="myTable" class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Nama Perusahan</th>
+                                            <th>Email</th>
+                                            <th>Status Survei</th>
+                                            <th>Hasil Survei</th>
+                                            <th>Aksi</th>
+                    
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    
+                                        @foreach($userList as $user)
+                                        
+                                            <tr>
+                                            <form action="{{url('delete-hasil-survei-lapangan-proses')}}" method="post" enctype="multipart/form-data">
+                                                    {{csrf_field()}}
+                                                <td><p>{{$user->id}}</p></td>
+                                                <td><p>{{$user->company_name}}</p></td>
+                                                <td>
+                                                
+                                                    <p>{{$user->email}}</p>
+
+                                                    
+                                                    <input type="hidden" class="form-control text-center" id="" required="" name="email" value="{{$user->email}}" />
+                                                
+
+                                                </td>
+
+                                                <td>
+                                                    <p><b>Selesai di survei</b></p>
+
+                                                </td>
+                                                
+                                                <td>
+         <a href="{{env('APP_URL')}}/storage/pdf/iso/hasil-survei-lapangan/{{$user->surat_inspeksi_ISO}}" target="_Blank">lihat</a>
+                                                </td>
+
+                                                <td>
+                                                    <button type="submit" class="btn btn-danger waves-effect waves-light m-r-10">delete</button>
+                                                </td>
+                                            </form>
+                                            </tr>
+                                        
+                                        @endforeach
+                                       
+                                    
+                                    </tbody>
+                                    <thead>
+                                        <tr>
+                                            <tr>
+                                            <th>No</th>
+                                            <th>Nama Perusahan</th>
+                                            <th>Email</th>
+                                            <th>Status Survei</th>
+                                            <th>Hasil Survei</th>
+                                            <th>Aksi</th>
+                    
+                                        </tr>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
             
             
                 

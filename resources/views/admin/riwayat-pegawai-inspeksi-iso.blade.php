@@ -65,7 +65,7 @@
                                                 <td>Sudah selesai di survei</td>
                                                 @endif
                                                 
-                                                <td>{{$user->surat_inspeksi_ISO}}</td>
+                                                <td><a href="{{env('APP_URL')}}/storage/pdf/iso/hasil-survei-lapangan/{{$user->surat_inspeksi_ISO}}" target="_Blank">lihat</a></td>
                                             
                                                 
                                             </tr>
