@@ -28,7 +28,9 @@ class HomeController extends Controller {
        $id = $request->session()->get('id');
        $db = DB::table('users');
        $verifiedIso = $db->where('Verifikator_ID_ISO', $id)->count();
-       $verifiedSni = $db->where('Verifikator_ID_SNI', $id)->count();
+       $verifiedSni = DB::table('users')->where('Verifikator_ID_SNI', $id)->count();
+
+       //dd($verifiedSni);
 
        $db_admin = DB::table('admin')->where('id',$id)
                                  ->update(['jumlah_total_pendaftar_ISO_yang_diverifikasi' => $verifiedIso,'jumlah_total_pendaftar_SNI_yang_diverifikasi' => $verifiedSni]);
