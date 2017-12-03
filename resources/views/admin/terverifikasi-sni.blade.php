@@ -97,7 +97,7 @@
                                                    
                                                 </td>
                                                 <td>
-                                                    {{$user->petugas_inspeksi_ISO_name}}
+                                                    {{$user->petugas_inspeksi_SNI_name}}
                                                 </td>
                                                 <td>{{$user->Verifikator_SNI_name}}</td>
                                             </tr>

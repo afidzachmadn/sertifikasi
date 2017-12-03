@@ -317,6 +317,7 @@ public function sni(Request $request){
   public function terverifikasi_sni(Request $request){
    $email = $request->session()->get('email');
    $userList = DB::table('users')->where('status_SNI', 'terverifikasi')->get();
+   //dd($userList);
 
       if($request->session()->get('login')) {
           return view('admin.terverifikasi-sni', array('userList' => $userList));
