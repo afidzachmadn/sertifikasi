@@ -358,8 +358,8 @@ public function sni(Request $request){
    $id = $request->get('no');
    $status_pembayaran_sni = $request->get('texted');
    $userDb = DB::table('users')->where('id', $id)
-                               ->update(['status_pembayaran_SNI' => $status_pembayaran_SNI]);
-   return redirect()->action('AdminController@belum_terverifikasi_pembayaran_SNI');
+                               ->update(['status_pembayaran_SNI' => $status_pembayaran_sni]);
+   return redirect()->action('AdminController@belum_terverifikasi_pembayaran_sni');
   }
 
   public function terverifikasi_pembayaran_sni(Request $request){
@@ -394,7 +394,7 @@ public function sni(Request $request){
    $userList = DB::table('users')->where([['status_pembayaran_SNI','=','terbayar'],['surat_pengesahan_SNI','=','default-pengesahan-sni.pdf'],['petugas_inspeksi_SNI_name','=',null],])->get();
    $pegawaiList = DB::table('pegawai_lapangan')->get();
   
-   //dd($pegawaiList);
+   //dd($userList);
    $status = '';
    
 

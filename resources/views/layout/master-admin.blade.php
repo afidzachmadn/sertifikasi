@@ -128,7 +128,6 @@
                 
                 @yield('breadcrumb-dashboard-admin')
                 @yield('breadcrumb-iso-admin')
-                @yield('breadcrumb-sni-admin')
                 @yield('breadcrumb-belum-terverifikasi-iso-admin')
                 @yield('breadcrumb-terverifikasi-iso-admin')
                 @yield('breadcrumb-belum-terverifikasi-pembayaran-iso-admin')
@@ -137,11 +136,15 @@
                 @yield('breadcrumb-pilih-pegawai-inspeksi-iso-admin')
                 @yield('breadcrumb-riwayat-pegawai-inspeksi-iso-admin')
                 
+                
+                @yield('breadcrumb-sni-admin')
                 @yield('breadcrumb-belum-terverifikasi-sni-admin')
+                @yield('breadcrumb-terverifikasi-sni-admin')
                 @yield('breadcrumb-belum-terverifikasi-pembayaran-sni-admin')
                 @yield('breadcrumb-terverifikasi-pembayaran-sni-admin')
                 @yield('breadcrumb-upload-hasil-sertifikasi-sni-admin')
-                @yield('breadcrumb-terverifikasi-sni-admin')
+                @yield('breadcrumb-pilih-pegawai-inspeksi-sni-admin')
+                @yield('breadcrumb-riwayat-pegawai-inspeksi-sni-admin')
                   
 
                 <!-- contents start here -->
@@ -165,11 +168,13 @@
                      @yield("isi-pilih-pegawai-inspeksi-iso-admin")
                      @yield("isi-riwayat-pegawai-inspeksi-iso-admin")
 
-                     @yield('isi-belum-terverifikasi-sni-admin')
+                    @yield('isi-belum-terverifikasi-sni-admin')
+                     @yield('isi-terverifikasi-sni-admin')
                      @yield('isi-belum-terverifikasi-pembayaran-sni-admin')
                      @yield('isi-terverifikasi-pembayaran-sni-admin')
                      @yield("isi-upload-hasil-sertifikasi-sni-admin")
-                     @yield('isi-terverifikasi-sni-admin')
+                     @yield("isi-pilih-pegawai-inspeksi-sni-admin")
+                     @yield("isi-riwayat-pegawai-inspeksi-sni-admin")
 
                      
                     

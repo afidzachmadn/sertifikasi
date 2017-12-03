@@ -3,8 +3,8 @@
 @section ('sidebar-sni-admin')
 <li class="nav-small-cap m-t-10">--- Menu Utama</li>
                     <li> <a href="{{env('APP_URL')}}/admin/dashboard" class="waves-effect"><i class="ti-dashboard p-r-10"></i> <span class="hide-menu">Dashboard</span></a> </li>
-                    <li> <a href="{{env('APP_URL')}}/admin/sni" class="waves-effect active"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi sni</span></a> </li>
-                     <li> <a href="{{env('APP_URL')}}/admin/sni" class="waves-effect"><i class="ti-world p-r-10"></i> <span class="hide-menu">Sertifikasi SNI</span></a> </li>
+                    <li> <a href="{{env('APP_URL')}}/admin/iso" class="waves-effect"><i class="ti-agenda p-r-10"></i> <span class="hide-menu">Sertifikasi ISO</span></a> </li>
+                     <li> <a href="{{env('APP_URL')}}/admin/sni" class="waves-effect active"><i class="ti-world p-r-10"></i> <span class="hide-menu">Sertifikasi SNI</span></a> </li>
                     <li> <a href="#" class="waves-effect" alt="alert" class="img-responsive model_img" id="sa-params"><i class="ti-bolt p-r-10"></i> <span class="hide-menu">One Stop Service</span></a> </li>
 @endsection
 
@@ -62,7 +62,7 @@
                                                 <td>{{$pegawai->nip}}</td>
                                                 <td>{{$pegawai->name}}</td>
                                                 <td>{{$pegawai->jabatan}}</td>
-                                                <td>{{$pegawai->jumlah_total_pendaftar_sni_yang_diverifikasi}}&nbsp&nbsp<span>
+                                                <td>{{$pegawai->jumlah_total_pendaftar_SNI_yang_diverifikasi}}&nbsp&nbsp<span>
                                                 <!--
                                                 <form action="{{url('riwayat-pegawai-inspeksi-sni-proses')}}" method="post" enctype="multipart/form-data"> -->
                                                 </span></td>
@@ -76,7 +76,7 @@
                                                         <input  type="hidden" class="form-control text-center" id="no" required="" name="no" value="{{$pegawai->id}}" hidden/>
                                                     </div>
 
-                                                    @if($pegawai->jumlah_total_pendaftar_sni_yang_diverifikasi !=0)
+                                                    @if($pegawai->jumlah_total_pendaftar_SNI_yang_diverifikasi !=0)
 
                                                     <div class="form-group">
                                                     
@@ -91,7 +91,7 @@
                                                 
                                                 
                                                 </td>
-                                                @if($pegawai->jumlah_total_pendaftar_sni_yang_diverifikasi <5)
+                                                @if($pegawai->jumlah_total_pendaftar_SNI_yang_diverifikasi <5)
 
                                                 <td>
                                                     

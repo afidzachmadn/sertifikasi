@@ -259,8 +259,14 @@ Route::get('/pegawailapangan/dashboard', 'PegawaiLapangan@dashboard')->middlewar
 
 Route::get('/pegawailapangan/upload-hasil-survei', 'PegawaiLapangan@upload_hasil_survei');
 
-Route::post('/upload-hasil-survei-lapangan-proses', 'PegawaiLapangan@upload_hasil_survei_proses');
+Route::post('/upload-hasil-survei-lapangan-proses-iso', 'PegawaiLapangan@upload_hasil_survei_proses_iso');
+
+Route::post('/upload-hasil-survei-lapangan-proses-sni', 'PegawaiLapangan@upload_hasil_survei_proses_sni');
 
 Route::get('/pegawailapangan/hapus-hasil-survei', 'PegawaiLapangan@hapus_hasil_survei');
 
 Route::post('/delete-hasil-survei-lapangan-proses', 'PegawaiLapangan@delete_hasil_survei_proses');
+
+Route::get('/pegawailapangan/pilihan', 'PegawaiLapangan@pilihan');
+
+
