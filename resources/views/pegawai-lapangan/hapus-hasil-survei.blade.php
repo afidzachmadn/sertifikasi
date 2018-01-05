@@ -173,7 +173,7 @@
                                                 </td>
                                                 
                                                 <td>
-         <a href="{{env('APP_URL')}}/storage/pdf/sni/hasil-survei-lapangan/{{$user->surat_inspeksi_SNI}}" target="_Blank">lihat</a>
+         <a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/sni/hasil-survei-lapangan/{{$user->surat_inspeksi_SNI}}" target="_Blank">lihat</a>
                                                 </td>
 
                                                 <td>

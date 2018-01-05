@@ -47,32 +47,32 @@
                                 <tbody>
                                     <tr>
                                         <td class="text-center">Struktur Organisasi</td>
-                                        <td class="text-center"><a href="{{env('APP_URL')}}/storage/pdf/iso/{{$dokumen_iso->file_upload_iso_1}}" target="_blank">download</a></td>
+                                        <td class="text-center"><a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/iso/{{$dokumen_iso->file_upload_iso_1}}" target="_blank">download</a></td>
                                         
                                     </tr>
                                     <tr>
                                         <td class="text-center">Diagram alir proses produksi/penyedia jasa termasuk jumlah line proses produksi</td>
-                                        <td class="text-center"><a href="{{env('APP_URL')}}/storage/pdf/iso/{{$dokumen_iso->file_upload_iso_2}}" target="_blank">download</a></td>
+                                        <td class="text-center"><a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/iso/{{$dokumen_iso->file_upload_iso_2}}" target="_blank">download</a></td>
                                         
                                     </tr>
                                     <tr>
                                         <td class="text-center">Sistem Manajemen Mutu</td>
-                                        <td class="text-center"><a href="{{env('APP_URL')}}/storage/pdf/iso/{{$dokumen_iso->file_upload_iso_3}}" target="_blank">download</a></td>
+                                        <td class="text-center"><a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/iso/{{$dokumen_iso->file_upload_iso_3}}" target="_blank">download</a></td>
                                         
                                     </tr>
                                     <tr>
                                         <td class="text-center">Daftar Induk Dokumen / Daftar Informasi terdokumentasi</td>
-                                        <td class="text-center"><a href="{{env('APP_URL')}}/storage/pdf/iso/{{$dokumen_iso->file_upload_iso_4}}" target="_blank">download</a></td>
+                                        <td class="text-center"><a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/iso/{{$dokumen_iso->file_upload_iso_4}}" target="_blank">download</a></td>
                                         
                                     </tr>
                                     <tr>
                                         <td class="text-center">Diagram alir proses Sistem Manajemen Mutu</td>
-                                        <td class="text-center"><a href="{{env('APP_URL')}}/storage/pdf/iso/{{$dokumen_iso->file_upload_iso_5}}" target="_blank">download</a></td>
+                                        <td class="text-center"><a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/iso/{{$dokumen_iso->file_upload_iso_5}}" target="_blank">download</a></td>
                                         
                                     </tr>
                                     <tr>
                                         <td class="text-center">Rekaman Audit Internal dan Tinjauan Manajemen</td>
-                                        <td class="text-center"><a href="{{env('APP_URL')}}/storage/pdf/iso/{{$dokumen_iso->file_upload_iso_6}}" target="_blank">download</a></td>
+                                        <td class="text-center"><a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/iso/{{$dokumen_iso->file_upload_iso_6}}" target="_blank">download</a></td>
                                         
                                     </tr>
                                     

@@ -30,7 +30,7 @@
 
                     <div class="col-md-4 col-xs-12">
                         <div class="white-box">
-                            <div class="user-bg"> <img width="100%" alt="user" src="{{env('APP_URL')}}/storage/img/{{$profile->img_url}}"> 
+                            <div class="user-bg"> <img width="100%" alt="user" src="{{env('APP_URL')}}/storage/hasil-upload/img/{{$profile->img_url}}"> 
                             </div>
                             <div class="user-btm-box">
                                 <!-- .row -->

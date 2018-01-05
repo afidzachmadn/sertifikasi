@@ -69,26 +69,26 @@
                                                 <td>{{$user->company_name}}</td>
                                                 <td>{{$user->email}}</td>
                                                 <td>
-                                                    <a href="{{env('APP_URL')}}/storage/pdf/iso/{{$user->file_upload_iso_1 ? $user->file_upload_iso_1 : '#'}}" target="_blank">Lihat</a>
+                                                    <a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/iso/{{$user->file_upload_iso_1 ? $user->file_upload_iso_1 : '#'}}" target="_blank">Lihat</a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{env('APP_URL')}}/storage/pdf/iso/{{$user->file_upload_iso_2 ? $user->file_upload_iso_2 : '#'}}" target="_blank">Lihat</a>
+                                                    <a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/iso/{{$user->file_upload_iso_2 ? $user->file_upload_iso_2 : '#'}}" target="_blank">Lihat</a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{env('APP_URL')}}/storage/pdf/iso/{{$user->file_upload_iso_3 ? $user->file_upload_iso_3 : '#'}}" target="_blank">Lihat</a>
+                                                    <a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/iso/{{$user->file_upload_iso_3 ? $user->file_upload_iso_3 : '#'}}" target="_blank">Lihat</a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{env('APP_URL')}}/storage/pdf/iso/{{$user->file_upload_iso_4 ? $user->file_upload_iso_4 : '#'}}" target="_blank">Lihat</a>
+                                                    <a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/iso/{{$user->file_upload_iso_4 ? $user->file_upload_iso_4 : '#'}}" target="_blank">Lihat</a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{env('APP_URL')}}/storage/pdf/iso/{{$user->file_upload_iso_5 ? $user->file_upload_iso_5 : '#'}}" target="_blank">Lihat</a>
+                                                    <a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/iso/{{$user->file_upload_iso_5 ? $user->file_upload_iso_5 : '#'}}" target="_blank">Lihat</a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{env('APP_URL')}}/storage/pdf/iso/{{$user->file_upload_iso_6 ? $user->file_upload_iso_6 : '#'}}" target="_blank">Lihat</a>
+                                                    <a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/iso/{{$user->file_upload_iso_6 ? $user->file_upload_iso_6 : '#'}}" target="_blank">Lihat</a>
                                                 </td>
                                                 <td>{{$user->status_pembayaran_ISO}}</td>
                                                 <td>
-                                                    <a href="{{env('APP_URL')}}/storage/pdf/iso/hasil-terbit-sertifikat/{{$user->surat_pengesahan_ISO ? $user->surat_pengesahan_ISO : '#'}}" target="_blank">Lihat</a>
+                                                    <a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/iso/hasil-terbit-sertifikat/{{$user->surat_pengesahan_ISO ? $user->surat_pengesahan_ISO : '#'}}" target="_blank">Lihat</a>
                                                 </td>
                                                 <td>
                                                     

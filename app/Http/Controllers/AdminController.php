@@ -190,7 +190,7 @@ class AdminController extends Controller
      $name = $request->get('nama-perusahaan');
      $hasil = $request->file('pdf-hasil-terbit-sertifikat-iso');
      $hasil_name = $hasil->hashName();
-     $storeFile_hasil = $hasil->store('public/pdf/iso/hasil-terbit-sertifikat');
+     $storeFile_hasil = $hasil->store('pdf/iso/hasil-terbit-sertifikat');
      
      $userDb = DB::table('users')->where('company_name', $name)
                                  ->update(['surat_pengesahan_ISO' => $hasil_name]);
@@ -451,7 +451,7 @@ public function sni(Request $request){
    $name = $request->get('nama-perusahaan');
    $hasil = $request->file('pdf-hasil-terbit-sertifikat-sni');
    $hasil_name = $hasil->hashName();
-   $storeFile_hasil = $hasil->store('public/pdf/sni/hasil-terbit-sertifikat');
+   $storeFile_hasil = $hasil->store('pdf/sni/hasil-terbit-sertifikat');
    
    $userDb = DB::table('users')->where('company_name', $name)
                                ->update(['surat_pengesahan_SNI' => $hasil_name]);

@@ -72,27 +72,27 @@ class UserController extends Controller {
         $id = $request->session()->get('id');
         $iso_1 = $request->file('pdf-iso-1');
         $iso_1_name = $iso_1->hashName();
-        $storeFile_iso_1 = $iso_1->store('public/public/pdf/iso');
+        $storeFile_iso_1 = $iso_1->store('pdf/iso');
 
         $iso_2 = $request->file('pdf-iso-2');
         $iso_2_name = $iso_2->hashName();
-        $storeFile_iso_2 = $iso_2->store('public/public/pdf/iso');
+        $storeFile_iso_2 = $iso_2->store('pdf/iso');
         
         $iso_3 = $request->file('pdf-iso-3');
         $iso_3_name = $iso_3->hashName();
-        $storeFile_iso_3 = $iso_3->store('public/public/pdf/iso');
+        $storeFile_iso_3 = $iso_3->store('pdf/iso');
         
         $iso_4 = $request->file('pdf-iso-4');
         $iso_4_name = $iso_4->hashName();
-        $storeFile_iso_4 = $iso_4->store('public/public/pdf/iso');
+        $storeFile_iso_4 = $iso_4->store('pdf/iso');
         
         $iso_5 = $request->file('pdf-iso-5');
         $iso_5_name = $iso_5->hashName();
-        $storeFile_iso_5 = $iso_5->store('public/public/pdf/iso');
+        $storeFile_iso_5 = $iso_5->store('pdf/iso');
         
         $iso_6 = $request->file('pdf-iso-6');
         $iso_6_name = $iso_6->hashName();
-        $storeFile_iso_6 = $iso_6->store('public/public/pdf/iso');
+        $storeFile_iso_6 = $iso_6->store('pdf/iso');
 
         $userDb = DB::table('users')->where('id', $id)
                                    /* ->update(['company_name' => $name, 'email' => $email, 'telp' => $telp, 'address' => $address, 'description' => $description, 'img_url' => $fileName]); */
@@ -145,7 +145,7 @@ class UserController extends Controller {
 
         $iso_pembayaran = $request->file('pdf-bukti-pembayaran-iso');
         $iso_pembayaran_name = $iso_pembayaran->hashName();
-        $storeFile_iso_pembayaran = $iso_pembayaran->store('public/public/img/bukti-pembayaran/iso');
+        $storeFile_iso_pembayaran = $iso_pembayaran->store('img/bukti-pembayaran/iso');
         $userDb = DB::table('users')->where('id', $id)
                                     ->update(['file_upload_bukti_pembayaran_ISO' => $iso_pembayaran_name]);
         $request->session()->put('file_upload_bukti_pembayaran_ISO');
@@ -175,27 +175,27 @@ class UserController extends Controller {
 
         $sni_1 = $request->file('pdf-sni-1');
         $sni_1_name = $sni_1->hashName();
-        $storeFile_sni_1 = $sni_1->store('public/public/pdf/sni');
+        $storeFile_sni_1 = $sni_1->store('pdf/sni');
 
         $sni_2 = $request->file('pdf-sni-2');
         $sni_2_name = $sni_2->hashName();
-        $storeFile_sni_2 = $sni_2->store('public/public/pdf/sni');
+        $storeFile_sni_2 = $sni_2->store('pdf/sni');
         
         $sni_3 = $request->file('pdf-sni-3');
         $sni_3_name = $sni_3->hashName();
-        $storeFile_sni_3 = $sni_3->store('public/public/pdf/sni');
+        $storeFile_sni_3 = $sni_3->store('pdf/sni');
         
         $sni_4 = $request->file('pdf-sni-4');
         $sni_4_name = $sni_4->hashName();
-        $storeFile_sni_4 = $sni_4->store('public/public/pdf/sni');
+        $storeFile_sni_4 = $sni_4->store('pdf/sni');
         
         $sni_5 = $request->file('pdf-sni-5');
         $sni_5_name = $sni_5->hashName();
-        $storeFile_sni_5 = $sni_5->store('public/public/pdf/sni');
+        $storeFile_sni_5 = $sni_5->store('pdf/sni');
 
         $sni_6 = $request->file('pdf-sni-6');
         $sni_6_name = $sni_6->hashName();
-        $storeFile_sni_6 = $sni_6->store('public/public/pdf/sni');
+        $storeFile_sni_6 = $sni_6->store('pdf/sni');
 
 
         $userDb = DB::table('users')->where('id', $id)
@@ -248,7 +248,7 @@ public function lihat_dokumen_sni(Request $request) {
 
         $sni_pembayaran = $request->file('pdf-bukti-pembayaran-sni');
         $sni_pembayaran_name = $sni_pembayaran->hashName();
-        $storeFile_sni_pembayaran = $sni_pembayaran->store('public/public/img/bukti-pembayaran/sni');
+        $storeFile_sni_pembayaran = $sni_pembayaran->store('img/bukti-pembayaran/sni');
         $userDb = DB::table('users')->where('id', $id)
                                     ->update(['file_upload_bukti_pembayaran_SNI' => $sni_pembayaran_name]);
         $request->session()->put('file_upload_bukti_pembayaran_SNI');

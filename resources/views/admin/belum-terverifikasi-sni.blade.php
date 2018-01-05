@@ -66,22 +66,22 @@
                                                 <td>{{$user->company_name}}</td>
                                                 <td>{{$user->email}}</td>
                                                 <td>
-                                                    <a href="{{env('APP_URL')}}/storage/pdf/sni/{{$user->file_upload_sni_1 ? $user->file_upload_sni_1 : '#'}}" target="_blank">Lihat</a>
+                                                    <a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/sni/{{$user->file_upload_sni_1 ? $user->file_upload_sni_1 : '#'}}" target="_blank">Lihat</a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{env('APP_URL')}}/storage/pdf/sni/{{$user->file_upload_sni_2 ? $user->file_upload_sni_2 : '#'}}" target="_blank">Lihat</a>
+                                                    <a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/sni/{{$user->file_upload_sni_2 ? $user->file_upload_sni_2 : '#'}}" target="_blank">Lihat</a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{env('APP_URL')}}/storage/pdf/sni/{{$user->file_upload_sni_3 ? $user->file_upload_sni_3 : '#'}}" target="_blank">Lihat</a>
+                                                    <a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/sni/{{$user->file_upload_sni_3 ? $user->file_upload_sni_3 : '#'}}" target="_blank">Lihat</a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{env('APP_URL')}}/storage/pdf/sni/{{$user->file_upload_sni_4 ? $user->file_upload_sni_4 : '#'}}" target="_blank">Lihat</a>
+                                                    <a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/sni/{{$user->file_upload_sni_4 ? $user->file_upload_sni_4 : '#'}}" target="_blank">Lihat</a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{env('APP_URL')}}/storage/pdf/sni/{{$user->file_upload_sni_5 ? $user->file_upload_sni_5 : '#'}}" target="_blank">Lihat</a>
+                                                    <a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/sni/{{$user->file_upload_sni_5 ? $user->file_upload_sni_5 : '#'}}" target="_blank">Lihat</a>
                                                 </td>
                                                 <td>
-                                                    <a href="{{env('APP_URL')}}/storage/pdf/sni/{{$user->file_upload_sni_6 ? $user->file_upload_sni_6 : '#'}}" target="_blank">Lihat</a>
+                                                    <a href="{{env('APP_URL')}}/storage/hasil-upload/pdf/sni/{{$user->file_upload_sni_6 ? $user->file_upload_sni_6 : '#'}}" target="_blank">Lihat</a>
                                                 </td>
                                                 <td>{{$user->status_pembayaran_SNI}}</td>
                                                 <td>

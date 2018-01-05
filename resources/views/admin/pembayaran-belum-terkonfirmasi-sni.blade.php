@@ -59,7 +59,7 @@
                                                 <td>{{$user->company_name}}</td>
                                                 <td>{{$user->email}}</td>
                                                 <td>
-                                                    <a href="{{env('APP_URL')}}/storage/img/bukti-pembayaran/sni/{{$user->file_upload_bukti_pembayaran_SNI ? $user->file_upload_bukti_pembayaran_SNI : '#'}}" target="_blank">Lihat</a>
+                                                    <a href="{{env('APP_URL')}}/storage/hasil-upload/img/bukti-pembayaran/sni/{{$user->file_upload_bukti_pembayaran_SNI ? $user->file_upload_bukti_pembayaran_SNI : '#'}}" target="_blank">Lihat</a>
 
                                                 </td>
                                                 <td>{{$user->status_pembayaran_SNI}}</td>

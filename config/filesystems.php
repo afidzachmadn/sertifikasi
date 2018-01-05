@@ -47,8 +47,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => public_path(). '/storage',
-            'visibility' => 'public',
+            'root' => public_path(). '/storage/hasil-upload',
         ],
 
         's3' => [
