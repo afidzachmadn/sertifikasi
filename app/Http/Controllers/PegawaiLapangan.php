@@ -51,7 +51,7 @@ class PegawaiLapangan extends Controller
         $name = $request->get('nama-perusahaan');
         $hasil = $request->file('hasil_upload');
         $hasil_name = $hasil->hashName();
-        $storeFile_hasil = $hasil->store('public/pdf/iso/hasil-survei-lapangan');
+        $storeFile_hasil = $hasil->store('public/public/pdf/iso/hasil-survei-lapangan');
         
         $userDb = DB::table('users')->where('company_name', $name)
                                     ->update(['surat_inspeksi_ISO' => $hasil_name]);
@@ -63,7 +63,7 @@ class PegawaiLapangan extends Controller
         $name = $request->get('nama-perusahaan');
         $hasil = $request->file('hasil_upload');
         $hasil_name = $hasil->hashName();
-        $storeFile_hasil = $hasil->store('public/pdf/sni/hasil-survei-lapangan');
+        $storeFile_hasil = $hasil->store('public/public/pdf/sni/hasil-survei-lapangan');
         
         $userDb = DB::table('users')->where('company_name', $name)
                                     ->update(['surat_inspeksi_SNI' => $hasil_name]);

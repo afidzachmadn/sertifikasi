@@ -45,6 +45,7 @@ class AuthController extends Controller {
         //cek username dan pass di database
         $usercheck= $usersTable->where('email', $email)->first();
         //dd($usercheck);
+        //dd($validator->fails());
         if($validator->fails()){
             $pesan = 'captcha salah!';
 
